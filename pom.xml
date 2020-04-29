@@ -8,6 +8,8 @@
     <packaging>jar</packaging>
 
     <name>yaeger-showcase</name>
+    <description>An implementation of Yaeger, displaying all features of Yaeger</description>
+    <url>https://github.com/han-yaeger/yaeger-showcase</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -64,8 +66,8 @@
     <dependencies>
         <dependency>
             <groupId>nl.han</groupId>
-            <artifactId>yaeger-core</artifactId>
-            <version>2019.2020-beta1</version>
+            <artifactId>yaeger</artifactId>
+            <version>2019.2020-alpha1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
