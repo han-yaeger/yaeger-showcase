@@ -4,7 +4,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.Back;
+import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.textentities.entities.SceneBorderCrossingDynamicTextEntity;
 import nl.han.showcase.scenes.textentities.entities.SceneBorderTouchingDynamicTextEntity;
@@ -28,7 +28,7 @@ public class TextEntitiesScene extends ShowCaseScene {
 
     @Override
     public void setupEntities() {
-        var backButton = new Back(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
         addEntity(backButton);
 
         var staticTextEntity = new TextEntity(new Location(getWidth() / 2, 30), "I'm a TextEntity and remain static on the Scene");

@@ -6,7 +6,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.Button;
-import nl.han.showcase.buttons.Quit;
+import nl.han.showcase.buttons.QuitButton;
 import nl.han.yaeger.engine.entities.entity.Location;
 import nl.han.yaeger.engine.entities.entity.shape.text.TextEntity;
 import nl.han.yaeger.engine.scenes.StaticScene;
@@ -31,7 +31,7 @@ public class SelectionScene extends StaticScene {
 
     @Override
     public void setupEntities() {
-        var quitButton = new Quit(showCase);
+        var quitButton = new QuitButton(showCase, new Location(20, getHeight() - 30));
         addEntity(quitButton);
 
         var select = new TextEntity(new Location(20, 30), "Please select a scene...");

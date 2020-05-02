@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.entitymaps;
 
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.Back;
+import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.entitymaps.tilemaps.BoundedTileMap;
 import nl.han.showcase.scenes.entitymaps.tilemaps.FullScreenTileMap;
 import nl.han.yaeger.engine.Size;
@@ -67,7 +67,7 @@ public class TileMapScene extends DynamicScene implements WithTileMaps {
 
     @Override
     public void setupEntities() {
-        var backButton = new Back(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
         addEntity(backButton);
     }
 }

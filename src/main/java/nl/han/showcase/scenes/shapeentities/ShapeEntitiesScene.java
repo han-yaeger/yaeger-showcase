@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.shapeentities;
 
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.Back;
+import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.shapeentities.entities.DynamicRectangle;
 import nl.han.showcase.scenes.shapeentities.entities.StaticRectangle;
@@ -23,7 +23,7 @@ public class ShapeEntitiesScene extends ShowCaseScene {
 
     @Override
     public void setupEntities() {
-        var backButton = new Back(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
         addEntity(backButton);
 
         var rect = new StaticRectangle(new Location(40, 60));

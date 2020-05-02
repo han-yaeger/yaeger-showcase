@@ -7,11 +7,11 @@ import nl.han.showcase.YaegerShowCase;
 import nl.han.yaeger.engine.entities.entity.AnchorPoint;
 import nl.han.yaeger.engine.entities.entity.Location;
 
-public class Back extends Button {
+public class BackButton extends Button {
 
     public static final String BACK = "Back";
 
-    public Back(YaegerShowCase showCase, Location location) {
+    public BackButton(final YaegerShowCase showCase, final Location location) {
         super(location, BACK, showCase, YaegerShowCase.SCENE_SELECTION);
         setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
         setFill(Color.SNOW);

@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.spawner;
 
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.Back;
+import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.spawner.entities.spawners.RainSpawner;
 import nl.han.yaeger.engine.entities.entity.Location;
@@ -22,7 +22,7 @@ public class EntitySpawnerScene extends ShowCaseScene implements WithSpawners {
 
     @Override
     public void setupEntities() {
-        var backButton = new Back(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
         addEntity(backButton);
     }
 
