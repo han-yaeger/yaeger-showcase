@@ -1,13 +1,13 @@
 package nl.han.showcase.scenes.textentities.entities;
 
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.SceneBorderCrossingWatcher;
+import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
+import com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity;
+import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.SceneBorderCrossingWatcher;
-import nl.han.yaeger.engine.entities.entity.motion.Direction;
-import nl.han.yaeger.engine.entities.entity.shape.text.DynamicTextEntity;
-import nl.han.yaeger.engine.scenes.SceneBorder;
 
 public class SceneBorderCrossingDynamicTextEntity extends DynamicTextEntity implements SceneBorderCrossingWatcher {
 

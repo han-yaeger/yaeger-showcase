@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.spriteentities.entities.timers;
 
+import com.github.hanyaeger.api.engine.Timer;
 import nl.han.showcase.scenes.spriteentities.entities.RugbyBall;
-import nl.han.yaeger.engine.Timer;
 
 public class RugbyBallTimer extends Timer {
 

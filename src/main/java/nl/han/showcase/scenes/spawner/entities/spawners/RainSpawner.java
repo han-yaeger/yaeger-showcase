@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.spawner.entities.spawners;
 
+import com.github.hanyaeger.api.engine.entities.EntitySpawner;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
 import nl.han.showcase.scenes.spawner.entities.Raindrop;
-import nl.han.yaeger.engine.entities.EntitySpawner;
-import nl.han.yaeger.engine.entities.entity.Location;
 
 import java.util.Random;
 

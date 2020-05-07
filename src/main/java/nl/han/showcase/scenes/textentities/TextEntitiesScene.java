@@ -1,5 +1,8 @@
 package nl.han.showcase.scenes.textentities;
 
+import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -9,9 +12,6 @@ import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.textentities.entities.SceneBorderCrossingDynamicTextEntity;
 import nl.han.showcase.scenes.textentities.entities.SceneBorderTouchingDynamicTextEntity;
 import nl.han.showcase.scenes.textentities.entities.TimedDynamicTextEntity;
-import nl.han.yaeger.engine.entities.entity.AnchorPoint;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.shape.text.TextEntity;
 
 public class TextEntitiesScene extends ShowCaseScene {
 

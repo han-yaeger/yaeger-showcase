@@ -1,11 +1,11 @@
 package nl.han.showcase.scenes.spawner.entities;
 
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.SceneBorderCrossingWatcher;
+import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
+import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.SceneBorderCrossingWatcher;
-import nl.han.yaeger.engine.entities.entity.motion.Direction;
-import nl.han.yaeger.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
-import nl.han.yaeger.engine.scenes.SceneBorder;
 
 public class Raindrop extends DynamicRectangleEntity implements SceneBorderCrossingWatcher {
 

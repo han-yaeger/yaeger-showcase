@@ -1,13 +1,13 @@
 package nl.han.showcase.scenes.spriteentities.entities;
 
-import nl.han.yaeger.engine.Size;
-import nl.han.yaeger.engine.entities.entity.ContinuousRotatable;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.SceneBorderTouchingWatcher;
-import nl.han.yaeger.engine.entities.entity.collisions.AABBCollided;
-import nl.han.yaeger.engine.entities.entity.collisions.Collider;
-import nl.han.yaeger.engine.entities.entity.sprite.DynamicSpriteEntity;
-import nl.han.yaeger.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.engine.Size;
+import com.github.hanyaeger.api.engine.entities.entity.ContinuousRotatable;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollided;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
+import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
+import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 
 public class GolfBall extends DynamicSpriteEntity implements SceneBorderTouchingWatcher, ContinuousRotatable, Collider, AABBCollided {
 

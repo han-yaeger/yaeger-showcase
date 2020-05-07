@@ -1,13 +1,12 @@
 package nl.han.showcase.scenes.textentities.entities;
 
+import com.github.hanyaeger.api.engine.WithTimers;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.scenes.textentities.entities.timers.TimedDynamicTextTimer;
-import nl.han.yaeger.engine.WithTimers;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.shape.text.DynamicTextEntity;
-
 import java.util.Arrays;
 import java.util.List;
 

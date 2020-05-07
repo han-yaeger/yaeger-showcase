@@ -1,15 +1,14 @@
 package nl.han.showcase.scenes.spriteentities.entities;
 
+import com.github.hanyaeger.api.engine.Size;
+import com.github.hanyaeger.api.engine.WithTimers;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
 import nl.han.showcase.scenes.spriteentities.entities.timers.RugbyBallTimer;
-import nl.han.yaeger.engine.Size;
-import nl.han.yaeger.engine.WithTimers;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.sprite.DynamicSpriteEntity;
-
 
 public class RugbyBall extends DynamicSpriteEntity implements WithTimers {
 
-    public RugbyBall(Location location) {
+    public RugbyBall(final Location location) {
         super("entities/rugbyball.png", location, new Size(60, 60), 0);
         setRotationSpeed(7);
     }

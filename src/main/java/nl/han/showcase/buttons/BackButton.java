@@ -1,11 +1,11 @@
 package nl.han.showcase.buttons;
 
+import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.yaeger.engine.entities.entity.AnchorPoint;
-import nl.han.yaeger.engine.entities.entity.Location;
 
 public class BackButton extends Button {
 

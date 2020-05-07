@@ -1,12 +1,12 @@
 package nl.han.showcase.scenes.shapeentities;
 
+import com.github.hanyaeger.api.engine.entities.entity.Location;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.shapeentities.entities.DynamicRectangle;
 import nl.han.showcase.scenes.shapeentities.entities.StaticRectangle;
 import nl.han.showcase.scenes.shapeentities.entities.TimedDynamicRectangle;
-import nl.han.yaeger.engine.entities.entity.Location;
 
 public class ShapeEntitiesScene extends ShowCaseScene {
 

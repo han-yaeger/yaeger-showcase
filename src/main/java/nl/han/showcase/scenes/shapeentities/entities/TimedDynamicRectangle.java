@@ -1,12 +1,12 @@
 package nl.han.showcase.scenes.shapeentities.entities;
 
+import com.github.hanyaeger.api.engine.WithTimers;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.shapeentities.entities.timers.TimedDynamicRectangleTimer;
-import nl.han.yaeger.engine.WithTimers;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.SceneBorderTouchingWatcher;
-import nl.han.yaeger.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
-import nl.han.yaeger.engine.scenes.SceneBorder;
 
 public class TimedDynamicRectangle extends DynamicRectangleEntity implements WithTimers, SceneBorderTouchingWatcher {
 
@@ -15,7 +15,7 @@ public class TimedDynamicRectangle extends DynamicRectangleEntity implements Wit
     private double currentArc = 0;
     private boolean decreasing = false;
 
-    public TimedDynamicRectangle(Location initialPosition) {
+    public TimedDynamicRectangle(final Location initialPosition) {
         super(initialPosition);
         setWidth(40);
         setHeight(80);

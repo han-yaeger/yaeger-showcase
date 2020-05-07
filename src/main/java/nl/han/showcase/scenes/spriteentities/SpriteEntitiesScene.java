@@ -1,5 +1,8 @@
 package nl.han.showcase.scenes.spriteentities;
 
+import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
@@ -7,10 +10,6 @@ import nl.han.showcase.scenes.spriteentities.entities.BasketBall;
 import nl.han.showcase.scenes.spriteentities.entities.GolfBall;
 import nl.han.showcase.scenes.spriteentities.entities.RugbyBall;
 import nl.han.showcase.scenes.spriteentities.entities.TennisBall;
-import nl.han.yaeger.engine.entities.entity.AnchorPoint;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.motion.Direction;
-
 
 public class SpriteEntitiesScene extends ShowCaseScene {
 

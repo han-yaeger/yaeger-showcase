@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.entitymaps.tilemaps.entities;
 
-import nl.han.yaeger.engine.Size;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.sprite.SpriteEntity;
+import com.github.hanyaeger.api.engine.Size;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.sprite.SpriteEntity;
 
 public class ConcreteGrayCeramicTileMapEntity extends SpriteEntity {
 

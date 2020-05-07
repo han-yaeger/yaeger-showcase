@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.spriteentities.entities;
 
-import nl.han.yaeger.engine.Size;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.sprite.DynamicSpriteEntity;
+import com.github.hanyaeger.api.engine.Size;
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
 
 public class BasketBall extends DynamicSpriteEntity {
 

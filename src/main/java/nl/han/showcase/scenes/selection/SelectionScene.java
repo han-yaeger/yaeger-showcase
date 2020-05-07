@@ -1,5 +1,9 @@
 package nl.han.showcase.scenes.selection;
 
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
+import com.github.hanyaeger.api.engine.scenes.StaticScene;
+import com.github.hanyaeger.api.engine.styles.HanFont;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -7,11 +11,6 @@ import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.Button;
 import nl.han.showcase.buttons.QuitButton;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.shape.text.TextEntity;
-import nl.han.yaeger.engine.scenes.StaticScene;
-import nl.han.yaeger.engine.styles.HanFont;
-import nl.han.yaeger.engine.styles.HanFontStyle;
 
 import java.util.Set;
 

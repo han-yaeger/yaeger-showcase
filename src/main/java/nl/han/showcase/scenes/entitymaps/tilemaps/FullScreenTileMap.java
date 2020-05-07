@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.entitymaps.tilemaps;
 
+import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
 import nl.han.showcase.scenes.entitymaps.tilemaps.entities.ConcreteGrayCeramicTileMapEntity;
-import nl.han.yaeger.engine.entities.tilemap.TileMap;
 
 public class FullScreenTileMap extends TileMap {
 

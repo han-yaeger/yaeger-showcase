@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.dynamicscenewithtimer.timers;
 
+import com.github.hanyaeger.api.engine.Timer;
 import nl.han.showcase.scenes.dynamicscenewithtimer.DynamicSceneWithTimer;
-import nl.han.yaeger.engine.Timer;
 
 public class SceneMinuteTimer extends Timer {
 

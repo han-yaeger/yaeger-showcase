@@ -1,11 +1,11 @@
 package nl.han.showcase.scenes.shapeentities.entities;
 
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
+import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.SceneBorderTouchingWatcher;
-import nl.han.yaeger.engine.entities.entity.motion.Direction;
-import nl.han.yaeger.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
-import nl.han.yaeger.engine.scenes.SceneBorder;
 
 public class DynamicRectangle extends DynamicRectangleEntity implements SceneBorderTouchingWatcher {
 

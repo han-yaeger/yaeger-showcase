@@ -1,14 +1,15 @@
 package nl.han.showcase.buttons;
 
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseButtonPressedListener;
+import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseEnterListener;
+import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseExitListener;
+import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.selection.SelectionScene;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.events.userinput.MouseEnterListener;
-import nl.han.yaeger.engine.entities.entity.events.userinput.MouseExitListener;
-import nl.han.yaeger.engine.entities.entity.events.userinput.MouseButtonPressedListener;
-import nl.han.yaeger.engine.entities.entity.shape.text.TextEntity;
+
 
 public class Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
 

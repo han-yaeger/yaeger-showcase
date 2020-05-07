@@ -1,5 +1,7 @@
 package nl.han.showcase;
 
+import com.github.hanyaeger.api.engine.Size;
+import com.github.hanyaeger.api.engine.YaegerApplication;
 import nl.han.showcase.scenes.dynamicscenewithtimer.DynamicSceneWithTimer;
 import nl.han.showcase.scenes.entitymaps.TileMapScene;
 import nl.han.showcase.scenes.selection.SelectionScene;
@@ -7,8 +9,6 @@ import nl.han.showcase.scenes.shapeentities.ShapeEntitiesScene;
 import nl.han.showcase.scenes.spawner.EntitySpawnerScene;
 import nl.han.showcase.scenes.spriteentities.SpriteEntitiesScene;
 import nl.han.showcase.scenes.textentities.TextEntitiesScene;
-import nl.han.yaeger.engine.Size;
-import nl.han.yaeger.engine.YaegerApplication;
 
 /**
  * ShowCase of all Yaeger Features.

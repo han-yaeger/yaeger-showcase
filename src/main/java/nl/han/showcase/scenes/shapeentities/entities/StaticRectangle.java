@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.shapeentities.entities;
 
+import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
 import javafx.scene.paint.Color;
-import nl.han.yaeger.engine.entities.entity.Location;
-import nl.han.yaeger.engine.entities.entity.shape.rectangle.RectangleEntity;
 
 public class StaticRectangle extends RectangleEntity {
 

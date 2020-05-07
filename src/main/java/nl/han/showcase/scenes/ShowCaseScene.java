@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes;
 
+import com.github.hanyaeger.api.engine.scenes.DynamicScene;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.yaeger.engine.scenes.DynamicScene;
 
 import java.util.Set;
 

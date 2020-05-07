@@ -1,5 +1,5 @@
 module yaeger.showcase {
-    requires yaeger.core;
+    requires hanyaeger.api;
 
     exports nl.han.showcase;
 
