@@ -48,7 +48,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>nl.han</groupId>
+            <groupId>com.github.hanyaeger</groupId>
             <artifactId>yaeger</artifactId>
             <version>2019.2020-alpha0.3-SNAPSHOT</version>
         </dependency>
