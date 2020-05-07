@@ -11,6 +11,7 @@ import nl.han.yaeger.engine.entities.entity.Location;
 import nl.han.yaeger.engine.entities.entity.shape.text.TextEntity;
 import nl.han.yaeger.engine.scenes.StaticScene;
 import nl.han.yaeger.engine.styles.HanFont;
+import nl.han.yaeger.engine.styles.HanFontStyle;
 
 import java.util.Set;
 
@@ -83,6 +84,6 @@ public class SelectionScene extends StaticScene {
 
     void styleText(TextEntity entity) {
         entity.setFill(TEXT_COLOR);
-        entity.setFont(HanFont.getInstance().createDefaultFont(25));
+        entity.setFont(HanFont.createDefaultCondensedFont(25));
     }
 }
