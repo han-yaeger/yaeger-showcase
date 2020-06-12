@@ -1,13 +1,13 @@
 package nl.han.showcase.scenes.spawner;
 
 import com.github.hanyaeger.api.engine.entities.entity.Location;
-import com.github.hanyaeger.api.engine.scenes.WithSpawners;
+import com.github.hanyaeger.api.engine.scenes.EntitySpawnerContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.spawner.entities.spawners.RainSpawner;
 
-public class EntitySpawnerScene extends ShowCaseScene implements WithSpawners {
+public class EntitySpawnerScene extends ShowCaseScene implements EntitySpawnerContainer {
 
     private YaegerShowCase showCase;
 

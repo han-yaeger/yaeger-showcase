@@ -1,7 +1,7 @@
 package nl.han.showcase;
 
 import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.YaegerApplication;
+import com.github.hanyaeger.api.engine.YaegerGame;
 import nl.han.showcase.scenes.dynamicscenewithtimer.DynamicSceneWithTimer;
 import nl.han.showcase.scenes.entitymaps.TileMapScene;
 import nl.han.showcase.scenes.selection.SelectionScene;
@@ -13,7 +13,7 @@ import nl.han.showcase.scenes.textentities.TextEntitiesScene;
 /**
  * ShowCase of all Yaeger Features.
  */
-public class YaegerShowCase extends YaegerApplication {
+public class YaegerShowCase extends YaegerGame {
 
     private static final String GAME_TITLE = "Yaeger Show Case";
     private static final int WIDTH = 880;
@@ -31,7 +31,7 @@ public class YaegerShowCase extends YaegerApplication {
     }
 
     @Override
-    protected void initializeGame() {
+    protected void setupGame() {
         setGameTitle(GAME_TITLE);
         setSize(new Size(WIDTH, HEIGHT));
     }

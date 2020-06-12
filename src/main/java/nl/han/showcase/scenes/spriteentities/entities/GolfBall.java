@@ -5,11 +5,11 @@ import com.github.hanyaeger.api.engine.entities.entity.ContinuousRotatable;
 import com.github.hanyaeger.api.engine.entities.entity.Location;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollider;
 import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 
-public class GolfBall extends DynamicSpriteEntity implements SceneBorderTouchingWatcher, ContinuousRotatable, Collider, AABBCollided {
+public class GolfBall extends DynamicSpriteEntity implements SceneBorderTouchingWatcher, ContinuousRotatable, AABBCollider, AABBCollided {
 
 
     public GolfBall(Location location, double speed, double direction) {
@@ -24,7 +24,7 @@ public class GolfBall extends DynamicSpriteEntity implements SceneBorderTouching
     }
 
     @Override
-    public void onCollision(Collider collidingObject) {
+    public void onCollision(AABBCollider collidingObject) {
         changeDirectionBy(180);
     }
 }
