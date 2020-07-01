@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.textentities.entities;
 
-import com.github.hanyaeger.api.engine.WithTimers;
+import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.Location;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity;
 import javafx.scene.paint.Color;
@@ -10,7 +10,7 @@ import nl.han.showcase.scenes.textentities.entities.timers.TimedDynamicTextTimer
 import java.util.Arrays;
 import java.util.List;
 
-public class TimedDynamicTextEntity extends DynamicTextEntity implements WithTimers {
+public class TimedDynamicTextEntity extends DynamicTextEntity implements TimerContainer {
 
     private int currentLine = 0;
 

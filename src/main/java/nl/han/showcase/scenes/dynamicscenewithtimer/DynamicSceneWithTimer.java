@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.dynamicscenewithtimer;
 
-import com.github.hanyaeger.api.engine.WithTimers;
+import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Location;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
@@ -12,7 +12,7 @@ import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.dynamicscenewithtimer.timers.SceneMinuteTimer;
 
-public class DynamicSceneWithTimer extends ShowCaseScene implements WithTimers {
+public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContainer {
 
     public static final int COUNTDOWN_NUMBER = 5;
     private YaegerShowCase showCase;

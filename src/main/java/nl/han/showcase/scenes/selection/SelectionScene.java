@@ -1,6 +1,7 @@
 package nl.han.showcase.scenes.selection;
 
 import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListener;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import com.github.hanyaeger.api.engine.scenes.StaticScene;
 import com.github.hanyaeger.api.engine.styles.HanFont;
@@ -14,7 +15,7 @@ import nl.han.showcase.buttons.QuitButton;
 
 import java.util.Set;
 
-public class SelectionScene extends StaticScene {
+public class SelectionScene extends StaticScene implements KeyListener {
 
     public static final Color TEXT_COLOR = Color.YELLOW;
     public static final Color TEXT_COLOR_HIGHLIGHT = Color.LIGHTYELLOW;
@@ -64,19 +65,20 @@ public class SelectionScene extends StaticScene {
         addEntity(entitySpawnerScene);
     }
 
+
     @Override
-    public void onInputChanged(Set<KeyCode> input) {
-        if (input.contains(KeyCode.DIGIT1)) {
+    public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
+        if (pressedKeys.contains(KeyCode.DIGIT1)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_TEXT_ENTITIES);
-        } else if (input.contains(KeyCode.DIGIT2)) {
+        } else if (pressedKeys.contains(KeyCode.DIGIT2)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_SPRITE_ENTITIES);
-        } else if (input.contains(KeyCode.DIGIT3)) {
+        } else if (pressedKeys.contains(KeyCode.DIGIT3)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_SHAPE_ENTITIES);
-        } else if (input.contains(KeyCode.DIGIT4)) {
+        } else if (pressedKeys.contains(KeyCode.DIGIT4)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_WITH_TIMERS);
-        } else if (input.contains(KeyCode.DIGIT5)) {
+        } else if (pressedKeys.contains(KeyCode.DIGIT5)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_WITH_ENTITYMAPS);
-        } else if (input.contains(KeyCode.DIGIT6)) {
+        } else if (pressedKeys.contains(KeyCode.DIGIT6)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_WITH_SPAWNERS);
         }
     }
