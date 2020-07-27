@@ -45,8 +45,6 @@ public class ShapeEntitiesScene extends ShowCaseScene {
 
         var timedDynamicRectangle = new TimedDynamicRectangle(new Location(40, 460));
         addEntity(timedDynamicRectangle);
-
-
     }
 
     @Override
