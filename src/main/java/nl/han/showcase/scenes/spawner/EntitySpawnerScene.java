@@ -17,7 +17,9 @@ public class EntitySpawnerScene extends ShowCaseScene implements EntitySpawnerCo
 
     @Override
     public void setupScene() {
+        setBackgroundAudio("audio/raindrops.mp3");
         setBackgroundImage("backgrounds/night-city.jpg");
+        setBrightness(0.5);
     }
 
     @Override
@@ -33,7 +35,7 @@ public class EntitySpawnerScene extends ShowCaseScene implements EntitySpawnerCo
 
     @Override
     public void setupEntitySpawners() {
-        addEntitySpawner(new RainSpawner(getWidth(), 1, 2, 1, 2));
-        addEntitySpawner(new RainSpawner(getWidth(), 1, 4, 2, 4));
+        addEntitySpawner(new RainSpawner(getWidth(), 0.5, 12, 1, 2));
+        addEntitySpawner(new RainSpawner(getWidth(), 0.5, 24, 1, 4));
     }
 }

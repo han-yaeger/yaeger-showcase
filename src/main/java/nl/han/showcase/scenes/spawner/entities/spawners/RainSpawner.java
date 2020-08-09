@@ -34,7 +34,7 @@ public class RainSpawner extends EntitySpawner {
     }
 
     private int generateRandomSpeed() {
-        return new Random().nextInt(maxSpeed) + 1;
+        return new Random().nextInt(maxSpeed) + 8;
     }
 
     private Location generateRandomPosition() {
