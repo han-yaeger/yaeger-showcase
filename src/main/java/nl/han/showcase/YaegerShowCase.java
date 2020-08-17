@@ -6,7 +6,7 @@ import nl.han.showcase.scenes.dynamicscenewithtimer.DynamicSceneWithTimer;
 import nl.han.showcase.scenes.entitymaps.TileMapScene;
 import nl.han.showcase.scenes.selection.SelectionScene;
 import nl.han.showcase.scenes.shapeentities.ShapeEntitiesScene;
-import nl.han.showcase.scenes.spawner.EntitySpawnerScene;
+import nl.han.showcase.scenes.ridethelightning.RideTheLightningScene;
 import nl.han.showcase.scenes.spriteentities.SpriteEntitiesScene;
 import nl.han.showcase.scenes.textentities.TextEntitiesScene;
 
@@ -50,7 +50,7 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_WITH_TIMERS, dynamicSceneWithTimers);
         var sceneWithEntityMaps = new TileMapScene(this);
         addScene(SCENE_WITH_ENTITYMAPS, sceneWithEntityMaps);
-        var sceneWithSpawners = new EntitySpawnerScene(this);
+        var sceneWithSpawners = new RideTheLightningScene(this);
         addScene(SCENE_WITH_SPAWNERS, sceneWithSpawners);
     }
 

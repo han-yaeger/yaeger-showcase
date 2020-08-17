@@ -1,8 +1,8 @@
-package nl.han.showcase.scenes.spawner.entities.spawners;
+package nl.han.showcase.scenes.ridethelightning.entities.spawners;
 
 import com.github.hanyaeger.api.engine.entities.EntitySpawner;
 import com.github.hanyaeger.api.engine.entities.entity.Location;
-import nl.han.showcase.scenes.spawner.entities.Raindrop;
+import nl.han.showcase.scenes.ridethelightning.entities.Raindrop;
 
 import java.util.Random;
 

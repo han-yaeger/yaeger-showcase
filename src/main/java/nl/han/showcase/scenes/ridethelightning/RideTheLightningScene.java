@@ -1,17 +1,19 @@
-package nl.han.showcase.scenes.spawner;
+package nl.han.showcase.scenes.ridethelightning;
 
+import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.Location;
 import com.github.hanyaeger.api.engine.scenes.EntitySpawnerContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.spawner.entities.spawners.RainSpawner;
+import nl.han.showcase.scenes.ridethelightning.entities.spawners.RainSpawner;
+import nl.han.showcase.scenes.ridethelightning.timers.LightningTimer;
 
-public class EntitySpawnerScene extends ShowCaseScene implements EntitySpawnerContainer {
+public class RideTheLightningScene extends ShowCaseScene implements EntitySpawnerContainer, TimerContainer {
 
     private YaegerShowCase showCase;
 
-    public EntitySpawnerScene(final YaegerShowCase showCase) {
+    public RideTheLightningScene(final YaegerShowCase showCase) {
         this.showCase = showCase;
     }
 
@@ -19,7 +21,6 @@ public class EntitySpawnerScene extends ShowCaseScene implements EntitySpawnerCo
     public void setupScene() {
         setBackgroundAudio("audio/raindrops.mp3");
         setBackgroundImage("backgrounds/night-city.jpg");
-        setBrightness(0.5);
     }
 
     @Override
@@ -37,5 +38,12 @@ public class EntitySpawnerScene extends ShowCaseScene implements EntitySpawnerCo
     public void setupEntitySpawners() {
         addEntitySpawner(new RainSpawner(getWidth(), 0.5, 12, 1, 2));
         addEntitySpawner(new RainSpawner(getWidth(), 0.5, 24, 1, 4));
+        addEntitySpawner(new RainSpawner(getWidth(), 0.5, 36, 1, 8));
+        addEntitySpawner(new RainSpawner(getWidth(), 0.5, 48, 1, 12));
+    }
+
+    @Override
+    public void setupTimers() {
+        addTimer(new LightningTimer());
     }
 }
