@@ -44,6 +44,6 @@ public class RideTheLightningScene extends ShowCaseScene implements EntitySpawne
 
     @Override
     public void setupTimers() {
-        addTimer(new LightningTimer());
+        addTimer(new LightningTimer(this));
     }
 }
