@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.dynamicscenewithtimer;
 
 import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -36,16 +36,16 @@ public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContain
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
         addEntity(backButton);
 
-        var explanationText = new TextEntity(new Location(getWidth() / 2, 150), "This scene will automatically switch back to the selection scene in: ");
+        var explanationText = new TextEntity(new Coordinate2D(getWidth() / 2, 150), "This scene will automatically switch back to the selection scene in: ");
         explanationText.setFont(Font.font("palatino", FontWeight.BOLD, 30));
         explanationText.setFill(Color.YELLOW);
         explanationText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(explanationText);
 
-        displayNumberText = new TextEntity(new Location(getWidth() / 2, getHeight() / 2), Integer.toString(displayNumber));
+        displayNumberText = new TextEntity(new Coordinate2D(getWidth() / 2, getHeight() / 2), Integer.toString(displayNumber));
         displayNumberText.setFont(Font.font("palatino", FontWeight.BOLD, 300));
         displayNumberText.setFill(Color.YELLOW);
         displayNumberText.setAnchorPoint(AnchorPoint.CENTER_CENTER);

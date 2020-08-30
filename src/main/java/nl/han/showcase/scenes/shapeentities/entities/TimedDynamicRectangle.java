@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.shapeentities.entities;
 
 import com.github.hanyaeger.api.engine.TimerContainer;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
@@ -15,7 +15,7 @@ public class TimedDynamicRectangle extends DynamicRectangleEntity implements Tim
     private double currentArc = 0;
     private boolean decreasing = false;
 
-    public TimedDynamicRectangle(final Location initialPosition) {
+    public TimedDynamicRectangle(final Coordinate2D initialPosition) {
         super(initialPosition);
         setWidth(40);
         setHeight(80);

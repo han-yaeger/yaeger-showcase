@@ -1,17 +1,14 @@
 package nl.han.showcase.scenes.entitymaps.tilemaps;
 
 import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
-import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
 import nl.han.showcase.scenes.entitymaps.tilemaps.entities.WallnutTileMapEntity;
 
 
 public class BoundedTileMap extends TileMap {
 
-    public BoundedTileMap(final Location location, final Size size) {
+    public BoundedTileMap(final Coordinate2D location, final Size size) {
         super(location, size);
     }
 

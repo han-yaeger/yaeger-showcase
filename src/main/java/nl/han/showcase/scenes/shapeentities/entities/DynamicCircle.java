@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.shapeentities.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
 
 public class DynamicCircle extends DynamicCircleEntity implements SceneBorderTouchingWatcher {
 
-    public DynamicCircle(Location initialPosition) {
+    public DynamicCircle(final Coordinate2D initialPosition) {
         super(initialPosition);
         setRadius(40);
         setOpacity(0.8);
@@ -20,7 +20,7 @@ public class DynamicCircle extends DynamicCircleEntity implements SceneBorderTou
     }
 
     @Override
-    public void notifyBoundaryTouching(SceneBorder border) {
+    public void notifyBoundaryTouching(final SceneBorder border) {
         changeDirectionBy(180);
     }
 }

@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.shapeentities.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
 
 public class DynamicRectangle extends DynamicRectangleEntity implements SceneBorderTouchingWatcher {
 
-    public DynamicRectangle(Location initialPosition) {
+    public DynamicRectangle(final Coordinate2D initialPosition) {
         super(initialPosition);
         setWidth(40);
         setHeight(80);
@@ -21,7 +21,7 @@ public class DynamicRectangle extends DynamicRectangleEntity implements SceneBor
     }
 
     @Override
-    public void notifyBoundaryTouching(SceneBorder border) {
+    public void notifyBoundaryTouching(final SceneBorder border) {
         changeDirectionBy(180);
     }
 }

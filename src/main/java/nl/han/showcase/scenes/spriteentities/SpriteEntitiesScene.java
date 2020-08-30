@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.spriteentities;
 
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
@@ -15,7 +15,7 @@ public class SpriteEntitiesScene extends ShowCaseScene {
 
     private YaegerShowCase showCase;
 
-    public SpriteEntitiesScene(YaegerShowCase showCase) {
+    public SpriteEntitiesScene(final YaegerShowCase showCase) {
         this.showCase = showCase;
     }
 
@@ -27,64 +27,64 @@ public class SpriteEntitiesScene extends ShowCaseScene {
     @Override
     public void setupEntities() {
 
-        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
         addEntity(backButton);
 
         placeRugbyBallOnWithAllAnchorPoints();
 
-        var tennisBall = new TennisBall(new Location(100, 120));
+        var tennisBall = new TennisBall(new Coordinate2D(100, 120));
         addEntity(tennisBall);
 
-        var basketBall = new BasketBall(new Location(100, 220));
+        var basketBall = new BasketBall(new Coordinate2D(100, 220));
         addEntity(basketBall);
 
 
-        var golfBall1 = new GolfBall(new Location(getWidth() / 2, 420), 4, Direction.RIGHT.getValue());
+        var golfBall1 = new GolfBall(new Coordinate2D(getWidth() / 2, 420), 4, Direction.RIGHT.getValue());
         golfBall1.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(golfBall1);
 
-        var golfBall2 = new GolfBall(new Location(20, 420), 5, Direction.LEFT.getValue());
+        var golfBall2 = new GolfBall(new Coordinate2D(20, 420), 5, Direction.LEFT.getValue());
         golfBall2.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(golfBall2);
 
-        var golfBall3 = new GolfBall(new Location(getWidth() - 20, 420), 6, Direction.RIGHT.getValue());
+        var golfBall3 = new GolfBall(new Coordinate2D(getWidth() - 20, 420), 6, Direction.RIGHT.getValue());
         golfBall3.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(golfBall3);
     }
 
     private void placeRugbyBallOnWithAllAnchorPoints() {
-        var rugbyBallTL = new RugbyBall(new Location(0, 0));
+        var rugbyBallTL = new RugbyBall(new Coordinate2D(0, 0));
         addEntity(rugbyBallTL);
 
-        var rugbyBallTC = new RugbyBall(new Location(getWidth() / 2, 0));
+        var rugbyBallTC = new RugbyBall(new Coordinate2D(getWidth() / 2, 0));
         rugbyBallTC.setAnchorPoint(AnchorPoint.TOP_CENTER);
         addEntity(rugbyBallTC);
 
-        var rugbyBallTR = new RugbyBall(new Location(getWidth(), 0));
+        var rugbyBallTR = new RugbyBall(new Coordinate2D(getWidth(), 0));
         rugbyBallTR.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(rugbyBallTR);
 
-        var rugbyBallLC = new RugbyBall(new Location(0, getHeight() / 2));
+        var rugbyBallLC = new RugbyBall(new Coordinate2D(0, getHeight() / 2));
         rugbyBallLC.setAnchorPoint(AnchorPoint.CENTER_LEFT);
         addEntity(rugbyBallLC);
 
-        var rugbyBallCC = new RugbyBall(new Location(getWidth() / 2, getHeight() / 2));
+        var rugbyBallCC = new RugbyBall(new Coordinate2D(getWidth() / 2, getHeight() / 2));
         rugbyBallCC.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(rugbyBallCC);
 
-        var rugbyBallRC = new RugbyBall(new Location(getWidth(), getHeight() / 2));
+        var rugbyBallRC = new RugbyBall(new Coordinate2D(getWidth(), getHeight() / 2));
         rugbyBallRC.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addEntity(rugbyBallRC);
 
-        var rugbyBallBL = new RugbyBall(new Location(0, getHeight()));
+        var rugbyBallBL = new RugbyBall(new Coordinate2D(0, getHeight()));
         rugbyBallBL.setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
         addEntity(rugbyBallBL);
 
-        var rugbyBallBC = new RugbyBall(new Location(getWidth() / 2, getHeight()));
+        var rugbyBallBC = new RugbyBall(new Coordinate2D(getWidth() / 2, getHeight()));
         rugbyBallBC.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
         addEntity(rugbyBallBC);
 
-        var rugbyBallBR = new RugbyBall(new Location(getWidth(), getHeight()));
+        var rugbyBallBR = new RugbyBall(new Coordinate2D(getWidth(), getHeight()));
         rugbyBallBR.setAnchorPoint(AnchorPoint.BOTTOM_RIGHT);
         addEntity(rugbyBallBR);
     }

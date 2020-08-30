@@ -1,6 +1,6 @@
 package nl.han.showcase.buttons;
 
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseButtonPressedListener;
 import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseEnterListener;
 import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseExitListener;
@@ -16,7 +16,7 @@ public class Button extends TextEntity implements MouseButtonPressedListener, Mo
     protected YaegerShowCase showCase;
     private int scene;
 
-    public Button(final Location initialPosition, final String text, YaegerShowCase showCase, int scene) {
+    public Button(final Coordinate2D initialPosition, final String text, YaegerShowCase showCase, int scene) {
         super(initialPosition, text);
         this.showCase = showCase;
         this.scene = scene;

@@ -1,7 +1,6 @@
 package nl.han.showcase.scenes.shapeentities;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
@@ -11,7 +10,7 @@ public class ShapeEntitiesScene extends ShowCaseScene {
 
     private YaegerShowCase showCase;
 
-    public ShapeEntitiesScene(YaegerShowCase showCase) {
+    public ShapeEntitiesScene(final YaegerShowCase showCase) {
         this.showCase = showCase;
     }
 
@@ -22,28 +21,28 @@ public class ShapeEntitiesScene extends ShowCaseScene {
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
         addEntity(backButton);
 
-        var rect = new StaticRectangle(new Location(40, 40));
+        var rect = new StaticRectangle(new Coordinate2D(40, 40));
         addEntity(rect);
 
-        var circle = new StaticCircle(new Location(140, 40));
+        var circle = new StaticCircle(new Coordinate2D(140, 40));
         addEntity(circle);
 
-        var ellipse = new StaticEllipse(new Location(240, 40));
+        var ellipse = new StaticEllipse(new Coordinate2D(240, 40));
         addEntity(ellipse);
 
-        var dynamicRectangle = new DynamicRectangle(new Location(40, 160));
+        var dynamicRectangle = new DynamicRectangle(new Coordinate2D(40, 160));
         addEntity(dynamicRectangle);
 
-        var dynamicCircle = new DynamicCircle(new Location(40, 260));
+        var dynamicCircle = new DynamicCircle(new Coordinate2D(40, 260));
         addEntity(dynamicCircle);
 
-        var dynamicEllipse = new DynamicEllipse(new Location(40, 360));
+        var dynamicEllipse = new DynamicEllipse(new Coordinate2D(40, 360));
         addEntity(dynamicEllipse);
 
-        var timedDynamicRectangle = new TimedDynamicRectangle(new Location(40, 460));
+        var timedDynamicRectangle = new TimedDynamicRectangle(new Coordinate2D(40, 460));
         addEntity(timedDynamicRectangle);
     }
 

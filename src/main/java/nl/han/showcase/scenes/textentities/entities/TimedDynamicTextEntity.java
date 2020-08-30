@@ -1,12 +1,13 @@
 package nl.han.showcase.scenes.textentities.entities;
 
 import com.github.hanyaeger.api.engine.TimerContainer;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.scenes.textentities.entities.timers.TimedDynamicTextTimer;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class TimedDynamicTextEntity extends DynamicTextEntity implements TimerCo
             "And trees and hills they long have known."
     });
 
-    public TimedDynamicTextEntity(final Location position) {
+    public TimedDynamicTextEntity(final Coordinate2D position) {
         super(position);
         nextLine();
         setFill(Color.SILVER);

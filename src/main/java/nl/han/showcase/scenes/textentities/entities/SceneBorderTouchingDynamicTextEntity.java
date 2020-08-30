@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.textentities.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity;
@@ -13,7 +13,7 @@ public class SceneBorderTouchingDynamicTextEntity extends DynamicTextEntity impl
 
     public static final String TEXT = "SceneBorderTouching";
 
-    public SceneBorderTouchingDynamicTextEntity(final Location position) {
+    public SceneBorderTouchingDynamicTextEntity(final Coordinate2D position) {
         super(position, TEXT);
         setFill(Color.SILVER);
         setFont(Font.font("arial", FontWeight.BOLD, 30));

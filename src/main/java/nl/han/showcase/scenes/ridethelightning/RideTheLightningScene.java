@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.ridethelightning;
 
 import com.github.hanyaeger.api.engine.TimerContainer;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.scenes.EntitySpawnerContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
@@ -25,7 +25,7 @@ public class RideTheLightningScene extends ShowCaseScene implements EntitySpawne
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(showCase, new Location(20, getHeight() - 30));
+        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
         addEntity(backButton);
     }
 
