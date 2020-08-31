@@ -2,25 +2,31 @@ package nl.han.showcase.scenes.distance;
 
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.scenes.DynamicScene;
 import com.github.hanyaeger.api.engine.scenes.EntitySpawnerContainer;
-import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.BackButton;
+import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.distance.entities.*;
 
-public class TheDistanceScene extends DynamicScene implements EntitySpawnerContainer {
+/**
+ * A common Use Case in games is shooting at something. To know where to shoot, you will need to
+ * aim in the right direction. This {@link com.github.hanyaeger.api.engine.scenes.YaegerScene} is
+ * a demonstration of that Use Case.
+ * <p>
+ * The user is able to control a SpaceShip, which is just a {@link com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity}
+ * that listens to user input. A Rocket Launcher, which consists of several Entities, calculates the distance and angle
+ * to the SpaceShip and shoots rockets.
+ */
+public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerContainer {
 
-    private YaegerShowCase showCase;
     private RocketSpawner rocketSpawner;
 
     public TheDistanceScene(YaegerShowCase yaegerShowCase) {
-        this.showCase = yaegerShowCase;
+        super(yaegerShowCase);
     }
 
     @Override
     public void setupScene() {
-        setBackgroundColor(Color.BLACK);
+        setBackgroundImage("backgrounds/distance.jpg");
 
         // We instantiate the rocketspawner at this early stage, so we can pass it
         // to the antiAircraftLauncher.
@@ -29,8 +35,7 @@ public class TheDistanceScene extends DynamicScene implements EntitySpawnerConta
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
-        addEntity(backButton);
+        super.setupEntities();
 
         var spaceShip = new SpaceShip(new Coordinate2D(getWidth() / 2, getHeight() / 2));
         spaceShip.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);

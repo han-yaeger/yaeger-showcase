@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.ridethelightning.entities.spawners;
 
 import com.github.hanyaeger.api.engine.entities.EntitySpawner;
-import com.github.hanyaeger.api.engine.entities.entity.Location;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import nl.han.showcase.scenes.ridethelightning.entities.Raindrop;
 
 import java.util.Random;
@@ -37,9 +37,9 @@ public class RainSpawner extends EntitySpawner {
         return new Random().nextInt(maxSpeed) + 8;
     }
 
-    private Location generateRandomPosition() {
+    private Coordinate2D generateRandomPosition() {
         int x = new Random().nextInt((int) Math.round(worldWidth));
 
-        return new Location(x, 0);
+        return new Coordinate2D(x, 0);
     }
 }

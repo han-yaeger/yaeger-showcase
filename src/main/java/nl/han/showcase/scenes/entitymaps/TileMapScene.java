@@ -4,18 +4,16 @@ import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMapContainer;
-import com.github.hanyaeger.api.engine.scenes.DynamicScene;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.BackButton;
+import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.entitymaps.tilemaps.BoundedTileMap;
 import nl.han.showcase.scenes.entitymaps.tilemaps.FullScreenTileMap;
 
-public class TileMapScene extends DynamicScene implements TileMapContainer {
+public class TileMapScene extends ShowCaseScene implements TileMapContainer {
 
-    private YaegerShowCase showCase;
 
     public TileMapScene(final YaegerShowCase showCase) {
-        this.showCase = showCase;
+        super(showCase);
     }
 
     @Override
@@ -63,11 +61,5 @@ public class TileMapScene extends DynamicScene implements TileMapContainer {
         var bottomRightMap = new BoundedTileMap(new Coordinate2D(getWidth(), getHeight()), new Size(100, 100));
         bottomRightMap.setAnchorPoint(AnchorPoint.BOTTOM_RIGHT);
         addTileMap(bottomRightMap);
-    }
-
-    @Override
-    public void setupEntities() {
-        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
-        addEntity(backButton);
     }
 }

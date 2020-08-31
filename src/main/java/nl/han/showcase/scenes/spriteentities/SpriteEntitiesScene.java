@@ -13,10 +13,8 @@ import nl.han.showcase.scenes.spriteentities.entities.TennisBall;
 
 public class SpriteEntitiesScene extends ShowCaseScene {
 
-    private YaegerShowCase showCase;
-
     public SpriteEntitiesScene(final YaegerShowCase showCase) {
-        this.showCase = showCase;
+        super(showCase);
     }
 
     @Override
@@ -27,8 +25,7 @@ public class SpriteEntitiesScene extends ShowCaseScene {
     @Override
     public void setupEntities() {
 
-        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
-        addEntity(backButton);
+        super.setupEntities();
 
         placeRugbyBallOnWithAllAnchorPoints();
 
@@ -37,7 +34,6 @@ public class SpriteEntitiesScene extends ShowCaseScene {
 
         var basketBall = new BasketBall(new Coordinate2D(100, 220));
         addEntity(basketBall);
-
 
         var golfBall1 = new GolfBall(new Coordinate2D(getWidth() / 2, 420), 4, Direction.RIGHT.getValue());
         golfBall1.setAnchorPoint(AnchorPoint.CENTER_CENTER);
@@ -87,10 +83,5 @@ public class SpriteEntitiesScene extends ShowCaseScene {
         var rugbyBallBR = new RugbyBall(new Coordinate2D(getWidth(), getHeight()));
         rugbyBallBR.setAnchorPoint(AnchorPoint.BOTTOM_RIGHT);
         addEntity(rugbyBallBR);
-    }
-
-    @Override
-    public YaegerShowCase getShowCase() {
-        return showCase;
     }
 }

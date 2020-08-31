@@ -13,21 +13,22 @@ import nl.han.showcase.scenes.spriteentities.SpriteEntitiesScene;
 import nl.han.showcase.scenes.textentities.TextEntitiesScene;
 
 /**
- * ShowCase of all Yaeger Features.
+ * The {@link YaegerShowCase} demonstrates implementations of all features Yaeger provides. Use the code
+ * to get insight into the code and run the application to see the result.
  */
 public class YaegerShowCase extends YaegerGame {
 
     private static final String GAME_TITLE = "Yaeger Show Case";
     public static final Color HAN_RED = Color.rgb(229, 0, 85);
-    private static final int WIDTH = 880;
-    private static final int HEIGHT = 600;
+    private static final int WIDTH = 1024;
+    private static final int HEIGHT = 698;
     public static final int SCENE_SELECTION = 1;
     public static final int SCENE_TEXT_ENTITIES = 2;
     public static final int SCENE_SPRITE_ENTITIES = 3;
-    public static final int SCENE_SHAPE_ENTITIES = 4;
-    public static final int SCENE_WITH_TIMERS = 5;
-    public static final int SCENE_WITH_ENTITYMAPS = 6;
-    public static final int SCENE_WITH_SPAWNERS = 7;
+    public static final int SCENE_SHAPE = 4;
+    public static final int SCENE_TIME = 5;
+    public static final int SCENE_ENTITYMAPS = 6;
+    public static final int SCENE_RIDE_THE_LIGHTNING = 7;
     public static final int SCENE_DISTANCE = 8;
 
     public static void main(String[] args) {
@@ -49,13 +50,13 @@ public class YaegerShowCase extends YaegerGame {
         var spriteEntitiesScene = new SpriteEntitiesScene(this);
         addScene(SCENE_SPRITE_ENTITIES, spriteEntitiesScene);
         var shapeEntitiesScene = new ShapeEntitiesScene(this);
-        addScene(SCENE_SHAPE_ENTITIES, shapeEntitiesScene);
+        addScene(SCENE_SHAPE, shapeEntitiesScene);
         var dynamicSceneWithTimers = new DynamicSceneWithTimer(this);
-        addScene(SCENE_WITH_TIMERS, dynamicSceneWithTimers);
+        addScene(SCENE_TIME, dynamicSceneWithTimers);
         var sceneWithEntityMaps = new TileMapScene(this);
-        addScene(SCENE_WITH_ENTITYMAPS, sceneWithEntityMaps);
+        addScene(SCENE_ENTITYMAPS, sceneWithEntityMaps);
         var sceneWithSpawners = new RideTheLightningScene(this);
-        addScene(SCENE_WITH_SPAWNERS, sceneWithSpawners);
+        addScene(SCENE_RIDE_THE_LIGHTNING, sceneWithSpawners);
         var distance = new TheDistanceScene(this);
         addScene(SCENE_DISTANCE, distance);
     }

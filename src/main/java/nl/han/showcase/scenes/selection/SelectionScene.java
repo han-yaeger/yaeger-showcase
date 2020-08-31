@@ -5,21 +5,25 @@ import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListe
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import com.github.hanyaeger.api.engine.scenes.StaticScene;
 import com.github.hanyaeger.api.engine.styles.HanFont;
+import com.github.hanyaeger.api.engine.styles.HanFontStyle;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.Button;
 import nl.han.showcase.buttons.QuitButton;
+import nl.han.showcase.buttons.SelectionButton;
 
 import java.util.Set;
 
+/**
+ * A {@link StaticScene} that only contains the menu for selecting the
+ * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}. Besides buttons,
+ * which are just instances of {@link TextEntity}, this {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
+ * also listens to the keyboard, by implementing the {@link KeyListener} interface.
+ */
 public class SelectionScene extends StaticScene implements KeyListener {
 
-    public static final Color TEXT_COLOR = Color.YELLOW;
-    public static final Color TEXT_COLOR_HIGHLIGHT = Color.LIGHTYELLOW;
-    private static final Font TEXT_FONT = Font.font("American Typewriter", FontWeight.BOLD, 30);
+    public static final double SELECTION_BUTTON_X = 34;
+    private static final String TEXT_PLEASE_SELECT = "PLEASE SELECT A SCENE:";
     private YaegerShowCase showCase;
 
     public SelectionScene(final YaegerShowCase showCase) {
@@ -28,47 +32,40 @@ public class SelectionScene extends StaticScene implements KeyListener {
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/nature.jpg");
+        setBackgroundImage("backgrounds/selection.jpg");
     }
 
     @Override
     public void setupEntities() {
-        var quitButton = new QuitButton(showCase, new Coordinate2D(20, getHeight() - 30));
+        var quitButton = new QuitButton(getHeight() - 30, showCase);
         addEntity(quitButton);
 
-        var select = new TextEntity(new Coordinate2D(20, 30), "Please select a scene...");
-        styleText(select);
+        var select = new TextEntity(new Coordinate2D(SELECTION_BUTTON_X, 95), TEXT_PLEASE_SELECT);
+        select.setFill(Color.BLACK);
+        select.setFont(HanFont.createDefaultCondensedFont(HanFontStyle.BOLD, 23));
         addEntity(select);
 
-        var textEntities = new Button(new Coordinate2D(20, 70), "1) Text Entities", showCase, YaegerShowCase.SCENE_TEXT_ENTITIES);
-        styleText(textEntities);
+        var textEntities = new SelectionButton(150, "Text Entities", showCase, YaegerShowCase.SCENE_TEXT_ENTITIES);
         addEntity(textEntities);
 
-        var spriteEntities = new Button(new Coordinate2D(20, 100), "2) Sprite Entities", showCase, YaegerShowCase.SCENE_SPRITE_ENTITIES);
-        styleText(spriteEntities);
+        var spriteEntities = new SelectionButton(200, "Sprite Entities", showCase, YaegerShowCase.SCENE_SPRITE_ENTITIES);
         addEntity(spriteEntities);
 
-        var shapeEntities = new Button(new Coordinate2D(20, 130), "3) Shape Entities", showCase, YaegerShowCase.SCENE_SHAPE_ENTITIES);
-        styleText(shapeEntities);
+        var shapeEntities = new SelectionButton(250, "Shape of you", showCase, YaegerShowCase.SCENE_SHAPE);
         addEntity(shapeEntities);
 
-        var dynamicSceneWithTimers = new Button(new Coordinate2D(20, 160), "4) Dynamic Scene with a Timer", showCase, YaegerShowCase.SCENE_WITH_TIMERS);
-        styleText(dynamicSceneWithTimers);
+        var dynamicSceneWithTimers = new SelectionButton(300, "Time", showCase, YaegerShowCase.SCENE_TIME);
         addEntity(dynamicSceneWithTimers);
 
-        var entityMapsScee = new Button(new Coordinate2D(20, 190), "5) Dynamic Scene with an EntityMap", showCase, YaegerShowCase.SCENE_WITH_ENTITYMAPS);
-        styleText(entityMapsScee);
+        var entityMapsScee = new SelectionButton(350, "EntityMaps", showCase, YaegerShowCase.SCENE_ENTITYMAPS);
         addEntity(entityMapsScee);
 
-        var entitySpawnerScene = new Button(new Coordinate2D(20, 220), "6) Ride the Lightning", showCase, YaegerShowCase.SCENE_WITH_SPAWNERS);
-        styleText(entitySpawnerScene);
+        var entitySpawnerScene = new SelectionButton(400, "Ride the Lightning", showCase, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
         addEntity(entitySpawnerScene);
 
-        var distanceScene = new Button(new Coordinate2D(20, 250), "7) The distance", showCase, YaegerShowCase.SCENE_DISTANCE);
-        styleText(distanceScene);
+        var distanceScene = new SelectionButton(450, "The distance", showCase, YaegerShowCase.SCENE_DISTANCE);
         addEntity(distanceScene);
     }
-
 
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
@@ -77,20 +74,15 @@ public class SelectionScene extends StaticScene implements KeyListener {
         } else if (pressedKeys.contains(KeyCode.DIGIT2)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_SPRITE_ENTITIES);
         } else if (pressedKeys.contains(KeyCode.DIGIT3)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_SHAPE_ENTITIES);
+            showCase.setActiveScene(YaegerShowCase.SCENE_SHAPE);
         } else if (pressedKeys.contains(KeyCode.DIGIT4)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_WITH_TIMERS);
+            showCase.setActiveScene(YaegerShowCase.SCENE_TIME);
         } else if (pressedKeys.contains(KeyCode.DIGIT5)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_WITH_ENTITYMAPS);
+            showCase.setActiveScene(YaegerShowCase.SCENE_ENTITYMAPS);
         } else if (pressedKeys.contains(KeyCode.DIGIT6)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_WITH_SPAWNERS);
+            showCase.setActiveScene(YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
         } else if (pressedKeys.contains(KeyCode.DIGIT7)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_DISTANCE);
         }
-    }
-
-    void styleText(TextEntity entity) {
-        entity.setFill(TEXT_COLOR);
-        entity.setFont(HanFont.createDefaultCondensedFont(25));
     }
 }

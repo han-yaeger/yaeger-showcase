@@ -7,7 +7,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.textentities.entities.SceneBorderCrossingDynamicTextEntity;
 import nl.han.showcase.scenes.textentities.entities.SceneBorderTouchingDynamicTextEntity;
@@ -15,10 +14,8 @@ import nl.han.showcase.scenes.textentities.entities.TimedDynamicTextEntity;
 
 public class TextEntitiesScene extends ShowCaseScene {
 
-    private YaegerShowCase showCase;
-
     public TextEntitiesScene(YaegerShowCase showCase) {
-        this.showCase = showCase;
+        super(showCase);
     }
 
     @Override
@@ -28,8 +25,7 @@ public class TextEntitiesScene extends ShowCaseScene {
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
-        addEntity(backButton);
+        super.setupEntities();
 
         var staticTextEntity = new TextEntity(new Coordinate2D(getWidth() / 2, 30), "I'm a TextEntity and remain static on the Scene");
         staticTextEntity.setFill(Color.ORANGE);
@@ -47,10 +43,5 @@ public class TextEntitiesScene extends ShowCaseScene {
 
         var timedDynamicTextEntity = new TimedDynamicTextEntity(new Coordinate2D(400, 120));
         addEntity(timedDynamicTextEntity);
-    }
-
-    @Override
-    public YaegerShowCase getShowCase() {
-        return showCase;
     }
 }

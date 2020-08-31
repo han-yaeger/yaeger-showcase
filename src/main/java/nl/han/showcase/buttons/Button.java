@@ -7,6 +7,7 @@ import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseExi
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
+import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.selection.SelectionScene;
 
@@ -29,13 +30,13 @@ public class Button extends TextEntity implements MouseButtonPressedListener, Mo
 
     @Override
     public void onMouseEntered() {
-        setFill(SelectionScene.TEXT_COLOR_HIGHLIGHT);
+        setFill(YaegerShowCase.HAN_RED);
         setCursor(Cursor.HAND);
     }
 
     @Override
     public void onMouseExited() {
-        setFill(SelectionScene.TEXT_COLOR);
+        setFill(Color.BLACK);
         setCursor(Cursor.DEFAULT);
     }
 }

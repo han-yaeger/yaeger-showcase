@@ -15,12 +15,11 @@ import nl.han.showcase.scenes.dynamicscenewithtimer.timers.SceneMinuteTimer;
 public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContainer {
 
     public static final int COUNTDOWN_NUMBER = 5;
-    private YaegerShowCase showCase;
     private TextEntity displayNumberText;
     private int displayNumber;
 
     public DynamicSceneWithTimer(YaegerShowCase showCase) {
-        this.showCase = showCase;
+        super(showCase);
     }
 
     @Override
@@ -36,8 +35,7 @@ public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContain
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
-        addEntity(backButton);
+        super.setupEntities();
 
         var explanationText = new TextEntity(new Coordinate2D(getWidth() / 2, 150), "This scene will automatically switch back to the selection scene in: ");
         explanationText.setFont(Font.font("palatino", FontWeight.BOLD, 30));
@@ -50,11 +48,6 @@ public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContain
         displayNumberText.setFill(Color.YELLOW);
         displayNumberText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(displayNumberText);
-    }
-
-    @Override
-    public YaegerShowCase getShowCase() {
-        return showCase;
     }
 
     public void update() {

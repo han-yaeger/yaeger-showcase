@@ -4,22 +4,28 @@ import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListe
 import com.github.hanyaeger.api.engine.scenes.DynamicScene;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
+import nl.han.showcase.buttons.BackButton;
 
 import java.util.Set;
 
 public abstract class ShowCaseScene extends DynamicScene implements KeyListener {
 
-    /**
-     * Return the YaegerShowCase Game
-     *
-     * @return An instance of {@link YaegerShowCase}
-     */
-    public abstract YaegerShowCase getShowCase();
+    protected YaegerShowCase showCase;
+
+    public ShowCaseScene(final YaegerShowCase yaegerShowCase) {
+        this.showCase = yaegerShowCase;
+    }
+
+    @Override
+    public void setupEntities() {
+        var backButton = new BackButton(getHeight() - 30, showCase);
+        addEntity(backButton);
+    }
 
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
         if (pressedKeys.contains(KeyCode.DIGIT0)) {
-            getShowCase().setActiveScene(YaegerShowCase.SCENE_SELECTION);
+            showCase.setActiveScene(YaegerShowCase.SCENE_SELECTION);
         }
     }
 }

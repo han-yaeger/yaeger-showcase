@@ -8,10 +8,8 @@ import nl.han.showcase.scenes.shapeentities.entities.*;
 
 public class ShapeEntitiesScene extends ShowCaseScene {
 
-    private YaegerShowCase showCase;
-
     public ShapeEntitiesScene(final YaegerShowCase showCase) {
-        this.showCase = showCase;
+        super(showCase);
     }
 
     @Override
@@ -21,8 +19,7 @@ public class ShapeEntitiesScene extends ShowCaseScene {
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(showCase, new Coordinate2D(20, getHeight() - 30));
-        addEntity(backButton);
+        super.setupEntities();
 
         var rect = new StaticRectangle(new Coordinate2D(40, 40));
         addEntity(rect);
@@ -44,10 +41,5 @@ public class ShapeEntitiesScene extends ShowCaseScene {
 
         var timedDynamicRectangle = new TimedDynamicRectangle(new Coordinate2D(40, 460));
         addEntity(timedDynamicRectangle);
-    }
-
-    @Override
-    public YaegerShowCase getShowCase() {
-        return showCase;
     }
 }
