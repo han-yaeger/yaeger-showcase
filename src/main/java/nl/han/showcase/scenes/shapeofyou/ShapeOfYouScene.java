@@ -1,14 +1,13 @@
-package nl.han.showcase.scenes.shapeentities;
+package nl.han.showcase.scenes.shapeofyou;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.shapeentities.entities.*;
+import nl.han.showcase.scenes.shapeofyou.entities.*;
 
-public class ShapeEntitiesScene extends ShowCaseScene {
+public class ShapeOfYouScene extends ShowCaseScene {
 
-    public ShapeEntitiesScene(final YaegerShowCase showCase) {
+    public ShapeOfYouScene(final YaegerShowCase showCase) {
         super(showCase);
     }
 

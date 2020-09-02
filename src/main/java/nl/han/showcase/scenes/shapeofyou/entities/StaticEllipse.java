@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.shapeentities.entities;
+package nl.han.showcase.scenes.shapeofyou.entities;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.shape.ellipse.EllipseEntity;

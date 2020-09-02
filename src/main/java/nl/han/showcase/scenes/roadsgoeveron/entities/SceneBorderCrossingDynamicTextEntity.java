@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.textentities.entities;
+package nl.han.showcase.scenes.roadsgoeveron.entities;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderCrossingWatcher;
@@ -21,7 +21,7 @@ public class SceneBorderCrossingDynamicTextEntity extends DynamicTextEntity impl
     }
 
     @Override
-    public void notifyBoundaryCrossing(SceneBorder border) {
+    public void notifyBoundaryCrossing(final SceneBorder border) {
         if (border.equals(SceneBorder.LEFT)) {
             setFill(Color.THISTLE);
         } else {

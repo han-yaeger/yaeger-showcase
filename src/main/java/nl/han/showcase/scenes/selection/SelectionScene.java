@@ -45,7 +45,7 @@ public class SelectionScene extends StaticScene implements KeyListener {
         select.setFont(HanFont.createDefaultCondensedFont(HanFontStyle.BOLD, 23));
         addEntity(select);
 
-        var textEntities = new SelectionButton(150, "Text Entities", showCase, YaegerShowCase.SCENE_TEXT_ENTITIES);
+        var textEntities = new SelectionButton(150, "Roads go ever on", showCase, YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
         addEntity(textEntities);
 
         var spriteEntities = new SelectionButton(200, "Sprite Entities", showCase, YaegerShowCase.SCENE_SPRITE_ENTITIES);
@@ -70,7 +70,7 @@ public class SelectionScene extends StaticScene implements KeyListener {
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
         if (pressedKeys.contains(KeyCode.DIGIT1)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_TEXT_ENTITIES);
+            showCase.setActiveScene(YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
         } else if (pressedKeys.contains(KeyCode.DIGIT2)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_SPRITE_ENTITIES);
         } else if (pressedKeys.contains(KeyCode.DIGIT3)) {

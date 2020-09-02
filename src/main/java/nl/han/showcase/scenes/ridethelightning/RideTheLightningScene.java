@@ -16,7 +16,7 @@ public class RideTheLightningScene extends ShowCaseScene implements EntitySpawne
     @Override
     public void setupScene() {
         setBackgroundAudio("audio/raindrops.mp3");
-        setBackgroundImage("backgrounds/night-city.jpg");
+        setBackgroundImage("backgrounds/night.jpg");
     }
 
     @Override

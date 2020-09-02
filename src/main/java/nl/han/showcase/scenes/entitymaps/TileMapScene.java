@@ -11,14 +11,13 @@ import nl.han.showcase.scenes.entitymaps.tilemaps.FullScreenTileMap;
 
 public class TileMapScene extends ShowCaseScene implements TileMapContainer {
 
-
     public TileMapScene(final YaegerShowCase showCase) {
         super(showCase);
     }
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/milky-way.jpg");
+        setBackgroundImage("backgrounds/purple.jpg");
     }
 
     @Override

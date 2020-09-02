@@ -1,7 +1,7 @@
-package nl.han.showcase.scenes.shapeentities.entities.timers;
+package nl.han.showcase.scenes.shapeofyou.entities.timers;
 
 import com.github.hanyaeger.api.engine.Timer;
-import nl.han.showcase.scenes.shapeentities.entities.TimedDynamicRectangle;
+import nl.han.showcase.scenes.shapeofyou.entities.TimedDynamicRectangle;
 
 public class TimedDynamicRectangleTimer extends Timer {
 

@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.shapeentities.entities;
+package nl.han.showcase.scenes.shapeofyou.entities;
 
 import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatche
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
-import nl.han.showcase.scenes.shapeentities.entities.timers.TimedDynamicRectangleTimer;
+import nl.han.showcase.scenes.shapeofyou.entities.timers.TimedDynamicRectangleTimer;
 
 public class TimedDynamicRectangle extends DynamicRectangleEntity implements TimerContainer, SceneBorderTouchingWatcher {
 

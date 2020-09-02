@@ -1,7 +1,7 @@
-package nl.han.showcase.scenes.textentities.entities.timers;
+package nl.han.showcase.scenes.roadsgoeveron.entities.timers;
 
 import com.github.hanyaeger.api.engine.Timer;
-import nl.han.showcase.scenes.textentities.entities.TimedDynamicTextEntity;
+import nl.han.showcase.scenes.roadsgoeveron.entities.TimedDynamicTextEntity;
 
 public class TimedDynamicTextTimer extends Timer {
 
@@ -12,13 +12,13 @@ public class TimedDynamicTextTimer extends Timer {
      *
      * @param intervalInMs The interval in milleseconds.
      */
-    public TimedDynamicTextTimer(TimedDynamicTextEntity timedDynamicTextEntity, int intervalInMs) {
+    public TimedDynamicTextTimer(final TimedDynamicTextEntity timedDynamicTextEntity, int intervalInMs) {
         super(intervalInMs);
         this.timedDynamicTextEntity = timedDynamicTextEntity;
     }
 
     @Override
-    public void onAnimationUpdate(long timestamp) {
+    public void onAnimationUpdate(final long timestamp) {
         timedDynamicTextEntity.nextLine();
     }
 

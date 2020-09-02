@@ -1,16 +1,14 @@
-package nl.han.showcase.scenes.dynamicscenewithtimer;
+package nl.han.showcase.scenes.timers;
 
 import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
+import com.github.hanyaeger.api.engine.styles.HanFont;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.BackButton;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.dynamicscenewithtimer.timers.SceneMinuteTimer;
+import nl.han.showcase.scenes.timers.timers.SceneMinuteTimer;
 
 public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContainer {
 
@@ -30,22 +28,16 @@ public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContain
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/milky-way.jpg");
+        setBackgroundImage("backgrounds/timer.jpg");
     }
 
     @Override
     public void setupEntities() {
         super.setupEntities();
 
-        var explanationText = new TextEntity(new Coordinate2D(getWidth() / 2, 150), "This scene will automatically switch back to the selection scene in: ");
-        explanationText.setFont(Font.font("palatino", FontWeight.BOLD, 30));
-        explanationText.setFill(Color.YELLOW);
-        explanationText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        addEntity(explanationText);
-
-        displayNumberText = new TextEntity(new Coordinate2D(getWidth() / 2, getHeight() / 2), Integer.toString(displayNumber));
-        displayNumberText.setFont(Font.font("palatino", FontWeight.BOLD, 300));
-        displayNumberText.setFill(Color.YELLOW);
+        displayNumberText = new TextEntity(new Coordinate2D(getWidth() / 2, (getHeight() / 2) + 10), Integer.toString(displayNumber));
+        displayNumberText.setFont(HanFont.createDefaultFont(100));
+        displayNumberText.setFill(Color.WHITE);
         displayNumberText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(displayNumberText);
     }

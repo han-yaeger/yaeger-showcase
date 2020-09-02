@@ -4,13 +4,13 @@ import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.YaegerGame;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
-import nl.han.showcase.scenes.dynamicscenewithtimer.DynamicSceneWithTimer;
+import nl.han.showcase.scenes.timers.DynamicSceneWithTimer;
 import nl.han.showcase.scenes.entitymaps.TileMapScene;
 import nl.han.showcase.scenes.selection.SelectionScene;
-import nl.han.showcase.scenes.shapeentities.ShapeEntitiesScene;
+import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 import nl.han.showcase.scenes.ridethelightning.RideTheLightningScene;
 import nl.han.showcase.scenes.spriteentities.SpriteEntitiesScene;
-import nl.han.showcase.scenes.textentities.TextEntitiesScene;
+import nl.han.showcase.scenes.roadsgoeveron.RoadsGoEverOnScene;
 
 /**
  * The {@link YaegerShowCase} demonstrates implementations of all features Yaeger provides. Use the code
@@ -23,7 +23,7 @@ public class YaegerShowCase extends YaegerGame {
     private static final int WIDTH = 1024;
     private static final int HEIGHT = 698;
     public static final int SCENE_SELECTION = 1;
-    public static final int SCENE_TEXT_ENTITIES = 2;
+    public static final int SCENE_ROADS_GO_EVER_ON = 2;
     public static final int SCENE_SPRITE_ENTITIES = 3;
     public static final int SCENE_SHAPE = 4;
     public static final int SCENE_TIME = 5;
@@ -45,11 +45,11 @@ public class YaegerShowCase extends YaegerGame {
     protected void setupScenes() {
         var selectionScene = new SelectionScene(this);
         addScene(SCENE_SELECTION, selectionScene);
-        var textEntitiesScene = new TextEntitiesScene(this);
-        addScene(SCENE_TEXT_ENTITIES, textEntitiesScene);
+        var textEntitiesScene = new RoadsGoEverOnScene(this);
+        addScene(SCENE_ROADS_GO_EVER_ON, textEntitiesScene);
         var spriteEntitiesScene = new SpriteEntitiesScene(this);
         addScene(SCENE_SPRITE_ENTITIES, spriteEntitiesScene);
-        var shapeEntitiesScene = new ShapeEntitiesScene(this);
+        var shapeEntitiesScene = new ShapeOfYouScene(this);
         addScene(SCENE_SHAPE, shapeEntitiesScene);
         var dynamicSceneWithTimers = new DynamicSceneWithTimer(this);
         addScene(SCENE_TIME, dynamicSceneWithTimers);
