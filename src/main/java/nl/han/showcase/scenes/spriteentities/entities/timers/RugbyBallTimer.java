@@ -1,19 +1,19 @@
 package nl.han.showcase.scenes.spriteentities.entities.timers;
 
 import com.github.hanyaeger.api.engine.Timer;
-import nl.han.showcase.scenes.spriteentities.entities.RugbyBall;
+import nl.han.showcase.scenes.spriteentities.entities.PinkBall;
 
 public class RugbyBallTimer extends Timer {
 
-    private RugbyBall rugbyBall;
+    private PinkBall pinkBall;
 
-    public RugbyBallTimer(RugbyBall rugbyBall, int intervalInMs) {
+    public RugbyBallTimer(PinkBall pinkBall, int intervalInMs) {
         super(intervalInMs);
-        this.rugbyBall = rugbyBall;
+        this.pinkBall = pinkBall;
     }
 
     @Override
     public void onAnimationUpdate(long timestamp) {
-        rugbyBall.changeDirection();
+        pinkBall.changeDirection();
     }
 }

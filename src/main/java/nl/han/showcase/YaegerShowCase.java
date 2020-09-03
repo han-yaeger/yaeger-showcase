@@ -9,7 +9,7 @@ import nl.han.showcase.scenes.entitymaps.TileMapScene;
 import nl.han.showcase.scenes.selection.SelectionScene;
 import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 import nl.han.showcase.scenes.ridethelightning.RideTheLightningScene;
-import nl.han.showcase.scenes.spriteentities.SpriteEntitiesScene;
+import nl.han.showcase.scenes.spriteentities.GreatBallsOfFire;
 import nl.han.showcase.scenes.roadsgoeveron.RoadsGoEverOnScene;
 
 /**
@@ -47,7 +47,7 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_SELECTION, selectionScene);
         var textEntitiesScene = new RoadsGoEverOnScene(this);
         addScene(SCENE_ROADS_GO_EVER_ON, textEntitiesScene);
-        var spriteEntitiesScene = new SpriteEntitiesScene(this);
+        var spriteEntitiesScene = new GreatBallsOfFire(this);
         addScene(SCENE_SPRITE_ENTITIES, spriteEntitiesScene);
         var shapeEntitiesScene = new ShapeOfYouScene(this);
         addScene(SCENE_SHAPE, shapeEntitiesScene);

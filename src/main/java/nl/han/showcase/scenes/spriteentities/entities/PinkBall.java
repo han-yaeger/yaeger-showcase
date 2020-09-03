@@ -6,10 +6,10 @@ import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
 import nl.han.showcase.scenes.spriteentities.entities.timers.RugbyBallTimer;
 
-public class RugbyBall extends DynamicSpriteEntity implements TimerContainer {
+public class PinkBall extends DynamicSpriteEntity implements TimerContainer {
 
-    public RugbyBall(final Coordinate2D location) {
-        super("entities/rugbyball.png", location, new Size(60, 60), 0);
+    public PinkBall(final Coordinate2D location) {
+        super("entities/ball-pink.png", location, new Size(60, 60), 0);
         setRotationSpeed(7);
     }
 

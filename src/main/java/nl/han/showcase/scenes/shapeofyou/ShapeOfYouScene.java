@@ -13,7 +13,7 @@ public class ShapeOfYouScene extends ShowCaseScene {
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/milky-way.jpg");
+        setBackgroundImage("backgrounds/underwater.jpg");
     }
 
     @Override

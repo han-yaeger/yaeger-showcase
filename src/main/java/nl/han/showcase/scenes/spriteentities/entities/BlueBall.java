@@ -7,10 +7,10 @@ import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 
-public class TennisBall extends DynamicSpriteEntity implements SceneBorderTouchingWatcher {
+public class BlueBall extends DynamicSpriteEntity implements SceneBorderTouchingWatcher {
 
-    public TennisBall(final Coordinate2D location) {
-        super("entities/tennisball.png", location, new Size(30, 30), 0);
+    public BlueBall(final Coordinate2D location) {
+        super("entities/ball-blue.png", location, new Size(30, 30), 0);
         setMotionTo(4, Direction.RIGHT.getValue());
     }
 
