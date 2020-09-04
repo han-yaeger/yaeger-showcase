@@ -45,25 +45,25 @@ public class SelectionScene extends StaticScene implements KeyListener {
         select.setFont(HanFont.createDefaultCondensedFont(HanFontStyle.BOLD, 23));
         addEntity(select);
 
-        var textEntities = new SelectionButton(150, "Roads go ever on", showCase, YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
+        var textEntities = new SelectionButton(150, YaegerShowCase.SCENE_ROADS_GO_EVER_ON_TITLE, showCase, YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
         addEntity(textEntities);
 
-        var spriteEntities = new SelectionButton(200, "Sprite Entities", showCase, YaegerShowCase.SCENE_SPRITE_ENTITIES);
+        var spriteEntities = new SelectionButton(200, YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE_TITLE, showCase, YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE);
         addEntity(spriteEntities);
 
-        var shapeEntities = new SelectionButton(250, "Shape of you", showCase, YaegerShowCase.SCENE_SHAPE);
+        var shapeEntities = new SelectionButton(250, YaegerShowCase.SCENE_SHAPE_TITLE, showCase, YaegerShowCase.SCENE_SHAPE);
         addEntity(shapeEntities);
 
-        var dynamicSceneWithTimers = new SelectionButton(300, "Time", showCase, YaegerShowCase.SCENE_TIME);
+        var dynamicSceneWithTimers = new SelectionButton(300, YaegerShowCase.SCENE_TIME_TITLE, showCase, YaegerShowCase.SCENE_TIME);
         addEntity(dynamicSceneWithTimers);
 
-        var entityMapsScee = new SelectionButton(350, "EntityMaps", showCase, YaegerShowCase.SCENE_ENTITYMAPS);
+        var entityMapsScee = new SelectionButton(350, YaegerShowCase.SCENE_MAPS_TITLE, showCase, YaegerShowCase.SCENE_MAPS);
         addEntity(entityMapsScee);
 
-        var entitySpawnerScene = new SelectionButton(400, "Ride the Lightning", showCase, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
+        var entitySpawnerScene = new SelectionButton(400, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING_TITLE, showCase, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
         addEntity(entitySpawnerScene);
 
-        var distanceScene = new SelectionButton(450, "The distance", showCase, YaegerShowCase.SCENE_DISTANCE);
+        var distanceScene = new SelectionButton(450, YaegerShowCase.SCENE_DISTANCE_TITLE, showCase, YaegerShowCase.SCENE_DISTANCE);
         addEntity(distanceScene);
     }
 
@@ -72,13 +72,13 @@ public class SelectionScene extends StaticScene implements KeyListener {
         if (pressedKeys.contains(KeyCode.DIGIT1)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
         } else if (pressedKeys.contains(KeyCode.DIGIT2)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_SPRITE_ENTITIES);
+            showCase.setActiveScene(YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE);
         } else if (pressedKeys.contains(KeyCode.DIGIT3)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_SHAPE);
         } else if (pressedKeys.contains(KeyCode.DIGIT4)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_TIME);
         } else if (pressedKeys.contains(KeyCode.DIGIT5)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_ENTITYMAPS);
+            showCase.setActiveScene(YaegerShowCase.SCENE_MAPS);
         } else if (pressedKeys.contains(KeyCode.DIGIT6)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
         } else if (pressedKeys.contains(KeyCode.DIGIT7)) {

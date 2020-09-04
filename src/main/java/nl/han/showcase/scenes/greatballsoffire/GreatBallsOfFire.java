@@ -1,14 +1,14 @@
-package nl.han.showcase.scenes.spriteentities;
+package nl.han.showcase.scenes.greatballsoffire;
 
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.spriteentities.entities.BouncingYellow;
-import nl.han.showcase.scenes.spriteentities.entities.GreenBall;
-import nl.han.showcase.scenes.spriteentities.entities.PinkBall;
-import nl.han.showcase.scenes.spriteentities.entities.BlueBall;
+import nl.han.showcase.scenes.greatballsoffire.entities.BouncingYellow;
+import nl.han.showcase.scenes.greatballsoffire.entities.GreenBall;
+import nl.han.showcase.scenes.greatballsoffire.entities.PinkBall;
+import nl.han.showcase.scenes.greatballsoffire.entities.BlueBall;
 
 public class GreatBallsOfFire extends ShowCaseScene {
 

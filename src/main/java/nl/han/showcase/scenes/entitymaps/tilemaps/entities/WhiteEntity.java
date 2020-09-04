@@ -4,9 +4,9 @@ import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.sprite.SpriteEntity;
 
-public class ConcreteGrayCeramicTileMapEntity extends SpriteEntity {
+public class WhiteEntity extends SpriteEntity {
 
-    public ConcreteGrayCeramicTileMapEntity(Coordinate2D location, Size size) {
-        super("entities/concrete-gray-ceramic.jpeg", location, size);
+    public WhiteEntity(Coordinate2D location, Size size) {
+        super("entities/block-white.png", location, size);
     }
 }

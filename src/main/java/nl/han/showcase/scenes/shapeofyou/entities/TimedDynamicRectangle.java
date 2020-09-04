@@ -6,6 +6,7 @@ import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatche
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
+import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.shapeofyou.entities.timers.TimedDynamicRectangleTimer;
 
 public class TimedDynamicRectangle extends DynamicRectangleEntity implements TimerContainer, SceneBorderTouchingWatcher {
@@ -19,8 +20,8 @@ public class TimedDynamicRectangle extends DynamicRectangleEntity implements Tim
         super(initialPosition);
         setWidth(40);
         setHeight(80);
-        setFill(Color.YELLOW);
-        setStrokeColor(Color.DARKKHAKI);
+        setStrokeColor(YaegerShowCase.HAN_RED);
+        setFill(Color.BLACK);
         setStrokeWidth(4);
         setArc();
     }

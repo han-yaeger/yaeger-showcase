@@ -4,9 +4,9 @@ import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.sprite.SpriteEntity;
 
-public class WallnutTileMapEntity extends SpriteEntity {
+public class PurpleEntity extends SpriteEntity {
 
-    public WallnutTileMapEntity(Coordinate2D location, Size size) {
-        super("entities/american-walnut.jpeg", location, size);
+    public PurpleEntity(Coordinate2D location, Size size) {
+        super("entities/block-purple.png", location, size);
     }
 }

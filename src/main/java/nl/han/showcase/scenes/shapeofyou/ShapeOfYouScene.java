@@ -1,11 +1,19 @@
 package nl.han.showcase.scenes.shapeofyou;
 
+import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
+import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.shapeofyou.entities.*;
 
 public class ShapeOfYouScene extends ShowCaseScene {
+
+    private static final double ROW_HEIGHT = 150;
+    private static final double MARGIN = 150;
+
+    public static final Color YELLOW = Color.rgb(248, 228, 87);
+    public static final Color ORANGE = Color.rgb(246, 170, 62);
 
     public ShapeOfYouScene(final YaegerShowCase showCase) {
         super(showCase);
@@ -20,25 +28,34 @@ public class ShapeOfYouScene extends ShowCaseScene {
     public void setupEntities() {
         super.setupEntities();
 
-        var rect = new StaticRectangle(new Coordinate2D(40, 40));
+        var rect = new StaticRectangle(new Coordinate2D(MARGIN, ROW_HEIGHT));
+        rect.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(rect);
 
-        var circle = new StaticCircle(new Coordinate2D(140, 40));
-        addEntity(circle);
-
-        var ellipse = new StaticEllipse(new Coordinate2D(240, 40));
+        var ellipse = new StaticEllipse(new Coordinate2D(getWidth() / 2, ROW_HEIGHT));
+        ellipse.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(ellipse);
 
-        var dynamicRectangle = new DynamicRectangle(new Coordinate2D(40, 160));
+        var circle = new StaticCircle(new Coordinate2D(getWidth() - MARGIN, ROW_HEIGHT));
+        circle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
+        addEntity(circle);
+
+        var timedDynamicRectangle = new TimedDynamicRectangle(new Coordinate2D(MARGIN, 2 * ROW_HEIGHT));
+        timedDynamicRectangle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
+        addEntity(timedDynamicRectangle);
+
+        var dynamicRectangle = new DynamicRectangle(new Coordinate2D(40, 3 * ROW_HEIGHT));
+        dynamicRectangle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(dynamicRectangle);
 
-        var dynamicCircle = new DynamicCircle(new Coordinate2D(40, 260));
-        addEntity(dynamicCircle);
+        var collidingDynamicCircle = new CollidingDynamicCircle(new Coordinate2D(40, 4 * ROW_HEIGHT));
+        collidingDynamicCircle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
+        addEntity(collidingDynamicCircle);
 
-        var dynamicEllipse = new DynamicEllipse(new Coordinate2D(40, 360));
-        addEntity(dynamicEllipse);
+        var collidingDynamicEllipse = new CollidingDynamicEllipse(new Coordinate2D(440, 4 * ROW_HEIGHT));
+        collidingDynamicEllipse.setAnchorPoint(AnchorPoint.CENTER_CENTER);
+        addEntity(collidingDynamicEllipse);
 
-        var timedDynamicRectangle = new TimedDynamicRectangle(new Coordinate2D(40, 460));
-        addEntity(timedDynamicRectangle);
+
     }
 }

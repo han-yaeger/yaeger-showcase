@@ -11,6 +11,8 @@ import nl.han.showcase.scenes.entitymaps.tilemaps.FullScreenTileMap;
 
 public class TileMapScene extends ShowCaseScene implements TileMapContainer {
 
+    private static final double MARGIN = 100d;
+
     public TileMapScene(final YaegerShowCase showCase) {
         super(showCase);
     }
@@ -25,19 +27,19 @@ public class TileMapScene extends ShowCaseScene implements TileMapContainer {
         var fullScreenMap = new FullScreenTileMap();
         addTileMap(fullScreenMap);
 
-        var topLeftMap = new BoundedTileMap(new Coordinate2D(0, 0), new Size(100, 100));
+        var topLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, MARGIN), new Size(100, 100));
         topLeftMap.setAnchorPoint(AnchorPoint.TOP_LEFT);
         addTileMap(topLeftMap);
 
-        var topCentertMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, 0), new Size(100, 100));
+        var topCentertMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, MARGIN), new Size(100, 100));
         topCentertMap.setAnchorPoint(AnchorPoint.TOP_CENTER);
         addTileMap(topCentertMap);
 
-        var topRighttMap = new BoundedTileMap(new Coordinate2D(getWidth(), 0), new Size(100, 100));
+        var topRighttMap = new BoundedTileMap(new Coordinate2D(getWidth() - MARGIN, MARGIN), new Size(100, 100));
         topRighttMap.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addTileMap(topRighttMap);
 
-        var centerLeftMap = new BoundedTileMap(new Coordinate2D(0, getHeight() / 2), new Size(100, 100));
+        var centerLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, getHeight() / 2), new Size(100, 100));
         centerLeftMap.setAnchorPoint(AnchorPoint.CENTER_LEFT);
         addTileMap(centerLeftMap);
 
@@ -45,19 +47,19 @@ public class TileMapScene extends ShowCaseScene implements TileMapContainer {
         centeredMap.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addTileMap(centeredMap);
 
-        var centerRightMap = new BoundedTileMap(new Coordinate2D(getWidth(), getHeight() / 2), new Size(100, 100));
+        var centerRightMap = new BoundedTileMap(new Coordinate2D(getWidth() - MARGIN, getHeight() / 2), new Size(100, 100));
         centerRightMap.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addTileMap(centerRightMap);
 
-        var bottomLeftMap = new BoundedTileMap(new Coordinate2D(0, getHeight()), new Size(100, 100));
+        var bottomLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, getHeight() - MARGIN), new Size(100, 100));
         bottomLeftMap.setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
         addTileMap(bottomLeftMap);
 
-        var bottomCenterMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, getHeight()), new Size(100, 100));
+        var bottomCenterMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, getHeight() - MARGIN), new Size(100, 100));
         bottomCenterMap.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
         addTileMap(bottomCenterMap);
 
-        var bottomRightMap = new BoundedTileMap(new Coordinate2D(getWidth(), getHeight()), new Size(100, 100));
+        var bottomRightMap = new BoundedTileMap(new Coordinate2D(getWidth() - MARGIN, getHeight() - MARGIN), new Size(100, 100));
         bottomRightMap.setAnchorPoint(AnchorPoint.BOTTOM_RIGHT);
         addTileMap(bottomRightMap);
     }

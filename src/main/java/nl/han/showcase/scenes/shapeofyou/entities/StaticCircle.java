@@ -9,8 +9,8 @@ public class StaticCircle extends CircleEntity {
     public StaticCircle(final Coordinate2D initialPosition) {
         super(initialPosition);
         setRadius(40);
-        setFill(Color.LIGHTSEAGREEN);
-        setStrokeColor(Color.DARKKHAKI);
+        setFill(Color.WHITE);
+        setStrokeColor(Color.rgb(188, 13, 93));
         setStrokeWidth(3);
     }
 }

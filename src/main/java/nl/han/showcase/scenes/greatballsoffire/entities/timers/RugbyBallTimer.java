@@ -1,7 +1,7 @@
-package nl.han.showcase.scenes.spriteentities.entities.timers;
+package nl.han.showcase.scenes.greatballsoffire.entities.timers;
 
 import com.github.hanyaeger.api.engine.Timer;
-import nl.han.showcase.scenes.spriteentities.entities.PinkBall;
+import nl.han.showcase.scenes.greatballsoffire.entities.PinkBall;
 
 public class RugbyBallTimer extends Timer {
 

@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.spriteentities.entities;
+package nl.han.showcase.scenes.greatballsoffire.entities;
 
 import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.ContinuousRotatable;

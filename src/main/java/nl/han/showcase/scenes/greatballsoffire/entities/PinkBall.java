@@ -1,10 +1,10 @@
-package nl.han.showcase.scenes.spriteentities.entities;
+package nl.han.showcase.scenes.greatballsoffire.entities;
 
 import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
-import nl.han.showcase.scenes.spriteentities.entities.timers.RugbyBallTimer;
+import nl.han.showcase.scenes.greatballsoffire.entities.timers.RugbyBallTimer;
 
 public class PinkBall extends DynamicSpriteEntity implements TimerContainer {
 

@@ -6,6 +6,7 @@ import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
+import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 
 public class DynamicRectangle extends DynamicRectangleEntity implements SceneBorderTouchingWatcher {
 
@@ -14,8 +15,8 @@ public class DynamicRectangle extends DynamicRectangleEntity implements SceneBor
         setWidth(40);
         setHeight(80);
         setOpacity(0.8);
-        setFill(Color.PALEGREEN);
-        setStrokeColor(Color.SPRINGGREEN);
+        setFill(ShapeOfYouScene.YELLOW);
+        setStrokeColor(ShapeOfYouScene.ORANGE);
         setStrokeWidth(4);
         setMotionTo(5, Direction.RIGHT.getValue());
     }
