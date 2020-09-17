@@ -22,8 +22,11 @@ import java.util.Set;
  */
 public class SelectionScene extends StaticScene implements KeyListener {
 
-    public static final double SELECTION_BUTTON_X = 34;
+    // To align the buttons on the screen we create a constant for the left margin.
+    public static final double LEFT_MARGIN = 34;
+
     private static final String TEXT_PLEASE_SELECT = "PLEASE SELECT A SCENE:";
+
     private YaegerShowCase showCase;
 
     public SelectionScene(final YaegerShowCase showCase) {
@@ -40,7 +43,9 @@ public class SelectionScene extends StaticScene implements KeyListener {
         var quitButton = new QuitButton(getHeight() - 30, showCase);
         addEntity(quitButton);
 
-        var select = new TextEntity(new Coordinate2D(SELECTION_BUTTON_X, 95), TEXT_PLEASE_SELECT);
+        // This line of text is a simple StaticTextEntity and can therefore just be instantiated
+        // and added to the Scene.
+        var select = new TextEntity(new Coordinate2D(LEFT_MARGIN, 95), TEXT_PLEASE_SELECT);
         select.setFill(Color.BLACK);
         select.setFont(HanFont.createDefaultCondensedFont(HanFontStyle.BOLD, 23));
         addEntity(select);

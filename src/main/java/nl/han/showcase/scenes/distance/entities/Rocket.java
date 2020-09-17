@@ -7,6 +7,10 @@ import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollider;
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
 import javafx.scene.paint.Color;
 
+/**
+ * A simple {@link DynamicCircleEntity} that needs to know when it collides with an
+ * {@link AABBCollider}, so it can remove itself.
+ */
 public class Rocket extends DynamicCircleEntity implements AABBCollided {
 
     public Rocket(final Coordinate2D initialPosition, final double direction) {

@@ -8,6 +8,10 @@ import nl.han.showcase.buttons.BackButton;
 
 import java.util.Set;
 
+/**
+ * Because all scenes from the showcase look partially similar, this abstract superclass
+ * encapsulates that part of the behaviour.
+ */
 public abstract class ShowCaseScene extends DynamicScene implements KeyListener {
 
     protected YaegerShowCase showCase;

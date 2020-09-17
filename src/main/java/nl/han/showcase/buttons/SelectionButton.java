@@ -10,7 +10,7 @@ import nl.han.showcase.scenes.selection.SelectionScene;
 public class SelectionButton extends Button {
 
     public SelectionButton(final double y, String text, YaegerShowCase showCase, int scene) {
-        super(new Coordinate2D(SelectionScene.SELECTION_BUTTON_X, y), text, showCase, scene);
+        super(new Coordinate2D(SelectionScene.LEFT_MARGIN, y), text, showCase, scene);
         setFill(Color.BLACK);
         setFont(HanFont.createDefaultCondensedFont(HanFontStyle.MEDIUM, 25));
     }

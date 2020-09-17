@@ -9,6 +9,10 @@ import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.shapeofyou.entities.timers.TimedDynamicRectangleTimer;
 
+/**
+ * A {@link DynamicRectangleEntity} that uses a {@link com.github.hanyaeger.api.engine.Timer} to change the arcWidth
+ * and arcHeight of the rectangle.
+ */
 public class TimedDynamicRectangle extends DynamicRectangleEntity implements TimerContainer, SceneBorderTouchingWatcher {
 
     private static final double ARC_MIN = 0;

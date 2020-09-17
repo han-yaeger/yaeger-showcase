@@ -5,7 +5,7 @@ import com.github.hanyaeger.api.engine.YaegerGame;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
 import nl.han.showcase.scenes.timers.DynamicSceneWithTimer;
-import nl.han.showcase.scenes.entitymaps.MapsAnsLegends;
+import nl.han.showcase.scenes.mapsandlegends.MapsAnsLegends;
 import nl.han.showcase.scenes.selection.SelectionScene;
 import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 import nl.han.showcase.scenes.ridethelightning.RideTheLightningScene;
@@ -18,13 +18,18 @@ import nl.han.showcase.scenes.roadsgoeveron.RoadsGoEverOnScene;
  */
 public class YaegerShowCase extends YaegerGame {
 
+    // A constant that contains the title of the game.
     private static final String GAME_TITLE = "Yaeger Show Case";
 
+    // A constant that contains the red color that is used throughout the ShowCase.
     public static final Color HAN_RED = Color.rgb(229, 0, 85);
 
-    private static final int WIDTH = 1024;
-    private static final int HEIGHT = 698;
+    // A constant that contains the dimensions of the ShowCase.
+    private static final Size SIZE = new Size(1024, 698);
 
+    // The ShowCase contains multiple Scenes to demonstrate all feature. Each of those
+    // Scenes has an id and a title, expect the first scene, which is the one that can be
+    // used for selecting other scenes.
     public static final int SCENE_SELECTION = 1;
     public static final int SCENE_ROADS_GO_EVER_ON = 2;
     public static final String SCENE_ROADS_GO_EVER_ON_TITLE = "Roads go ever on";
@@ -41,6 +46,12 @@ public class YaegerShowCase extends YaegerGame {
     public static final int SCENE_DISTANCE = 8;
     public static final String SCENE_DISTANCE_TITLE = "The distance";
 
+    /**
+     * The {@link #main(String[])} is the entry point of every Java Application. This {@link #main(String[])}
+     * is used to call {@link YaegerGame#launch(String...)}, which start the Game.
+     *
+     * @param args Commandline parameters that will be passed to Yaeger.
+     */
     public static void main(String[] args) {
         launch(args);
     }
@@ -48,7 +59,7 @@ public class YaegerShowCase extends YaegerGame {
     @Override
     protected void setupGame() {
         setGameTitle(GAME_TITLE);
-        setSize(new Size(WIDTH, HEIGHT));
+        setSize(SIZE);
     }
 
     @Override

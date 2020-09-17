@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.entitymaps;
+package nl.han.showcase.scenes.mapsandlegends;
 
 import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
@@ -6,11 +6,18 @@ import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMapContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.entitymaps.tilemaps.BoundedTileMap;
-import nl.han.showcase.scenes.entitymaps.tilemaps.FullScreenTileMap;
+import nl.han.showcase.scenes.mapsandlegends.tilemaps.BoundedTileMap;
+import nl.han.showcase.scenes.mapsandlegends.tilemaps.FullScreenTileMap;
 
+/**
+ * There are two flavours of TileMaps. Those that cover the entire {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
+ * and thos that only take up a give area. In this Scene we demonstrate several implementations, and how we can
+ * use the {@link com.github.hanyaeger.api.engine.entities.tilemap.TileMap#setAnchorPoint(AnchorPoint)} to put them on the
+ * Scene.
+ */
 public class MapsAnsLegends extends ShowCaseScene implements TileMapContainer {
 
+    // A constant that is used as the top, right, bottom and left margin.
     private static final double MARGIN = 100d;
 
     public MapsAnsLegends(final YaegerShowCase showCase) {

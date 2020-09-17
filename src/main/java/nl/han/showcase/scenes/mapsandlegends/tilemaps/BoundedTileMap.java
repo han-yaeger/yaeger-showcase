@@ -1,9 +1,9 @@
-package nl.han.showcase.scenes.entitymaps.tilemaps;
+package nl.han.showcase.scenes.mapsandlegends.tilemaps;
 
 import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
-import nl.han.showcase.scenes.entitymaps.tilemaps.entities.PurpleEntity;
+import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.PurpleEntity;
 
 
 public class BoundedTileMap extends TileMap {

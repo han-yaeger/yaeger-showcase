@@ -41,7 +41,6 @@ public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerCont
         spaceShip.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
         addEntity(spaceShip);
 
-
         addAntiAircraftGun(spaceShip);
     }
 
@@ -56,7 +55,7 @@ public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerCont
         var antiAircraftBase = new AntiAircraftBase(new Coordinate2D(getWidth() / 2, getHeight()));
         addEntity(antiAircraftBase);
 
-        var antiAircraftLauncher = new AnitAircraftLauncer(new Coordinate2D(getWidth() / 2, getHeight()), spaceShip, rocketSpawner);
+        var antiAircraftLauncher = new AntiAircraftLauncer(new Coordinate2D(getWidth() / 2, getHeight()), spaceShip, rocketSpawner);
         addEntity(antiAircraftLauncher);
 
         var distanceText = new DistanceText(new Coordinate2D(getWidth() / 2 + 60, getHeight() - 60), antiAircraftBase, spaceShip);
