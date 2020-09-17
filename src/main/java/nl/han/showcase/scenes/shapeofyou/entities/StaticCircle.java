@@ -3,6 +3,7 @@ package nl.han.showcase.scenes.shapeofyou.entities;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.CircleEntity;
 import javafx.scene.paint.Color;
+import nl.han.showcase.YaegerShowCase;
 
 public class StaticCircle extends CircleEntity {
 
@@ -10,7 +11,7 @@ public class StaticCircle extends CircleEntity {
         super(initialPosition);
         setRadius(40);
         setFill(Color.WHITE);
-        setStrokeColor(Color.rgb(188, 13, 93));
+        setStrokeColor(YaegerShowCase.HAN_RED);
         setStrokeWidth(3);
     }
 }
