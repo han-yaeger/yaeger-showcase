@@ -9,11 +9,11 @@ import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.entitymaps.tilemaps.BoundedTileMap;
 import nl.han.showcase.scenes.entitymaps.tilemaps.FullScreenTileMap;
 
-public class TileMapScene extends ShowCaseScene implements TileMapContainer {
+public class MapsAnsLegends extends ShowCaseScene implements TileMapContainer {
 
     private static final double MARGIN = 100d;
 
-    public TileMapScene(final YaegerShowCase showCase) {
+    public MapsAnsLegends(final YaegerShowCase showCase) {
         super(showCase);
     }
 

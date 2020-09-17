@@ -41,6 +41,18 @@ public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerCont
         spaceShip.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
         addEntity(spaceShip);
 
+
+        addAntiAircraftGun(spaceShip);
+    }
+
+    /**
+     * The anti aircraft gun is a composition of several different Entities, which are added individually
+     * to the Scene. This is of cours rather ugly, since a composition as such should be mirrored by a
+     * composite structure. When Issue #101 is resolved, this code will be changed to use a composite Entity.
+     *
+     * @param spaceShip
+     */
+    private void addAntiAircraftGun(SpaceShip spaceShip) {
         var antiAircraftBase = new AntiAircraftBase(new Coordinate2D(getWidth() / 2, getHeight()));
         addEntity(antiAircraftBase);
 

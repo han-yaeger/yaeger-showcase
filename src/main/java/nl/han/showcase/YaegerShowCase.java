@@ -5,7 +5,7 @@ import com.github.hanyaeger.api.engine.YaegerGame;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
 import nl.han.showcase.scenes.timers.DynamicSceneWithTimer;
-import nl.han.showcase.scenes.entitymaps.TileMapScene;
+import nl.han.showcase.scenes.entitymaps.MapsAnsLegends;
 import nl.han.showcase.scenes.selection.SelectionScene;
 import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 import nl.han.showcase.scenes.ridethelightning.RideTheLightningScene;
@@ -63,7 +63,7 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_SHAPE, shapeEntitiesScene);
         var dynamicSceneWithTimers = new DynamicSceneWithTimer(this);
         addScene(SCENE_TIME, dynamicSceneWithTimers);
-        var sceneWithEntityMaps = new TileMapScene(this);
+        var sceneWithEntityMaps = new MapsAnsLegends(this);
         addScene(SCENE_MAPS, sceneWithEntityMaps);
         var sceneWithSpawners = new RideTheLightningScene(this);
         addScene(SCENE_RIDE_THE_LIGHTNING, sceneWithSpawners);
