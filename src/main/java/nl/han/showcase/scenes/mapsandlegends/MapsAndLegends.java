@@ -15,12 +15,12 @@ import nl.han.showcase.scenes.mapsandlegends.tilemaps.FullScreenTileMap;
  * use the {@link com.github.hanyaeger.api.engine.entities.tilemap.TileMap#setAnchorPoint(AnchorPoint)} to put them on the
  * Scene.
  */
-public class MapsAnsLegends extends ShowCaseScene implements TileMapContainer {
+public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
 
     // A constant that is used as the top, right, bottom and left margin.
     private static final double MARGIN = 100d;
 
-    public MapsAnsLegends(final YaegerShowCase showCase) {
+    public MapsAndLegends(final YaegerShowCase showCase) {
         super(showCase);
     }
 

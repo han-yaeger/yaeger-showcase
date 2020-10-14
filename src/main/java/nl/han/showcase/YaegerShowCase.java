@@ -3,9 +3,10 @@ package nl.han.showcase;
 import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.YaegerGame;
 import javafx.scene.paint.Color;
+import nl.han.showcase.scenes.composing.Composing;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
-import nl.han.showcase.scenes.timers.DynamicSceneWithTimer;
-import nl.han.showcase.scenes.mapsandlegends.MapsAnsLegends;
+import nl.han.showcase.scenes.timers.Time;
+import nl.han.showcase.scenes.mapsandlegends.MapsAndLegends;
 import nl.han.showcase.scenes.selection.SelectionScene;
 import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 import nl.han.showcase.scenes.ridethelightning.RideTheLightningScene;
@@ -37,13 +38,17 @@ public class YaegerShowCase extends YaegerGame {
     public static final String SCENE_GREAT_BALLS_OF_FIRE_TITLE = "Great balls of fire";
     public static final int SCENE_SHAPE = 4;
     public static final String SCENE_SHAPE_TITLE = "Shape of you";
-    public static final int SCENE_TIME = 5;
+
+    public static final int SCENE_COMPOSING = 5;
+    public static final String SCENE_COMPOSING_TITLE = "Composing";
+
+    public static final int SCENE_TIME = 6;
     public static final String SCENE_TIME_TITLE = "Time";
-    public static final int SCENE_MAPS = 6;
+    public static final int SCENE_MAPS = 7;
     public static final String SCENE_MAPS_TITLE = "Maps and Legends";
-    public static final int SCENE_RIDE_THE_LIGHTNING = 7;
+    public static final int SCENE_RIDE_THE_LIGHTNING = 8;
     public static final String SCENE_RIDE_THE_LIGHTNING_TITLE = "Ride the Lightning";
-    public static final int SCENE_DISTANCE = 8;
+    public static final int SCENE_DISTANCE = 9;
     public static final String SCENE_DISTANCE_TITLE = "The distance";
 
     /**
@@ -64,20 +69,25 @@ public class YaegerShowCase extends YaegerGame {
 
     @Override
     protected void setupScenes() {
-        var selectionScene = new SelectionScene(this);
-        addScene(SCENE_SELECTION, selectionScene);
-        var textEntitiesScene = new RoadsGoEverOnScene(this);
-        addScene(SCENE_ROADS_GO_EVER_ON, textEntitiesScene);
-        var spriteEntitiesScene = new GreatBallsOfFire(this);
-        addScene(SCENE_GREAT_BALLS_OF_FIRE, spriteEntitiesScene);
-        var shapeEntitiesScene = new ShapeOfYouScene(this);
-        addScene(SCENE_SHAPE, shapeEntitiesScene);
-        var dynamicSceneWithTimers = new DynamicSceneWithTimer(this);
-        addScene(SCENE_TIME, dynamicSceneWithTimers);
-        var sceneWithEntityMaps = new MapsAnsLegends(this);
-        addScene(SCENE_MAPS, sceneWithEntityMaps);
-        var sceneWithSpawners = new RideTheLightningScene(this);
-        addScene(SCENE_RIDE_THE_LIGHTNING, sceneWithSpawners);
+        var selection = new SelectionScene(this);
+        addScene(SCENE_SELECTION, selection);
+        var roadsGoEverOn = new RoadsGoEverOnScene(this);
+        addScene(SCENE_ROADS_GO_EVER_ON, roadsGoEverOn);
+        var greatBallsOfFire = new GreatBallsOfFire(this);
+        addScene(SCENE_GREAT_BALLS_OF_FIRE, greatBallsOfFire);
+        var shapeOfYou = new ShapeOfYouScene(this);
+        addScene(SCENE_SHAPE, shapeOfYou);
+
+        var composing = new Composing(this);
+        addScene(SCENE_COMPOSING, composing);
+
+
+        var time = new Time(this);
+        addScene(SCENE_TIME, time);
+        var mapsAndLegends = new MapsAndLegends(this);
+        addScene(SCENE_MAPS, mapsAndLegends);
+        var rideTheLightning = new RideTheLightningScene(this);
+        addScene(SCENE_RIDE_THE_LIGHTNING, rideTheLightning);
         var distance = new TheDistanceScene(this);
         addScene(SCENE_DISTANCE, distance);
     }

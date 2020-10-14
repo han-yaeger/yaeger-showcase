@@ -10,13 +10,13 @@ import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.timers.timers.SceneMinuteTimer;
 
-public class DynamicSceneWithTimer extends ShowCaseScene implements TimerContainer {
+public class Time extends ShowCaseScene implements TimerContainer {
 
     public static final int COUNTDOWN_NUMBER = 5;
     private TextEntity displayNumberText;
     private int displayNumber;
 
-    public DynamicSceneWithTimer(YaegerShowCase showCase) {
+    public Time(YaegerShowCase showCase) {
         super(showCase);
     }
 

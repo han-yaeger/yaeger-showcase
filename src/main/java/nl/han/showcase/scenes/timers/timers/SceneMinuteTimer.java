@@ -1,13 +1,13 @@
 package nl.han.showcase.scenes.timers.timers;
 
 import com.github.hanyaeger.api.engine.Timer;
-import nl.han.showcase.scenes.timers.DynamicSceneWithTimer;
+import nl.han.showcase.scenes.timers.Time;
 
 public class SceneMinuteTimer extends Timer {
 
-    private DynamicSceneWithTimer scene;
+    private Time scene;
 
-    public SceneMinuteTimer(DynamicSceneWithTimer scene) {
+    public SceneMinuteTimer(Time scene) {
         super(1000);
         this.scene = scene;
     }
