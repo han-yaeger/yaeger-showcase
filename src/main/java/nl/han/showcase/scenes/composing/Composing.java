@@ -26,13 +26,13 @@ public class Composing extends ShowCaseScene {
         topLeftWheel.setAnchorPoint(AnchorPoint.TOP_LEFT);
         addEntity(topLeftWheel);
 
-        var topRightWheel = new Wheel(new Coordinate2D(0, 0));
-        topRightWheel.setAnchorPoint(AnchorPoint.TOP_RIGHT);
-        addEntity(topRightWheel);
-
-        var bottomRightWheel = new Wheel(new Coordinate2D(0, 0));
-        bottomRightWheel.setAnchorPoint(AnchorPoint.BOTTOM_RIGHT);
-        addEntity(bottomRightWheel);
+//        var topRightWheel = new Wheel(new Coordinate2D(0, 0));
+//        topRightWheel.setAnchorPoint(AnchorPoint.TOP_RIGHT);
+//        addEntity(topRightWheel);
+//
+//        var bottomRightWheel = new Wheel(new Coordinate2D(0, 0));
+//        bottomRightWheel.setAnchorPoint(AnchorPoint.BOTTOM_RIGHT);
+//        addEntity(bottomRightWheel);
 
         var bottomLeftWheel = new Wheel(new Coordinate2D(0, 0));
         bottomLeftWheel.setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
