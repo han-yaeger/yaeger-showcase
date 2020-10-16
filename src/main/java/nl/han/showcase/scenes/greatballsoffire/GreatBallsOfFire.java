@@ -5,10 +5,7 @@ import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.greatballsoffire.entities.BouncingYellow;
-import nl.han.showcase.scenes.greatballsoffire.entities.GreenBall;
-import nl.han.showcase.scenes.greatballsoffire.entities.PinkBall;
-import nl.han.showcase.scenes.greatballsoffire.entities.BlueBall;
+import nl.han.showcase.scenes.greatballsoffire.entities.*;
 
 public class GreatBallsOfFire extends ShowCaseScene {
 
@@ -28,7 +25,7 @@ public class GreatBallsOfFire extends ShowCaseScene {
 
         placeRugbyBallsWithAllAnchorPoints();
 
-        var blueBall = new BlueBall(new Coordinate2D(100, 200));
+        var blueBall = new BlueBallBouncing(new Coordinate2D(100, 200));
         addEntity(blueBall);
 
         var greenBall1 = new GreenBall(new Coordinate2D(getWidth() / 2, 280), 4, Direction.RIGHT.getValue());
@@ -42,6 +39,9 @@ public class GreatBallsOfFire extends ShowCaseScene {
         var greenBall3 = new GreenBall(new Coordinate2D(getWidth() - 20, 280), 6, Direction.RIGHT.getValue());
         greenBall3.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(greenBall3);
+
+        var circlingBlue = new BlueBallCircling(new Coordinate2D(50, 430));
+        addEntity(circlingBlue);
 
         var bouncingYellow = new BouncingYellow(new Coordinate2D(260, 500));
         addEntity(bouncingYellow);
