@@ -48,7 +48,7 @@ public class ShapeOfYouScene extends ShowCaseScene {
         updatingCircle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(updatingCircle);
 
-        var collidingUpdatedCircle = new CollidingUpdatingCircle(new Coordinate2D(VERTICAL_MARGIN, 3 * ROW_HEIGHT));
+        var collidingUpdatedCircle = new MovingUpdatingCircle(new Coordinate2D(VERTICAL_MARGIN, 3 * ROW_HEIGHT));
         collidingUpdatedCircle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(collidingUpdatedCircle);
 

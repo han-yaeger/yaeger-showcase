@@ -19,7 +19,7 @@ public class BlueBallCircling extends DynamicSpriteEntity implements SceneBorder
     @Override
     public void notifyBoundaryCrossing(SceneBorder border) {
         if (border.equals(SceneBorder.RIGHT)) {
-            setReferenceX(-30);
+            setAnchorLocationX(-30);
         }
     }
 }

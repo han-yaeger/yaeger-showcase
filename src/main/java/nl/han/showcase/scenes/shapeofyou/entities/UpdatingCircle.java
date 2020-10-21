@@ -19,7 +19,7 @@ public class UpdatingCircle extends DynamicCircleEntity implements UpdateExposer
 
     private static final double MIN_RADIUS = 1;
     private static final double MAX_RADIUS = 40;
-    private static final double RADIUS_INCREMENT = 0.5;
+    private static final double RADIUS_DELTA = 0.5;
     private static boolean INCREMENT = true;
 
     public UpdatingCircle(final Coordinate2D initialLocation) {
@@ -35,17 +35,21 @@ public class UpdatingCircle extends DynamicCircleEntity implements UpdateExposer
     public void explicitUpdate(final long timestamp) {
         if (INCREMENT) {
             if (getRadius() < MAX_RADIUS) {
-                setRadius(getRadius() + RADIUS_INCREMENT);
+                setRadius(getRadius() + getRadiusIncrement());
             } else {
                 INCREMENT = false;
             }
         }
         if (!INCREMENT) {
             if (getRadius() > MIN_RADIUS) {
-                setRadius(getRadius() - RADIUS_INCREMENT);
+                setRadius(getRadius() - getRadiusIncrement());
             } else {
                 INCREMENT = true;
             }
         }
+    }
+
+    protected double getRadiusIncrement() {
+        return RADIUS_DELTA;
     }
 }
