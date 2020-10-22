@@ -48,9 +48,9 @@ public class ShapeOfYouScene extends ShowCaseScene {
         updatingCircle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(updatingCircle);
 
-        var collidingUpdatedCircle = new MovingUpdatingCircle(new Coordinate2D(VERTICAL_MARGIN, 3 * ROW_HEIGHT));
-        collidingUpdatedCircle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        addEntity(collidingUpdatedCircle);
+        var movingUpdatedCircle = new MovingUpdatingCircle(new Coordinate2D(VERTICAL_MARGIN, 3 * ROW_HEIGHT));
+        movingUpdatedCircle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
+        addEntity(movingUpdatedCircle);
 
         var dynamicRectangle = new DynamicRectangle(new Coordinate2D(getWidth() - VERTICAL_MARGIN, 3 * ROW_HEIGHT));
         dynamicRectangle.setAnchorPoint(AnchorPoint.CENTER_CENTER);
@@ -63,7 +63,5 @@ public class ShapeOfYouScene extends ShowCaseScene {
         var collidingDynamicEllipse = new CollidingDynamicEllipse(new Coordinate2D(440, 4 * ROW_HEIGHT));
         collidingDynamicEllipse.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(collidingDynamicEllipse);
-
-
     }
 }
