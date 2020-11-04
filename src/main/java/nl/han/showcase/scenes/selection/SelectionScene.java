@@ -59,16 +59,19 @@ public class SelectionScene extends StaticScene implements KeyListener {
         var shapeOfYou = new SelectionButton(250, YaegerShowCase.SCENE_SHAPE_TITLE, showCase, YaegerShowCase.SCENE_SHAPE);
         addEntity(shapeOfYou);
 
-        var time = new SelectionButton(300, YaegerShowCase.SCENE_TIME_TITLE, showCase, YaegerShowCase.SCENE_TIME);
+        var composing = new SelectionButton(300, YaegerShowCase.SCENE_COMPOSING_TITLE, showCase, YaegerShowCase.SCENE_COMPOSING);
+        addEntity(composing);
+
+        var time = new SelectionButton(350, YaegerShowCase.SCENE_TIME_TITLE, showCase, YaegerShowCase.SCENE_TIME);
         addEntity(time);
 
-        var maps = new SelectionButton(350, YaegerShowCase.SCENE_MAPS_TITLE, showCase, YaegerShowCase.SCENE_MAPS);
+        var maps = new SelectionButton(400, YaegerShowCase.SCENE_MAPS_TITLE, showCase, YaegerShowCase.SCENE_MAPS);
         addEntity(maps);
 
-        var rideTheLightning = new SelectionButton(400, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING_TITLE, showCase, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
+        var rideTheLightning = new SelectionButton(450, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING_TITLE, showCase, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
         addEntity(rideTheLightning);
 
-        var distanceScene = new SelectionButton(450, YaegerShowCase.SCENE_DISTANCE_TITLE, showCase, YaegerShowCase.SCENE_DISTANCE);
+        var distanceScene = new SelectionButton(500, YaegerShowCase.SCENE_DISTANCE_TITLE, showCase, YaegerShowCase.SCENE_DISTANCE);
         addEntity(distanceScene);
     }
 
@@ -81,12 +84,14 @@ public class SelectionScene extends StaticScene implements KeyListener {
         } else if (pressedKeys.contains(KeyCode.DIGIT3)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_SHAPE);
         } else if (pressedKeys.contains(KeyCode.DIGIT4)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_TIME);
+            showCase.setActiveScene(YaegerShowCase.SCENE_COMPOSING);
         } else if (pressedKeys.contains(KeyCode.DIGIT5)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_MAPS);
+            showCase.setActiveScene(YaegerShowCase.SCENE_TIME);
         } else if (pressedKeys.contains(KeyCode.DIGIT6)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
+            showCase.setActiveScene(YaegerShowCase.SCENE_MAPS);
         } else if (pressedKeys.contains(KeyCode.DIGIT7)) {
+            showCase.setActiveScene(YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
+        } else if (pressedKeys.contains(KeyCode.DIGIT8)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_DISTANCE);
         }
     }
