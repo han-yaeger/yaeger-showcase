@@ -20,7 +20,7 @@ public class Rocket extends DynamicCircleEntity implements AABBCollided {
         setStrokeWidth(1);
         setStrokeColor(Color.YELLOW);
         setFill(Color.ORANGE);
-        setMotionTo(8, direction);
+        setMotion(8, direction);
         setRadius(4);
     }
 

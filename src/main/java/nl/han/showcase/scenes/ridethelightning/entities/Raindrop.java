@@ -16,7 +16,7 @@ public class Raindrop extends DynamicEllipseEntity implements SceneBorderCrossin
         setOpacity(0.4);
         setFill(Color.rgb(10, 10, 40));
         setStrokeWidth(0);
-        setMotionTo(speed, Direction.DOWN.getValue());
+        setMotion(speed, Direction.DOWN.getValue());
     }
 
     @Override

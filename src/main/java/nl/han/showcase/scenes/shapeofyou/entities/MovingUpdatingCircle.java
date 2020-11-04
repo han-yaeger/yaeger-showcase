@@ -17,7 +17,7 @@ public class MovingUpdatingCircle extends UpdatingCircle implements SceneBorderT
     public MovingUpdatingCircle(final Coordinate2D initialLocation) {
         super(initialLocation);
 
-        setMotionTo(2, Direction.RIGHT.getValue());
+        setMotion(2, Direction.RIGHT.getValue());
     }
 
     @Override
@@ -27,7 +27,7 @@ public class MovingUpdatingCircle extends UpdatingCircle implements SceneBorderT
 
     @Override
     public void notifyBoundaryTouching(final SceneBorder border) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 
     /**

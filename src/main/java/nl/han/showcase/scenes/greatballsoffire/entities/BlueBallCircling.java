@@ -11,7 +11,7 @@ public class BlueBallCircling extends DynamicSpriteEntity implements SceneBorder
 
     public BlueBallCircling(final Coordinate2D location) {
         super("entities/ball-blue.png", location, new Size(30, 30), 0);
-        setMotionTo(8, Direction.RIGHT.getValue());
+        setMotion(8, Direction.RIGHT.getValue());
 
     }
 

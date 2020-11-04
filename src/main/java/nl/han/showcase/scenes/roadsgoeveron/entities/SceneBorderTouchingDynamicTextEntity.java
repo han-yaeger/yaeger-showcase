@@ -17,7 +17,7 @@ public class SceneBorderTouchingDynamicTextEntity extends DynamicTextEntity impl
         super(position, TEXT);
         setFill(Color.SILVER);
         setFont(Font.font("arial", FontWeight.BOLD, 30));
-        setMotionTo(6, Direction.RIGHT.getValue());
+        setMotion(6, Direction.RIGHT.getValue());
     }
 
     @Override
@@ -27,6 +27,6 @@ public class SceneBorderTouchingDynamicTextEntity extends DynamicTextEntity impl
         } else {
             setFill(Color.TEAL);
         }
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 }

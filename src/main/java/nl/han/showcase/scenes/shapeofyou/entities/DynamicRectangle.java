@@ -18,11 +18,11 @@ public class DynamicRectangle extends DynamicRectangleEntity implements SceneBor
         setFill(ShapeOfYouScene.YELLOW);
         setStrokeColor(ShapeOfYouScene.ORANGE);
         setStrokeWidth(4);
-        setMotionTo(5, Direction.RIGHT.getValue());
+        setMotion(5, Direction.RIGHT.getValue());
     }
 
     @Override
     public void notifyBoundaryTouching(final SceneBorder border) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 }

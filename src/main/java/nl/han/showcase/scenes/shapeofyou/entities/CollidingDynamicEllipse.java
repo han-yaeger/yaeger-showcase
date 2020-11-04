@@ -20,16 +20,16 @@ public class CollidingDynamicEllipse extends DynamicEllipseEntity implements Sce
         setFill(Color.BLACK);
         setStrokeColor(YaegerShowCase.HAN_RED);
         setStrokeWidth(4);
-        setMotionTo(5, Direction.LEFT.getValue());
+        setMotion(5, Direction.LEFT.getValue());
     }
 
     @Override
     public void notifyBoundaryTouching(final SceneBorder border) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 
     @Override
     public void onCollision(AABBCollider collidingObject) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 }

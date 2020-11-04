@@ -32,7 +32,7 @@ public class TimedDynamicRectangle extends DynamicRectangleEntity implements Tim
 
     @Override
     public void notifyBoundaryTouching(SceneBorder border) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 
     @Override

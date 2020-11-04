@@ -38,24 +38,24 @@ public class SpaceShip extends DynamicCircleEntity implements KeyListener, Scene
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
         if (pressedKeys.contains(KeyCode.LEFT)) {
-            setMotionTo(SPACESHIP_SPEED, Direction.LEFT.getValue());
+            setMotion(SPACESHIP_SPEED, Direction.LEFT.getValue());
             setRotate(270);
         } else if (pressedKeys.contains(KeyCode.RIGHT)) {
-            setMotionTo(SPACESHIP_SPEED, Direction.RIGHT.getValue());
+            setMotion(SPACESHIP_SPEED, Direction.RIGHT.getValue());
             setRotate(90);
         } else if (pressedKeys.contains(KeyCode.UP)) {
-            setMotionTo(SPACESHIP_SPEED, Direction.UP.getValue());
+            setMotion(SPACESHIP_SPEED, Direction.UP.getValue());
             setRotate(0);
         } else if (pressedKeys.contains(KeyCode.DOWN)) {
-            setMotionTo(SPACESHIP_SPEED, Direction.DOWN.getValue());
+            setMotion(SPACESHIP_SPEED, Direction.DOWN.getValue());
             setRotate(180);
         } else if (pressedKeys.isEmpty()) {
-            setSpeedTo(0);
+            setSpeed(0);
         }
     }
 
     @Override
     public void notifyBoundaryTouching(SceneBorder border) {
-        setSpeedTo(0);
+        setSpeed(0);
     }
 }

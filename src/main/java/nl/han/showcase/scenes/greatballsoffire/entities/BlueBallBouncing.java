@@ -11,11 +11,11 @@ public class BlueBallBouncing extends DynamicSpriteEntity implements SceneBorder
 
     public BlueBallBouncing(final Coordinate2D location) {
         super("entities/ball-blue.png", location, new Size(30, 30), 0);
-        setMotionTo(4, Direction.RIGHT.getValue());
+        setMotion(4, Direction.RIGHT.getValue());
     }
 
     @Override
     public void notifyBoundaryTouching(final SceneBorder border) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 }

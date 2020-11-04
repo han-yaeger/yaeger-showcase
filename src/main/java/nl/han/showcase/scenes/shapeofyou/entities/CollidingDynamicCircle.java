@@ -20,16 +20,16 @@ public class CollidingDynamicCircle extends DynamicCircleEntity implements Scene
         setFill(YaegerShowCase.HAN_RED);
         setStrokeColor(Color.BLACK);
         setStrokeWidth(4);
-        setMotionTo(6, Direction.RIGHT.getValue());
+        setMotion(6, Direction.RIGHT.getValue());
     }
 
     @Override
     public void notifyBoundaryTouching(final SceneBorder border) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 
     @Override
     public void onCollision(AABBCollider collidingObject) {
-        changeDirectionBy(180);
+        changeDirection(180);
     }
 }
