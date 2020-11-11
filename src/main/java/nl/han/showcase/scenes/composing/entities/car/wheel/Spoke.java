@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.composing.entities.wheel;
+package nl.han.showcase.scenes.composing.entities.car.wheel;
 
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;

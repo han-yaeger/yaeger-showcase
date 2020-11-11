@@ -1,15 +1,13 @@
-package nl.han.showcase.scenes.composing.entities.wheel;
+package nl.han.showcase.scenes.composing.entities.car.wheel;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.DynamicCompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 
 public class Wheel extends DynamicCompositeEntity {
 
     public Wheel(Coordinate2D initialLocation) {
         super(initialLocation);
-        setRotationSpeed(4);
-        setMotion(1, Direction.RIGHT.getValue());
+        setRotationSpeed(-4);
     }
 
     @Override
