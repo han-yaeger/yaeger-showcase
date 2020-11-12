@@ -9,6 +9,11 @@ import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.composing.entities.car.wheel.Wheel;
 
+/**
+ * A composition of a car. Notice how the wheels themselves are also compositions and rotate.
+ * The car itself is a {@link SceneBorderTouchingWatcher}, so the car can automatically move from left to right and
+ * vice versa.
+ */
 public class Car extends DynamicCompositeEntity implements SceneBorderTouchingWatcher {
 
     public final static Color BODY_COLOR = Color.rgb(109, 0, 65);

@@ -5,15 +5,19 @@ import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseBut
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.CircleEntity;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
+import nl.han.showcase.YaegerShowCase;
 
 public class Circle extends CircleEntity implements MouseButtonPressedListener {
 
+    public static final double RADIUS = 30;
+
     public Circle(Coordinate2D initialPosition) {
         super(initialPosition);
-        setRadius(20);
+        setRadius(RADIUS);
         setFill(Color.TRANSPARENT);
-        setStrokeColor(Color.WHITE);
-        setStrokeWidth(0.2);
+        setStrokeWidth(1);
+        setStrokeColor(YaegerShowCase.HAN_RED);
+        setStrokeWidth(1);
     }
 
     @Override
