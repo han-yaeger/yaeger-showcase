@@ -2,15 +2,15 @@ package nl.han.showcase.scenes.shapeofyou.entities;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollider;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.ellipse.DynamicEllipseEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
-public class CollidingDynamicEllipse extends DynamicEllipseEntity implements SceneBorderTouchingWatcher, AABBCollided, AABBCollider {
+public class CollidingDynamicEllipse extends DynamicEllipseEntity implements SceneBorderTouchingWatcher, Collided, Collider {
 
     public CollidingDynamicEllipse(final Coordinate2D initialPosition) {
         super(initialPosition);
@@ -29,7 +29,7 @@ public class CollidingDynamicEllipse extends DynamicEllipseEntity implements Sce
     }
 
     @Override
-    public void onCollision(AABBCollider collidingObject) {
+    public void onCollision(Collider collidingObject) {
         changeDirection(180);
     }
 }

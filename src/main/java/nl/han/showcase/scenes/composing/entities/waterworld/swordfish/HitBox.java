@@ -1,15 +1,15 @@
 package nl.han.showcase.scenes.composing.entities.waterworld.swordfish;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollider;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
 import javafx.scene.paint.Color;
 
 /**
  * The Hitbox to be used in the composition is just a simple static {@link RectangleEntity}
- * that implements {@link AABBCollider}.
+ * that implements {@link Collider}.
  */
-public class HitBox extends RectangleEntity implements AABBCollider {
+public class HitBox extends RectangleEntity implements Collider {
 
     public HitBox(final Coordinate2D initialPosition) {
         super(initialPosition);

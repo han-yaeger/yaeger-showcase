@@ -2,8 +2,8 @@ package nl.han.showcase.scenes.shapeofyou.entities;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollider;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 
-public class CollidingDynamicCircle extends DynamicCircleEntity implements SceneBorderTouchingWatcher, AABBCollider, AABBCollided {
+public class CollidingDynamicCircle extends DynamicCircleEntity implements SceneBorderTouchingWatcher, Collider, Collided {
 
     public CollidingDynamicCircle(final Coordinate2D initialPosition) {
         super(initialPosition);
@@ -29,7 +29,7 @@ public class CollidingDynamicCircle extends DynamicCircleEntity implements Scene
     }
 
     @Override
-    public void onCollision(AABBCollider collidingObject) {
+    public void onCollision(Collider collidingObject) {
         changeDirection(180);
     }
 }

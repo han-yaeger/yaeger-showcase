@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.distance.entities;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollider;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
 import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListener;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
@@ -21,9 +21,9 @@ import java.util.Set;
  * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}. When that happens its speed
  * is set to 0.
  * <p>
- * The interface {@link AABBCollider} is used to registers collisions with a {@link Rocket}.
+ * The interface {@link Collider} is used to registers collisions with a {@link Rocket}.
  */
-public class SpaceShip extends DynamicCircleEntity implements KeyListener, SceneBorderTouchingWatcher, AABBCollider {
+public class SpaceShip extends DynamicCircleEntity implements KeyListener, SceneBorderTouchingWatcher, Collider {
 
     private static final double SPACESHIP_SPEED = 5;
 

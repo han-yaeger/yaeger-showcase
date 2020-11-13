@@ -2,8 +2,8 @@ package nl.han.showcase.scenes.composing.entities.waterworld.hanny;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.DynamicCompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.AABBCollider;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
+import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
 import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListener;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
@@ -18,9 +18,9 @@ import java.util.Set;
  * displays her health.
  * <p>
  * Because the composition will act as a whole, this is the place where we implement {@link KeyListener} and
- * {@link AABBCollided}.
+ * {@link Collided}.
  */
-public class Hanny extends DynamicCompositeEntity implements KeyListener, AABBCollided {
+public class Hanny extends DynamicCompositeEntity implements KeyListener, Collided {
 
     private int health = 10;
 
@@ -59,7 +59,7 @@ public class Hanny extends DynamicCompositeEntity implements KeyListener, AABBCo
     }
 
     @Override
-    public void onCollision(AABBCollider collidingObject) {
+    public void onCollision(Collider collidingObject) {
         healthText.setText(String.valueOf(health--));
     }
 }
