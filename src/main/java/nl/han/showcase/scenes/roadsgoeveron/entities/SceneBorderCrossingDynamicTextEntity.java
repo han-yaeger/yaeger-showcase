@@ -17,7 +17,7 @@ public class SceneBorderCrossingDynamicTextEntity extends DynamicTextEntity impl
         super(position, TEXT);
         setFill(Color.TURQUOISE);
         setFont(Font.font("palatino", FontWeight.BOLD, 30));
-        setMotion(4, Direction.LEFT.getValue());
+        setMotion(4, Direction.LEFT);
     }
 
     @Override

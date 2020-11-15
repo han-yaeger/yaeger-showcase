@@ -20,7 +20,7 @@ public class CollidingDynamicEllipse extends DynamicEllipseEntity implements Sce
         setFill(Color.BLACK);
         setStrokeColor(YaegerShowCase.HAN_RED);
         setStrokeWidth(4);
-        setMotion(5, Direction.LEFT.getValue());
+        setMotion(5, Direction.LEFT);
     }
 
     @Override

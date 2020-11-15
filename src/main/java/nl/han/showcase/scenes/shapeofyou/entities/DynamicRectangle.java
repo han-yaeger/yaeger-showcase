@@ -18,7 +18,7 @@ public class DynamicRectangle extends DynamicRectangleEntity implements SceneBor
         setFill(ShapeOfYouScene.YELLOW);
         setStrokeColor(ShapeOfYouScene.ORANGE);
         setStrokeWidth(4);
-        setMotion(5, Direction.RIGHT.getValue());
+        setMotion(5, Direction.RIGHT);
     }
 
     @Override

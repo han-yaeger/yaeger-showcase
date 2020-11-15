@@ -23,7 +23,7 @@ public class Car extends DynamicCompositeEntity implements SceneBorderTouchingWa
 
     public Car(Coordinate2D initialLocation) {
         super(initialLocation);
-        setMotion(4, Direction.RIGHT.getValue());
+        setMotion(4, Direction.RIGHT);
     }
 
     @Override

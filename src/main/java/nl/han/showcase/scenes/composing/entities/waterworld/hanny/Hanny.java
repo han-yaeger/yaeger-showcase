@@ -45,14 +45,14 @@ public class Hanny extends DynamicCompositeEntity implements KeyListener, Collid
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
         if (pressedKeys.contains(KeyCode.LEFT)) {
             hannySprite.setCurrentFrameIndex(0);
-            setMotion(3, Direction.LEFT.getValue());
+            setMotion(3, Direction.LEFT);
         } else if (pressedKeys.contains(KeyCode.RIGHT)) {
             hannySprite.setCurrentFrameIndex(1);
-            setMotion(3, Direction.RIGHT.getValue());
+            setMotion(3, Direction.RIGHT);
         } else if (pressedKeys.contains(KeyCode.UP)) {
-            setMotion(3, Direction.UP.getValue());
+            setMotion(3, Direction.UP);
         } else if (pressedKeys.contains(KeyCode.DOWN)) {
-            setMotion(3, Direction.DOWN.getValue());
+            setMotion(3, Direction.DOWN);
         } else if (pressedKeys.isEmpty()) {
             setSpeed(0);
         }

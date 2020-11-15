@@ -20,7 +20,7 @@ public class CollidingDynamicCircle extends DynamicCircleEntity implements Scene
         setFill(YaegerShowCase.HAN_RED);
         setStrokeColor(Color.BLACK);
         setStrokeWidth(4);
-        setMotion(6, Direction.RIGHT.getValue());
+        setMotion(6, Direction.RIGHT);
     }
 
     @Override

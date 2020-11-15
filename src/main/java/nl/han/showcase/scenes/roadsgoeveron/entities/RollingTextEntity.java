@@ -15,7 +15,7 @@ public class RollingTextEntity extends DynamicTextEntity implements SceneBorderT
         super(initialPosition);
         setText("Rolling");
         setFill(YaegerShowCase.HAN_RED);
-        setMotion(5, Direction.LEFT.getValue());
+        setMotion(5, Direction.LEFT);
         setFont(Font.font("Roboto", FontWeight.BOLD, 30));
         setRotationSpeed(4);
     }
