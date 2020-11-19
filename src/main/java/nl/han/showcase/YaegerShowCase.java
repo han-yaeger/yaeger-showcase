@@ -5,6 +5,7 @@ import com.github.hanyaeger.api.engine.YaegerGame;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.composing.Composing;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
+import nl.han.showcase.scenes.gravity.Gravity;
 import nl.han.showcase.scenes.timers.Time;
 import nl.han.showcase.scenes.mapsandlegends.MapsAndLegends;
 import nl.han.showcase.scenes.selection.SelectionScene;
@@ -38,10 +39,8 @@ public class YaegerShowCase extends YaegerGame {
     public static final String SCENE_GREAT_BALLS_OF_FIRE_TITLE = "Great balls of fire";
     public static final int SCENE_SHAPE = 4;
     public static final String SCENE_SHAPE_TITLE = "Shape of you";
-
     public static final int SCENE_COMPOSING = 5;
     public static final String SCENE_COMPOSING_TITLE = "Composing";
-
     public static final int SCENE_TIME = 6;
     public static final String SCENE_TIME_TITLE = "Time";
     public static final int SCENE_MAPS = 7;
@@ -50,6 +49,9 @@ public class YaegerShowCase extends YaegerGame {
     public static final String SCENE_RIDE_THE_LIGHTNING_TITLE = "Ride the Lightning";
     public static final int SCENE_DISTANCE = 9;
     public static final String SCENE_DISTANCE_TITLE = "The distance";
+    public static final int SCENE_GRAVITY = 10;
+    public static final String SCENE_GRAVITY_TITLE = "Gravity";
+
 
     /**
      * The {@link #main(String[])} is the entry point of every Java Application. This {@link #main(String[])}
@@ -77,11 +79,8 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_GREAT_BALLS_OF_FIRE, greatBallsOfFire);
         var shapeOfYou = new ShapeOfYouScene(this);
         addScene(SCENE_SHAPE, shapeOfYou);
-
         var composing = new Composing(this);
         addScene(SCENE_COMPOSING, composing);
-
-
         var time = new Time(this);
         addScene(SCENE_TIME, time);
         var mapsAndLegends = new MapsAndLegends(this);
@@ -90,6 +89,8 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_RIDE_THE_LIGHTNING, rideTheLightning);
         var distance = new TheDistanceScene(this);
         addScene(SCENE_DISTANCE, distance);
+        var gravity = new Gravity(this);
+        addScene(SCENE_GRAVITY, gravity);
     }
 
     public void setActiveScene(int scene) {

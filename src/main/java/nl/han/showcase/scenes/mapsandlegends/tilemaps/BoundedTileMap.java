@@ -14,6 +14,7 @@ public class BoundedTileMap extends TileMap {
 
     @Override
     public void setupEntities() {
+
         addEntity(1, PurpleEntity.class);
     }
 

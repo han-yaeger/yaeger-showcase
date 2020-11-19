@@ -20,7 +20,7 @@ import java.util.Set;
  * which are just instances of {@link TextEntity}, this {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
  * also listens to the keyboard, by implementing the {@link KeyListener} interface.
  */
-public class SelectionScene extends StaticScene implements KeyListener {
+public class SelectionScene extends StaticScene {
 
     // To align the buttons on the screen we create a constant for the left margin.
     public static final double LEFT_MARGIN = 34;
@@ -73,26 +73,8 @@ public class SelectionScene extends StaticScene implements KeyListener {
 
         var distanceScene = new SelectionButton(500, YaegerShowCase.SCENE_DISTANCE_TITLE, showCase, YaegerShowCase.SCENE_DISTANCE);
         addEntity(distanceScene);
-    }
 
-    @Override
-    public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
-        if (pressedKeys.contains(KeyCode.DIGIT1)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
-        } else if (pressedKeys.contains(KeyCode.DIGIT2)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE);
-        } else if (pressedKeys.contains(KeyCode.DIGIT3)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_SHAPE);
-        } else if (pressedKeys.contains(KeyCode.DIGIT4)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_COMPOSING);
-        } else if (pressedKeys.contains(KeyCode.DIGIT5)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_TIME);
-        } else if (pressedKeys.contains(KeyCode.DIGIT6)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_MAPS);
-        } else if (pressedKeys.contains(KeyCode.DIGIT7)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
-        } else if (pressedKeys.contains(KeyCode.DIGIT8)) {
-            showCase.setActiveScene(YaegerShowCase.SCENE_DISTANCE);
-        }
+        var gravityScene = new SelectionButton(550, YaegerShowCase.SCENE_GRAVITY_TITLE, showCase, YaegerShowCase.SCENE_GRAVITY);
+        addEntity(gravityScene);
     }
 }
