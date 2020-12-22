@@ -14,6 +14,7 @@ import java.util.Set;
  */
 public abstract class ShowCaseScene extends DynamicScene implements KeyListener {
 
+    public static final double BOTTOM_MARGIN = 30;
     protected YaegerShowCase showCase;
 
     public ShowCaseScene(final YaegerShowCase yaegerShowCase) {
@@ -22,7 +23,7 @@ public abstract class ShowCaseScene extends DynamicScene implements KeyListener 
 
     @Override
     public void setupEntities() {
-        var backButton = new BackButton(getHeight() - 30, showCase);
+        var backButton = new BackButton(getHeight() - BOTTOM_MARGIN, showCase);
         addEntity(backButton);
     }
 

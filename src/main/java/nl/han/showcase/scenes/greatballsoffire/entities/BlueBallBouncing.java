@@ -10,7 +10,7 @@ import com.github.hanyaeger.api.engine.scenes.SceneBorder;
 public class BlueBallBouncing extends DynamicSpriteEntity implements SceneBorderTouchingWatcher {
 
     public BlueBallBouncing(final Coordinate2D location) {
-        super("entities/ball-blue.png", location, new Size(30, 30), 0);
+        super("entities/ball-blue.png", location, new Size(30, 30));
         setMotion(4, Direction.RIGHT.getValue());
     }
 

@@ -9,7 +9,7 @@ import nl.han.showcase.scenes.greatballsoffire.entities.timers.RugbyBallTimer;
 public class PinkBall extends DynamicSpriteEntity implements TimerContainer {
 
     public PinkBall(final Coordinate2D location) {
-        super("entities/ball-pink.png", location, new Size(60, 60), 0);
+        super("entities/ball-pink.png", location, new Size(60, 60));
         setRotationSpeed(7);
     }
 

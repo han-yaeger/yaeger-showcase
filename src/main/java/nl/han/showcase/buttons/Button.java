@@ -5,6 +5,8 @@ import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseBut
 import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseEnterListener;
 import com.github.hanyaeger.api.engine.entities.entity.events.userinput.MouseExitListener;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
+import com.github.hanyaeger.api.engine.styles.HanFont;
+import com.github.hanyaeger.api.engine.styles.HanFontStyle;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
@@ -12,20 +14,16 @@ import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.selection.SelectionScene;
 
 
-public class Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
+public abstract class Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
 
-    protected YaegerShowCase showCase;
     private int scene;
 
-    public Button(final Coordinate2D initialPosition, final String text, YaegerShowCase showCase, int scene) {
+    public Button(final Coordinate2D initialPosition, final String text, final int scene) {
         super(initialPosition, text);
-        this.showCase = showCase;
-        this.scene = scene;
-    }
 
-    @Override
-    public void onMouseButtonPressed(MouseButton button, double x, double y) {
-        showCase.setActiveScene(scene);
+        this.scene = scene;
+
+        setFont(HanFont.createDefaultCondensedFont(HanFontStyle.MEDIUM, 25));
     }
 
     @Override
@@ -38,5 +36,9 @@ public class Button extends TextEntity implements MouseButtonPressedListener, Mo
     public void onMouseExited() {
         setFill(Color.BLACK);
         setCursor(Cursor.DEFAULT);
+    }
+
+    public int getScene() {
+        return scene;
     }
 }
