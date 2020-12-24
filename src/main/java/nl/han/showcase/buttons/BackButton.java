@@ -1,18 +1,29 @@
 package nl.han.showcase.buttons;
 
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
+import javafx.scene.input.MouseButton;
 import nl.han.showcase.YaegerShowCase;
+import nl.han.showcase.scenes.gravity.Gravity;
+import nl.han.showcase.scenes.selection.SelectionScene;
 
 /**
  * Just a simple {@link com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity}
  * that is used as a button.
  */
-public class BackButton extends SelectionButton {
+public class BackButton extends BorderButton {
 
-    public static final String BACK = "Back";
+    public static final String TEXT = "Back";
+    private final YaegerShowCase showCase;
 
     public BackButton(final double y, final YaegerShowCase showCase) {
-        super(y, BACK, showCase, YaegerShowCase.SCENE_SELECTION);
+        super(new Coordinate2D(SelectionScene.LEFT_MARGIN, y), TEXT, 60);
+        this.showCase = showCase;
         setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
+    }
+
+    @Override
+    public void onMouseButtonPressed(MouseButton button, double x, double y) {
+        showCase.setActiveScene(YaegerShowCase.SCENE_SELECTION);
     }
 }

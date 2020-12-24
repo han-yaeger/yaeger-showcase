@@ -6,10 +6,7 @@ import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMapContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.gravity.entities.Blue;
-import nl.han.showcase.scenes.gravity.entities.Green;
-import nl.han.showcase.scenes.gravity.entities.Pink;
-import nl.han.showcase.scenes.gravity.entities.ReinitializeButton;
+import nl.han.showcase.scenes.gravity.entities.*;
 import nl.han.showcase.scenes.gravity.tilemaps.GroundTileMap;
 
 import java.util.ArrayList;
@@ -43,7 +40,7 @@ public class Gravity extends ShowCaseScene implements TileMapContainer {
     public void setupEntities() {
         super.setupEntities();
 
-        var resetButton = new ReinitializeButton(new Coordinate2D(100, getHeight() - BOTTOM_MARGIN), this);
+        var resetButton = new ResetButton(new Coordinate2D(100, getHeight() - BOTTOM_MARGIN), this);
         addEntity(resetButton);
 
         createEntities();
