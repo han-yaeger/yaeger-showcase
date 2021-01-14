@@ -28,11 +28,11 @@ public class GreatBallsOfFire extends ShowCaseScene {
         var blueBall = new BlueBallBouncing(new Coordinate2D(100, 200));
         addEntity(blueBall);
 
-        var greenBall1 = new GreenBall(new Coordinate2D(getWidth() / 2, 280), 4, Direction.RIGHT.getValue());
+        var greenBall1 = new GreenBall(new Coordinate2D(getWidth() / 2, 280), 5, Direction.LEFT.getValue());
         greenBall1.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(greenBall1);
 
-        var greenBall2 = new GreenBall(new Coordinate2D(20, 280), 5, Direction.LEFT.getValue());
+        var greenBall2 = new GreenBall(new Coordinate2D(20, 280), 4, Direction.RIGHT.getValue());
         greenBall2.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(greenBall2);
 

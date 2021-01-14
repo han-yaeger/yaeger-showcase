@@ -15,7 +15,6 @@ public class GreenBall extends DynamicSpriteEntity implements SceneBorderTouchin
     public GreenBall(final Coordinate2D location, double speed, double direction) {
         super("entities/ball-green.png", location, new Size(20, 20));
         setMotion(speed, direction);
-        setRotationSpeed(2);
     }
 
     @Override

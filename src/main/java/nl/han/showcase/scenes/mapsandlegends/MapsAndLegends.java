@@ -6,8 +6,7 @@ import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMapContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.mapsandlegends.tilemaps.BoundedTileMap;
-import nl.han.showcase.scenes.mapsandlegends.tilemaps.FullScreenTileMap;
+import nl.han.showcase.scenes.mapsandlegends.tilemaps.*;
 
 /**
  * There are two flavours of TileMaps. Those that cover the entire {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
@@ -34,15 +33,15 @@ public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
         var fullScreenMap = new FullScreenTileMap();
         addTileMap(fullScreenMap);
 
-        var topLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, MARGIN), new Size(100, 100));
+        var topLeftMap = new BoundedRectangleMap(new Coordinate2D(MARGIN, MARGIN), new Size(100, 100));
         topLeftMap.setAnchorPoint(AnchorPoint.TOP_LEFT);
         addTileMap(topLeftMap);
 
-        var topCentertMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, MARGIN), new Size(100, 100));
+        var topCentertMap = new BoundedDynamicRectangleMap(new Coordinate2D(getWidth() / 2, MARGIN), new Size(100, 100));
         topCentertMap.setAnchorPoint(AnchorPoint.TOP_CENTER);
         addTileMap(topCentertMap);
 
-        var topRighttMap = new BoundedTileMap(new Coordinate2D(getWidth() - MARGIN, MARGIN), new Size(100, 100));
+        var topRighttMap = new BoundedEllipseMap(new Coordinate2D(getWidth() - MARGIN, MARGIN), new Size(100, 100));
         topRighttMap.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addTileMap(topRighttMap);
 

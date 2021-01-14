@@ -7,8 +7,8 @@ features of Yaeger
 
 ## Roads go ever on
 
-TextEntities in their many forms. Some will rotate, some will move around the Scene, some will bounce on its
-borders, and some will remain still. One will tell a story of roads that go ever on.
+TextEntities in their many forms. Some will rotate, some will move around the Scene, some will bounce 
+on its borders, and some will remain still. One will tell a story of roads that go ever on.
 
 ## Great balls of fire
 
@@ -32,3 +32,5 @@ TileMaps in their many forms
 As EntitySpawners spew rain, timers generate random thunder and lightning. 
 
 ## The distance
+
+## Gravity
