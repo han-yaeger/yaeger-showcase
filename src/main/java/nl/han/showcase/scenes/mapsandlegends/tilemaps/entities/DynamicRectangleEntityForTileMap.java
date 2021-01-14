@@ -7,14 +7,14 @@ import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRe
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
 import javafx.scene.paint.Color;
 
-public class DynamicRectangleEntityForEntityMap extends DynamicRectangleEntity implements UpdateExposer {
+public class DynamicRectangleEntityForTileMap extends DynamicRectangleEntity implements UpdateExposer {
 
     private static final double ARC_MIN = 0;
     private static final double ARC_MAX = 110;
     private double currentArc = 0;
     private boolean decreasing = false;
 
-    public DynamicRectangleEntityForEntityMap(final Coordinate2D initialPosition, final Size size) {
+    public DynamicRectangleEntityForTileMap(final Coordinate2D initialPosition, final Size size) {
         super(initialPosition, size);
 
         setStrokeWidth(1);

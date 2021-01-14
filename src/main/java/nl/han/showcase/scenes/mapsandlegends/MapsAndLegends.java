@@ -45,7 +45,7 @@ public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
         topRighttMap.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addTileMap(topRighttMap);
 
-        var centerLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, getHeight() / 2), new Size(100, 100));
+        var centerLeftMap = new BoundedCompositeMap(new Coordinate2D(MARGIN, getHeight() / 2), new Size(100, 100));
         centerLeftMap.setAnchorPoint(AnchorPoint.CENTER_LEFT);
         addTileMap(centerLeftMap);
 

@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.mapsandlegends.tilemaps;
 import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
-import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.PurpleEntity;
+import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.PurpleEntityForTileMap;
 
 
 public class BoundedTileMap extends TileMap {
@@ -14,7 +14,7 @@ public class BoundedTileMap extends TileMap {
 
     @Override
     public void setupEntities() {
-        addEntity(1, PurpleEntity.class);
+        addEntity(1, PurpleEntityForTileMap.class);
     }
 
     @Override

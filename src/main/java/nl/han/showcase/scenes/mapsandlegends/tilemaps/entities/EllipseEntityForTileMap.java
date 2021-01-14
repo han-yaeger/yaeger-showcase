@@ -6,9 +6,9 @@ import com.github.hanyaeger.api.engine.entities.entity.shape.ellipse.EllipseEnti
 import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
 import javafx.scene.paint.Color;
 
-public class EllipseEntityForEntityMap extends EllipseEntity {
+public class EllipseEntityForTileMap extends EllipseEntity {
 
-    public EllipseEntityForEntityMap(Coordinate2D initialPosition, Size size) {
+    public EllipseEntityForTileMap(Coordinate2D initialPosition, Size size) {
         super(initialPosition, size);
 
         setStrokeWidth(1);

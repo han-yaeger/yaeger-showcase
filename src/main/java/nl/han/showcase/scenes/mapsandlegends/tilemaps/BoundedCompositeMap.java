@@ -3,17 +3,18 @@ package nl.han.showcase.scenes.mapsandlegends.tilemaps;
 import com.github.hanyaeger.api.engine.Size;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
-import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.EllipseEntityForTileMap;
+import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.CompositeEntityForTileMap;
+import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.RectangleEntityForTileMap;
 
-public class BoundedEllipseMap extends TileMap {
+public class BoundedCompositeMap extends TileMap {
 
-    public BoundedEllipseMap(final Coordinate2D location, final Size size) {
+    public BoundedCompositeMap(final Coordinate2D location, final Size size) {
         super(location, size);
     }
 
     @Override
     public void setupEntities() {
-        addEntity(1, EllipseEntityForTileMap.class);
+        addEntity(1, CompositeEntityForTileMap.class);
     }
 
     @Override
