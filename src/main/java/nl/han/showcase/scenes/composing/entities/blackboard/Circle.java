@@ -15,7 +15,6 @@ public class Circle extends CircleEntity implements MouseButtonPressedListener {
         super(initialPosition);
         setRadius(RADIUS);
         setFill(Color.TRANSPARENT);
-        setStrokeWidth(1);
         setStrokeColor(YaegerShowCase.HAN_RED);
         setStrokeWidth(1);
     }

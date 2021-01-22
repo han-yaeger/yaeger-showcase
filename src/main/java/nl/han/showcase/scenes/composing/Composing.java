@@ -7,6 +7,8 @@ import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.composing.entities.blackboard.ShapesInShapes;
 import nl.han.showcase.scenes.composing.entities.car.Car;
 import nl.han.showcase.scenes.composing.entities.car.wheel.Wheel;
+import nl.han.showcase.scenes.composing.entities.newtoniancircle.NewtonianCircleComposite;
+import nl.han.showcase.scenes.composing.entities.newtoniancircle.RectangularFloor;
 import nl.han.showcase.scenes.composing.entities.waterworld.hanny.Hanny;
 import nl.han.showcase.scenes.composing.entities.waterworld.swordfish.SwordFish;
 
@@ -33,6 +35,13 @@ public class Composing extends ShowCaseScene {
         var shapeInShapes = new ShapesInShapes(new Coordinate2D(MARGIN, 90));
         shapeInShapes.setAnchorPoint(AnchorPoint.TOP_LEFT);
         addEntity(shapeInShapes);
+
+        var newtonianCircleComposite = new NewtonianCircleComposite(new Coordinate2D(getWidth() - 100, 60));
+        addEntity(newtonianCircleComposite);
+
+        var rectangularFloor = new RectangularFloor(new Coordinate2D(getWidth(), 240));
+        rectangularFloor.setAnchorPoint(AnchorPoint.TOP_RIGHT);
+        addEntity(rectangularFloor);
 
         var hanny = new Hanny(new Coordinate2D(MARGIN, 400));
         addEntity(hanny);
