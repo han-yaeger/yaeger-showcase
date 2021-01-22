@@ -36,8 +36,7 @@ public class Composing extends ShowCaseScene {
         shapeInShapes.setAnchorPoint(AnchorPoint.TOP_LEFT);
         addEntity(shapeInShapes);
 
-        var newtonianCircleComposite = new NewtonianCircleComposite(new Coordinate2D(getWidth() - 100, 60));
-        addEntity(newtonianCircleComposite);
+        placeNewtonianCircle();
 
         var rectangularFloor = new RectangularFloor(new Coordinate2D(getWidth(), 240));
         rectangularFloor.setAnchorPoint(AnchorPoint.TOP_RIGHT);
@@ -52,5 +51,10 @@ public class Composing extends ShowCaseScene {
         var car = new Car(new Coordinate2D(getWidth() / 2, getHeight() - 100));
         car.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(car);
+    }
+
+    public void placeNewtonianCircle() {
+        var newtonianCircleComposite = new NewtonianCircleComposite(new Coordinate2D(getWidth() - 100, 60), this);
+        addEntity(newtonianCircleComposite);
     }
 }
