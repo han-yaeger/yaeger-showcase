@@ -59,7 +59,6 @@ public class Gravity extends ShowCaseScene implements TileMapContainer {
     private void createEntities() {
 
         var verticalWithFriction = new Blue(new Coordinate2D(20, 20));
-        verticalWithFriction.setGravitationalPull(false);
         verticalWithFriction.setMotion(4, Direction.RIGHT);
         entities.add(verticalWithFriction);
 
