@@ -1,5 +1,7 @@
 package nl.han.showcase.scenes.gravity;
 
+import com.github.hanyaeger.api.engine.Size;
+import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.YaegerEntity;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
@@ -8,6 +10,7 @@ import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.gravity.entities.*;
 import nl.han.showcase.scenes.gravity.tilemaps.GroundTileMap;
+import nl.han.showcase.scenes.gravity.tilemaps.StairsTileMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,15 +48,15 @@ public class Gravity extends ShowCaseScene implements TileMapContainer {
 
         createEntities();
 
-        entities.forEach(entity -> addEntity(entity));
+        entities.forEach(this::addEntity);
     }
 
     public void resetEntities() {
-        entities.forEach(entity -> entity.remove());
+        entities.forEach(YaegerEntity::remove);
         entities.clear();
 
         createEntities();
-        entities.forEach(entity -> addEntity(entity));
+        entities.forEach(this::addEntity);
     }
 
     private void createEntities() {
@@ -81,16 +84,10 @@ public class Gravity extends ShowCaseScene implements TileMapContainer {
         blueHighFriction.setFrictionConstant(0.5);
         entities.add(blueHighFriction);
 
-        var greenLowFriction = new Green(new Coordinate2D(6 * (getWidth() / 10), HEIGHT));
-        greenLowFriction.setFrictionConstant(0.001);
-        entities.add(greenLowFriction);
-
-        var greenDefaultFriction = new Green(new Coordinate2D(7 * (getWidth() / 10), HEIGHT));
-        entities.add(greenDefaultFriction);
-
-        var greenHighFriction = new Green(new Coordinate2D(8 * (getWidth() / 10), HEIGHT));
-        greenHighFriction.setFrictionConstant(0.5);
-        entities.add(greenHighFriction);
+        var stairBouncer = new Green(new Coordinate2D(6 * (getWidth() / 10), HEIGHT));
+        stairBouncer.setMotion(1, Direction.RIGHT);
+        stairBouncer.setFrictionConstant(0.001);
+        entities.add(stairBouncer);
 
         var pink = new Pink(new Coordinate2D(9 * (getWidth() / 10), HEIGHT));
         entities.add(pink);
@@ -100,5 +97,9 @@ public class Gravity extends ShowCaseScene implements TileMapContainer {
     public void setupTileMaps() {
         var groundScreenMap = new GroundTileMap();
         addTileMap(groundScreenMap);
+
+        var stairsMap = new StairsTileMap(new Coordinate2D(getWidth() - 100, getHeight() / 2), new Size(300, 300));
+        stairsMap.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
+        addTileMap(stairsMap);
     }
 }
