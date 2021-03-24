@@ -49,19 +49,19 @@ public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
         centerLeftMap.setAnchorPoint(AnchorPoint.CENTER_LEFT);
         addTileMap(centerLeftMap);
 
-        var centeredMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, getHeight() / 2), new Size(100, 100));
+        var centeredMap = new BoundedCustomColorMap(new Coordinate2D(getWidth() / 2, getHeight() / 2), new Size(100, 100));
         centeredMap.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addTileMap(centeredMap);
 
-        var centerRightMap = new BoundedTileMap(new Coordinate2D(getWidth() - MARGIN, getHeight() / 2), new Size(100, 100));
+        var centerRightMap = new BoundedCustomColorMap(new Coordinate2D(getWidth() - MARGIN, getHeight() / 2), new Size(100, 100));
         centerRightMap.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addTileMap(centerRightMap);
 
-        var bottomLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, getHeight() - MARGIN), new Size(100, 100));
+        var bottomLeftMap = new BoundedCustomColorMap(new Coordinate2D(MARGIN, getHeight() - MARGIN), new Size(100, 100));
         bottomLeftMap.setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
         addTileMap(bottomLeftMap);
 
-        var bottomCenterMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, getHeight() - MARGIN), new Size(100, 100));
+        var bottomCenterMap = new BoundedCustomColorMap(new Coordinate2D(getWidth() / 2, getHeight() - MARGIN), new Size(100, 100));
         bottomCenterMap.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
         addTileMap(bottomCenterMap);
 
