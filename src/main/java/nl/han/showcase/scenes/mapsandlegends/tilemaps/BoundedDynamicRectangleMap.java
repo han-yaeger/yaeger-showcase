@@ -18,11 +18,10 @@ public class BoundedDynamicRectangleMap extends TileMap {
 
     @Override
     public int[][] defineMap() {
-        int[][] map = {
+        return new int[][]{
                 {1, 1, 1},
                 {1, 0, 1},
                 {1, 1, 1}
         };
-        return map;
     }
 }

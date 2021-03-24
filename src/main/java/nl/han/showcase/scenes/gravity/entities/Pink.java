@@ -1,14 +1,12 @@
 package nl.han.showcase.scenes.gravity.entities;
 
 import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.TimerContainer;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
 import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Newtonian;
 import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
-import nl.han.showcase.scenes.greatballsoffire.entities.timers.RugbyBallTimer;
 
 public class Pink extends DynamicSpriteEntity implements Newtonian, Collided {
 

@@ -16,7 +16,7 @@ public class ThunderClap {
     private long startTime = 0;
     private long maxAge;
     private boolean clapPlayed = false;
-    private long timeBeforeClap;
+    private final long timeBeforeClap;
 
 
     public ThunderClap(final String audioClip, final YaegerScene scene) {

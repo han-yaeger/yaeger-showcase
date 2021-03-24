@@ -10,10 +10,9 @@ import javafx.scene.Cursor;
 
 public abstract class BorderButton extends CompositeEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
 
-    private ButtonBackground buttonBackground;
     private ButtonText buttonText;
-    private String text;
-    private double width;
+    private final String text;
+    private final double width;
 
     public BorderButton(final Coordinate2D initialLocation, final String text, final double width) {
         super(initialLocation);
@@ -23,7 +22,7 @@ public abstract class BorderButton extends CompositeEntity implements MouseButto
 
     @Override
     protected void setupEntities() {
-        buttonBackground = new ButtonBackground(new Coordinate2D(0, 0), new Size(width, 36));
+        ButtonBackground buttonBackground = new ButtonBackground(new Coordinate2D(0, 0), new Size(width, 36));
         addEntity(buttonBackground);
 
         buttonText = new ButtonText(new Coordinate2D(9, 2), text);

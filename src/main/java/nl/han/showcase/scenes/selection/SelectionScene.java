@@ -6,13 +6,10 @@ import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import com.github.hanyaeger.api.engine.scenes.StaticScene;
 import com.github.hanyaeger.api.engine.styles.HanFont;
 import com.github.hanyaeger.api.engine.styles.HanFontStyle;
-import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.QuitButton;
 import nl.han.showcase.buttons.SelectionButton;
-
-import java.util.Set;
 
 /**
  * A {@link StaticScene} that only contains the menu for selecting the
@@ -27,7 +24,7 @@ public class SelectionScene extends StaticScene {
 
     private static final String TEXT_PLEASE_SELECT = "PLEASE SELECT A SCENE:";
 
-    private YaegerShowCase showCase;
+    private final YaegerShowCase showCase;
 
     public SelectionScene(final YaegerShowCase showCase) {
         this.showCase = showCase;

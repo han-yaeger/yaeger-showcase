@@ -13,7 +13,6 @@ import javafx.scene.paint.Color;
  */
 public class AngleText extends DynamicTextEntity implements UpdateExposer {
 
-    private final String DISTANCE = "Angle: ";
     private final YaegerEntity target;
     private final YaegerEntity origin;
 
@@ -27,6 +26,6 @@ public class AngleText extends DynamicTextEntity implements UpdateExposer {
 
     @Override
     public void explicitUpdate(long timestamp) {
-        setText(DISTANCE + String.valueOf(Math.round(origin.angleTo(target))));
+        setText("Angle: " + Math.round(origin.angleTo(target)));
     }
 }

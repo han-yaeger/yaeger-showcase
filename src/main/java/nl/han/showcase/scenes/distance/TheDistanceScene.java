@@ -49,13 +49,13 @@ public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerCont
      * to the Scene. This is of cours rather ugly, since a composition as such should be mirrored by a
      * composite structure. When Issue #101 is resolved, this code will be changed to use a composite Entity.
      *
-     * @param spaceShip
+     * @param spaceShip the {@link SpaceShip} that needs to be followed
      */
-    private void addAntiAircraftGun(SpaceShip spaceShip) {
+    private void addAntiAircraftGun(final SpaceShip spaceShip) {
         var antiAircraftBase = new AntiAircraftBase(new Coordinate2D(getWidth() / 2, getHeight()));
         addEntity(antiAircraftBase);
 
-        var antiAircraftLauncher = new AntiAircraftLauncer(new Coordinate2D(getWidth() / 2, getHeight()), spaceShip, rocketSpawner);
+        var antiAircraftLauncher = new AntiAircraftLauncher(new Coordinate2D(getWidth() / 2, getHeight()), spaceShip, rocketSpawner);
         addEntity(antiAircraftLauncher);
 
         var distanceText = new DistanceText(new Coordinate2D(getWidth() / 2 + 60, getHeight() - 60), antiAircraftBase, spaceShip);

@@ -8,11 +8,8 @@ import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import com.github.hanyaeger.api.engine.styles.HanFont;
 import com.github.hanyaeger.api.engine.styles.HanFontStyle;
 import javafx.scene.Cursor;
-import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.scenes.selection.SelectionScene;
-
 
 public abstract class Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
 

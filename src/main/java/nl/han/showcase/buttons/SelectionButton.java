@@ -1,9 +1,6 @@
 package nl.han.showcase.buttons;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.styles.HanFont;
-import com.github.hanyaeger.api.engine.styles.HanFontStyle;
-import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;

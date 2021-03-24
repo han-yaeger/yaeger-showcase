@@ -13,7 +13,6 @@ import javafx.scene.paint.Color;
  */
 public class DistanceText extends DynamicTextEntity implements UpdateExposer {
 
-    private final String DISTANCE = "Distance: ";
     private final YaegerEntity target;
     private final YaegerEntity origin;
 
@@ -27,6 +26,6 @@ public class DistanceText extends DynamicTextEntity implements UpdateExposer {
 
     @Override
     public void explicitUpdate(long timestamp) {
-        setText(DISTANCE + String.valueOf(Math.round(origin.distanceTo(target))));
+        setText("Distance: " + Math.round(origin.distanceTo(target)));
     }
 }

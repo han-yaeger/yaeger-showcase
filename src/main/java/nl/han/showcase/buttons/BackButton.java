@@ -4,7 +4,6 @@ import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import javafx.scene.input.MouseButton;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.scenes.gravity.Gravity;
 import nl.han.showcase.scenes.selection.SelectionScene;
 
 /**

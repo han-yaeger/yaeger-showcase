@@ -12,7 +12,7 @@ public class FullScreenTileMap extends TileMap {
 
     @Override
     public int[][] defineMap() {
-        int[][] map = {
+        return new int[][]{
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -27,6 +27,5 @@ public class FullScreenTileMap extends TileMap {
                 {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
                 {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0}
         };
-        return map;
     }
 }

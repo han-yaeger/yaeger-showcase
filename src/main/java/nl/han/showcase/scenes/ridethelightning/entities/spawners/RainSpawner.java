@@ -16,7 +16,7 @@ public class RainSpawner extends EntitySpawner {
     /**
      * Create a new instance of {@link EntitySpawner} for the given interval in milliseconds.
      *
-     * @param intervalInMs The interval in milleseconds.
+     * @param intervalInMs The interval in milliseconds.
      */
     public RainSpawner(final double worldWidth, final double raindropWidth, final double raindropHeight, final long intervalInMs, final int maxSpeed) {
         super(intervalInMs);

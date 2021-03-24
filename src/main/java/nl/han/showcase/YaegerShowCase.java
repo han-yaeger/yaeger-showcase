@@ -54,7 +54,7 @@ public class YaegerShowCase extends YaegerGame {
 
 
     /**
-     * The {@link #main(String[])} is the entry point of every Java Application. This {@link #main(String[])}
+     * The {@code #main(String[])} is the entry point of every Java Application. This {@code #main(String[])}
      * is used to call {@link YaegerGame#launch(String...)}, which start the Game.
      *
      * @param args Commandline parameters that will be passed to Yaeger.

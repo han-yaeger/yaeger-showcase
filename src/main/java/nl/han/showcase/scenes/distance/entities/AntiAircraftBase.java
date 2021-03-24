@@ -3,7 +3,6 @@ package nl.han.showcase.scenes.distance.entities;
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.CircleEntity;
-import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
 import nl.han.showcase.YaegerShowCase;
 
 /**

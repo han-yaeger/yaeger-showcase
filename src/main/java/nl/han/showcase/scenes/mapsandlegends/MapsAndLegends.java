@@ -10,7 +10,7 @@ import nl.han.showcase.scenes.mapsandlegends.tilemaps.*;
 
 /**
  * There are two flavours of TileMaps. Those that cover the entire {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
- * and thos that only take up a give area. In this Scene we demonstrate several implementations, and how we can
+ * and those that only take up a give area. In this Scene we demonstrate several implementations, and how we can
  * use the {@link com.github.hanyaeger.api.engine.entities.tilemap.TileMap#setAnchorPoint(AnchorPoint)} to put them on the
  * Scene.
  */
@@ -41,9 +41,9 @@ public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
         topCentertMap.setAnchorPoint(AnchorPoint.TOP_CENTER);
         addTileMap(topCentertMap);
 
-        var topRighttMap = new BoundedEllipseMap(new Coordinate2D(getWidth() - MARGIN, MARGIN), new Size(100, 100));
-        topRighttMap.setAnchorPoint(AnchorPoint.TOP_RIGHT);
-        addTileMap(topRighttMap);
+        var topRightMap = new BoundedEllipseMap(new Coordinate2D(getWidth() - MARGIN, MARGIN), new Size(100, 100));
+        topRightMap.setAnchorPoint(AnchorPoint.TOP_RIGHT);
+        addTileMap(topRightMap);
 
         var centerLeftMap = new BoundedCompositeMap(new Coordinate2D(MARGIN, getHeight() / 2), new Size(100, 100));
         centerLeftMap.setAnchorPoint(AnchorPoint.CENTER_LEFT);
