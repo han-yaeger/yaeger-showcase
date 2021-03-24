@@ -53,15 +53,15 @@ public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
         centeredMap.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addTileMap(centeredMap);
 
-        var centerRightMap = new BoundedCustomColorMap(new Coordinate2D(getWidth() - MARGIN, getHeight() / 2), new Size(100, 100));
+        var centerRightMap = new BoundedCustomGrassTileMap(new Coordinate2D(getWidth() - MARGIN, getHeight() / 2), new Size(100, 100));
         centerRightMap.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addTileMap(centerRightMap);
 
-        var bottomLeftMap = new BoundedCustomColorMap(new Coordinate2D(MARGIN, getHeight() - MARGIN), new Size(100, 100));
+        var bottomLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, getHeight() - MARGIN), new Size(100, 100));
         bottomLeftMap.setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
         addTileMap(bottomLeftMap);
 
-        var bottomCenterMap = new BoundedCustomColorMap(new Coordinate2D(getWidth() / 2, getHeight() - MARGIN), new Size(100, 100));
+        var bottomCenterMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, getHeight() - MARGIN), new Size(100, 100));
         bottomCenterMap.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
         addTileMap(bottomCenterMap);
 
