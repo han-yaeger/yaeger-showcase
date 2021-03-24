@@ -85,8 +85,6 @@ public class Gravity extends ShowCaseScene implements TileMapContainer {
         entities.add(blueHighFriction);
 
         var stairBouncer = new Green(new Coordinate2D(6 * (getWidth() / 10), HEIGHT));
-        stairBouncer.setMotion(1, Direction.RIGHT);
-        stairBouncer.setFrictionConstant(0.001);
         entities.add(stairBouncer);
 
         var pink = new Pink(new Coordinate2D(9 * (getWidth() / 10), HEIGHT));

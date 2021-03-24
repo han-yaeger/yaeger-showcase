@@ -40,9 +40,9 @@ public class NewtonianCircleComposite extends DynamicCompositeEntity implements 
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
         if (pressedKeys.contains(KeyCode.Z)) {
-            setMotion(1, Direction.LEFT);
+            maximizeMotionInDirection(Direction.LEFT, 1);
         } else if (pressedKeys.contains(KeyCode.X)) {
-            setMotion(1, Direction.RIGHT);
+            maximizeMotionInDirection(Direction.RIGHT, 1);
         }
     }
 

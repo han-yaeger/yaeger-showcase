@@ -7,7 +7,7 @@ import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntit
 public class BouncingYellow extends DynamicSpriteEntity {
 
     public BouncingYellow(final Coordinate2D initialLocation) {
-        super("entities/bouncing-yellow.png", initialLocation, new Size(1757, 126), 14);
+        super("entities/bouncing-yellow.png", initialLocation, new Size(1757, 126), 1, 14);
         setAutoCycle(20);
     }
 }

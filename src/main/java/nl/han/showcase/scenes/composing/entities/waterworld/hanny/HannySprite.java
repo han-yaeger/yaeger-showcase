@@ -11,6 +11,6 @@ import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntit
 public class HannySprite extends DynamicSpriteEntity {
 
     public HannySprite(Coordinate2D location) {
-        super("entities/hanny.png", location, new Size(20, 40), 2);
+        super("entities/hanny.png", location, new Size(20, 40), 1, 2);
     }
 }
