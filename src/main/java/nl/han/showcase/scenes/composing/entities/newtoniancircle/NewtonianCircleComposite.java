@@ -34,6 +34,9 @@ public class NewtonianCircleComposite extends DynamicCompositeEntity implements 
     }
 
     public void onCollision(final Collider collidingObject) {
+        // The vertical (gravitational) component should be set to 0
+        nullifySpeedInDirection(Direction.DOWN);
+        // Place the Entity on the correct vertical location
         setAnchorLocationY(collidingObject.getBoundingBox().getMinY() - OuterCircle.RADIUS - InnerCircle.RADIUS);
     }
 
