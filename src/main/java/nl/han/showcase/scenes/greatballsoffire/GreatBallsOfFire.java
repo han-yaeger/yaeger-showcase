@@ -45,6 +45,9 @@ public class GreatBallsOfFire extends ShowCaseScene {
 
         var bouncingYellow = new BouncingYellow(new Coordinate2D(260, 500));
         addEntity(bouncingYellow);
+
+        var walking = new Walking(new Coordinate2D(50, 500));
+        addEntity(walking);
     }
 
     private void placeRugbyBallsWithAllAnchorPoints() {
@@ -73,17 +76,5 @@ public class GreatBallsOfFire extends ShowCaseScene {
         var rc = new PinkBall(new Coordinate2D(getWidth() - margin, getHeight() / 2));
         rc.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addEntity(rc);
-
-        var bl = new PinkBall(new Coordinate2D(margin, getHeight() - margin));
-        bl.setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
-        addEntity(bl);
-
-        var bc = new PinkBall(new Coordinate2D(getWidth() / 2, getHeight() - margin));
-        bc.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
-        addEntity(bc);
-
-        var br = new PinkBall(new Coordinate2D(getWidth() - margin, getHeight() - margin));
-        br.setAnchorPoint(AnchorPoint.BOTTOM_RIGHT);
-        addEntity(br);
     }
 }

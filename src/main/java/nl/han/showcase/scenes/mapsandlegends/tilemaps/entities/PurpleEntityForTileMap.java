@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.engine.entities.entity.sprite.SpriteEntity;
 
 public class PurpleEntityForTileMap extends SpriteEntity {
 
-    public PurpleEntityForTileMap(Coordinate2D location, Size size) {
+    public PurpleEntityForTileMap(final Coordinate2D location, final Size size) {
         super("entities/block-purple.png", location, size);
     }
 }
