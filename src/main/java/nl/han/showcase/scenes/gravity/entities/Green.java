@@ -23,8 +23,6 @@ public class Green extends DynamicSpriteEntity implements Newtonian, Collided, S
     public void onCollision(final Collider collidingObject) {
         setAnchorLocationY(collidingObject.getBoundingBox().getMinY());
 
-        System.out.println(getSpeed());
-
         if (getSpeedInDirection(Direction.DOWN) < 1) {
             nullifySpeedInDirection(Direction.DOWN);
             setRotationSpeed(0);
