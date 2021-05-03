@@ -3,55 +3,41 @@ package nl.han.showcase.scenes.distance.entities;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListener;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
-import javafx.scene.input.KeyCode;
+import com.github.hanyaeger.api.engine.userinput.MouseMovedListener;
+import javafx.scene.Cursor;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
-import java.util.Set;
-
 /**
  * A {@link SpaceShip} is just a simple {@link DynamicCircleEntity} that can move around the
- * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}. It implements the
- * {@link KeyListener} interface for listening to key strokes and
- * {@link SceneBorderTouchingWatcher} to be notified if it touches the border of the
- * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}. When that happens its speed
- * is set to 0.
+ * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}.
  * <p>
  * The interface {@link Collider} is used to registers collisions with a {@link Rocket}.
  */
-public class SpaceShip extends DynamicCircleEntity implements KeyListener, SceneBorderTouchingWatcher, Collider {
+public class SpaceShip extends DynamicCircleEntity implements MouseMovedListener, Collider {
 
-    private static final double SPACESHIP_SPEED = 5;
+    private static final double RADIUS = 20;
 
     public SpaceShip(Coordinate2D location) {
         super(location);
         setStrokeWidth(1);
         setStrokeColor(YaegerShowCase.HAN_RED);
         setFill(Color.WHITE);
-        setRadius(20);
+        setRadius(RADIUS);
     }
 
     @Override
-    public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
-        if (pressedKeys.contains(KeyCode.LEFT)) {
-            setMotion(SPACESHIP_SPEED, Direction.LEFT);
-        } else if (pressedKeys.contains(KeyCode.RIGHT)) {
-            setMotion(SPACESHIP_SPEED, Direction.RIGHT);
-        } else if (pressedKeys.contains(KeyCode.UP)) {
-            setMotion(SPACESHIP_SPEED, Direction.UP);
-        } else if (pressedKeys.contains(KeyCode.DOWN)) {
-            setMotion(SPACESHIP_SPEED, Direction.DOWN);
-        } else if (pressedKeys.isEmpty()) {
-            setSpeed(0);
+    public void onMouseMoved(Coordinate2D coordinate2D) {
+        if (coordinate2D.getX() > RADIUS &&
+                coordinate2D.getX() < getSceneWidth() - RADIUS &&
+                coordinate2D.getY() > RADIUS &&
+                coordinate2D.getY() < getSceneHeight() - RADIUS - 100) {
+            setCursor(Cursor.NONE);
+
+            setAnchorLocation(coordinate2D);
+        } else if (getCursor().equals(Cursor.NONE)) {
+            setCursor(Cursor.DEFAULT);
         }
-    }
-
-    @Override
-    public void notifyBoundaryTouching(SceneBorder border) {
-        setSpeed(0);
     }
 }

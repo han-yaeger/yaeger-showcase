@@ -1,7 +1,6 @@
 package nl.han.showcase.scenes.selection;
 
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListener;
 import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
 import com.github.hanyaeger.api.engine.scenes.StaticScene;
 import com.github.hanyaeger.api.engine.styles.HanFont;
@@ -15,7 +14,7 @@ import nl.han.showcase.buttons.SelectionButton;
  * A {@link StaticScene} that only contains the menu for selecting the
  * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}. Besides buttons,
  * which are just instances of {@link TextEntity}, this {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
- * also listens to the keyboard, by implementing the {@link KeyListener} interface.
+ * also listens to the keyboard, by implementing the {@link com.github.hanyaeger.api.engine.userinput.KeyListener interface.
  */
 public class SelectionScene extends StaticScene {
 

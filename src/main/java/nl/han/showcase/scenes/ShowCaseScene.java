@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes;
 
-import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListener;
 import com.github.hanyaeger.api.engine.scenes.DynamicScene;
+import com.github.hanyaeger.api.engine.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;

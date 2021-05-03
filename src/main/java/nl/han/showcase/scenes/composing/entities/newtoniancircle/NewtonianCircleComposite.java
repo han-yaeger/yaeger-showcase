@@ -5,10 +5,10 @@ import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.entities.entity.DynamicCompositeEntity;
 import com.github.hanyaeger.api.engine.entities.entity.SceneBorderCrossingWatcher;
 import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.events.userinput.KeyListener;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
 import com.github.hanyaeger.api.engine.entities.entity.motion.Newtonian;
 import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.engine.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.scenes.composing.Composing;
 

@@ -3,6 +3,8 @@ package nl.han.showcase.scenes.distance;
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
 import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import com.github.hanyaeger.api.engine.scenes.EntitySpawnerContainer;
+import com.github.hanyaeger.api.engine.userinput.*;
+import javafx.scene.input.MouseButton;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.distance.entities.*;
@@ -16,11 +18,11 @@ import nl.han.showcase.scenes.distance.entities.*;
  * that listens to user input. A Rocket Launcher, which consists of several Entities, calculates the distance and angle
  * to the SpaceShip and shoots rockets.
  */
-public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerContainer {
+public class TheDistanceScene extends ShowCaseScene implements MouseButtonPressedListener, MouseButtonReleasedListener, MouseEnterListener, MouseExitListener, MouseMovedListener, EntitySpawnerContainer {
 
     private RocketSpawner rocketSpawner;
 
-    public TheDistanceScene(YaegerShowCase yaegerShowCase) {
+    public TheDistanceScene(final YaegerShowCase yaegerShowCase) {
         super(yaegerShowCase);
     }
 
@@ -38,7 +40,7 @@ public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerCont
         super.setupEntities();
 
         var spaceShip = new SpaceShip(new Coordinate2D(getWidth() / 2, getHeight() / 2));
-        spaceShip.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
+        spaceShip.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(spaceShip);
 
         addAntiAircraftGun(spaceShip);
@@ -68,5 +70,30 @@ public class TheDistanceScene extends ShowCaseScene implements EntitySpawnerCont
     @Override
     public void setupEntitySpawners() {
         addEntitySpawner(rocketSpawner);
+    }
+
+    @Override
+    public void onMouseMoved(Coordinate2D coordinate2D) {
+        System.out.println("Scene reporting MouseMoved: (" + coordinate2D.getX() + ", " + coordinate2D.getY() + ")");
+    }
+
+    @Override
+    public void onMouseEntered() {
+        System.out.println("The Mouse Pointer has entered the Scene");
+    }
+
+    @Override
+    public void onMouseExited() {
+        System.out.println("The Mouse Pointer has exited the scene");
+    }
+
+    @Override
+    public void onMouseButtonPressed(MouseButton button, double x, double y) {
+        System.out.println("The Mouse Button has been pressed: " + button);
+    }
+
+    @Override
+    public void onMouseButtonReleased(MouseButton button, double x, double y) {
+        System.out.println("The Mouse Button has been release: " + button);
     }
 }
