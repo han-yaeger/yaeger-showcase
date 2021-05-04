@@ -1,6 +1,7 @@
 package nl.han.showcase.buttons;
 
 import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
+import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
 import javafx.scene.input.MouseButton;
 import nl.han.showcase.YaegerShowCase;
 
@@ -14,7 +15,7 @@ public class QuitButton extends SelectionButton {
     }
 
     @Override
-    public void onMouseButtonPressed(final MouseButton button, final double x, final double y) {
+    public void onMouseButtonPressed(final MouseButton button, final Coordinate2D coordinate2D) {
         showCase.quit();
     }
 }

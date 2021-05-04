@@ -22,7 +22,7 @@ public class BackButton extends BorderButton {
     }
 
     @Override
-    public void onMouseButtonPressed(MouseButton button, double x, double y) {
+    public void onMouseButtonPressed(final MouseButton button, final Coordinate2D coordinate2D) {
         showCase.setActiveScene(YaegerShowCase.SCENE_SELECTION);
     }
 }

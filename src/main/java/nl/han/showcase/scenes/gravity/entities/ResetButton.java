@@ -18,7 +18,7 @@ public class ResetButton extends BorderButton {
     }
 
     @Override
-    public void onMouseButtonPressed(MouseButton button, double x, double y) {
+    public void onMouseButtonPressed(final MouseButton button, final Coordinate2D coordinate2D) {
         gravity.resetEntities();
     }
 }

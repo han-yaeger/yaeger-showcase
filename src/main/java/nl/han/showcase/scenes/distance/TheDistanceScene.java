@@ -88,12 +88,12 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
     }
 
     @Override
-    public void onMouseButtonPressed(MouseButton button, double x, double y) {
+    public void onMouseButtonPressed(MouseButton button, final Coordinate2D coordinate2D) {
         System.out.println("The Mouse Button has been pressed: " + button);
     }
 
     @Override
-    public void onMouseButtonReleased(MouseButton button, double x, double y) {
+    public void onMouseButtonReleased(MouseButton button, final Coordinate2D coordinate2D) {
         System.out.println("The Mouse Button has been release: " + button);
     }
 }

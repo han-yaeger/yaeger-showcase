@@ -18,7 +18,7 @@ public class SelectionButton extends Button {
     }
 
     @Override
-    public void onMouseButtonPressed(final MouseButton button, final double x, final double y) {
+    public void onMouseButtonPressed(final MouseButton button, final Coordinate2D coordinate2D) {
         showCase.setActiveScene(getScene());
     }
 }
