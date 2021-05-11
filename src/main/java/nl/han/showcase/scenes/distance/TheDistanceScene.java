@@ -15,7 +15,13 @@ import nl.han.showcase.scenes.distance.entities.*;
  * a demonstration of that Use Case.
  * <p>
  * The user is able to control a SpaceShip, which is just a {@link com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity}
- * that listens to user input. A Rocket Launcher, which consists of several Entities, calculates the distance and angle
+ * that listens to mouse movements. While the mouse pointer is within the Scene, the SpaceShip is placed on the location
+ * of the mouse pointer. To enable this behavior, the SpaceShip implements the interface {@link MouseMovedListener}.
+ * <p>
+ * The Scene itself also implements many of the mouse-related listeners, namely {@link MouseButtonPressedListener}, {@link MouseButtonReleasedListener},
+ * {@link MouseEnterListener} and {@link MouseExitListener}, which lead to informative console messages.
+ * <p>
+ * A Rocket Launcher, which consists of several Entities, calculates the distance and angle
  * to the SpaceShip and shoots rockets.
  */
 public class TheDistanceScene extends ShowCaseScene implements MouseButtonPressedListener, MouseButtonReleasedListener, MouseEnterListener, MouseExitListener, MouseMovedListener, EntitySpawnerContainer {
