@@ -1,11 +1,11 @@
 package nl.han.showcase.scenes.gravity;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.YaegerEntity;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.entities.tilemap.TileMapContainer;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.YaegerEntity;
+import com.github.hanyaeger.api.scenes.TileMapContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.gravity.entities.*;
@@ -17,9 +17,9 @@ import java.util.List;
 
 
 /**
- * Yaeger supports simple physics through the {@link com.github.hanyaeger.api.engine.entities.entity.motion.Newtonian}
+ * Yaeger supports simple physics through the {@link com.github.hanyaeger.api.entities.Newtonian}
  * interface. This interface should be implemented by Dynamic Entities to change their behaviour by including gravity and friction.
- * Where a true physics implementation would mean the whole {@link com.github.hanyaeger.api.engine.scenes.YaegerScene} should
+ * Where a true physics implementation would mean the whole {@link com.github.hanyaeger.api.scenes.DynamicScene} should
  * follow the rules of physics, this implementation can be applied to certain entities.
  * <p>
  * The sprites from this scene are taken from: http://blog.spiralgraphics.biz/2011/01/mystery-forest-tile-set.html

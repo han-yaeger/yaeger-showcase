@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.roadsgoeveron.entities;
 
-import com.github.hanyaeger.api.engine.TimerContainer;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.TimerContainer;
+import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;

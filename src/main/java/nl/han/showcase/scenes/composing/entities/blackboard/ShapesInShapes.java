@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.composing.entities.blackboard;
 
-import com.github.hanyaeger.api.engine.entities.entity.CompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.CompositeEntity;
+import com.github.hanyaeger.api.entities.impl.text.TextEntity;
 import nl.han.showcase.YaegerShowCase;
 
 /**
@@ -12,7 +12,7 @@ public class ShapesInShapes extends CompositeEntity {
 
     public static final int TEXT_HEIGHT = 40;
 
-    public ShapesInShapes(Coordinate2D initialLocation) {
+    public ShapesInShapes(final Coordinate2D initialLocation) {
         super(initialLocation);
     }
 
@@ -31,8 +31,10 @@ public class ShapesInShapes extends CompositeEntity {
 
         var rowOne = new ThreeCirclesInARow(new Coordinate2D(0, TEXT_HEIGHT));
         addEntity(rowOne);
+
         var rowTwo = new ThreeCirclesInARow(new Coordinate2D(0, TEXT_HEIGHT + 2 * Circle.RADIUS));
         addEntity(rowTwo);
+
         var rowThree = new ThreeCirclesInARow(new Coordinate2D(0, TEXT_HEIGHT + 4 * Circle.RADIUS));
         addEntity(rowThree);
     }

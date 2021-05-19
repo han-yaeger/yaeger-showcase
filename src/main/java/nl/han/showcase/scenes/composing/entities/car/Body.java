@@ -1,11 +1,11 @@
 package nl.han.showcase.scenes.composing.entities.car;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
 
 public class Body extends RectangleEntity {
 
-    public Body(Coordinate2D initialPosition) {
+    public Body(final Coordinate2D initialPosition) {
         super(initialPosition);
         setHeight(40);
         setWidth(210);

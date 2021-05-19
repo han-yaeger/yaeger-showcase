@@ -1,14 +1,14 @@
 package nl.han.showcase.scenes.composing.entities.car.wheel;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.circle.CircleEntity;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.circle.CircleEntity;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
 public class Tire extends CircleEntity {
 
-    public Tire(Coordinate2D initialPosition) {
+    public Tire(final Coordinate2D initialPosition) {
         super(initialPosition);
         setRadius(30);
         setFill(Color.TRANSPARENT);

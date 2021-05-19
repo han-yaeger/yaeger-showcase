@@ -1,20 +1,20 @@
 package nl.han.showcase.scenes.selection;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
-import com.github.hanyaeger.api.engine.scenes.StaticScene;
-import com.github.hanyaeger.api.engine.styles.HanFont;
-import com.github.hanyaeger.api.engine.styles.HanFontStyle;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.text.TextEntity;
+import com.github.hanyaeger.api.scenes.StaticScene;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.QuitButton;
 import nl.han.showcase.buttons.SelectionButton;
 
 /**
  * A {@link StaticScene} that only contains the menu for selecting the
- * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}. Besides buttons,
- * which are just instances of {@link TextEntity}, this {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
- * also listens to the keyboard, by implementing the {@link com.github.hanyaeger.api.engine.userinput.KeyListener interface.
+ * {@link StaticScene}. Besides buttons,
+ * which are just instances of {@link TextEntity}, this {@link StaticScene}
+ * also listens to the keyboard, by implementing the {@link com.github.hanyaeger.api.userinput.KeyListener interface.
  */
 public class SelectionScene extends StaticScene {
 
@@ -43,7 +43,7 @@ public class SelectionScene extends StaticScene {
         // and added to the Scene.
         var select = new TextEntity(new Coordinate2D(LEFT_MARGIN, 95), TEXT_PLEASE_SELECT);
         select.setFill(Color.BLACK);
-        select.setFont(HanFont.createDefaultCondensedFont(HanFontStyle.BOLD, 23));
+        select.setFont(Font.font("Roboto", FontWeight.BOLD, 23));
         addEntity(select);
 
         var roadsGoEverOn = new SelectionButton(150, YaegerShowCase.SCENE_ROADS_GO_EVER_ON_TITLE, showCase, YaegerShowCase.SCENE_ROADS_GO_EVER_ON);

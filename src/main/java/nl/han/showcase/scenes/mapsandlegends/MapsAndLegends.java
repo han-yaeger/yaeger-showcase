@@ -1,17 +1,17 @@
 package nl.han.showcase.scenes.mapsandlegends;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.tilemap.TileMapContainer;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.scenes.TileMapContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.mapsandlegends.tilemaps.*;
 
 /**
- * There are two flavours of TileMaps. Those that cover the entire {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}
+ * There are two flavours of TileMaps. Those that cover the entire {@link com.github.hanyaeger.api.scenes.DynamicScene}
  * and those that only take up a give area. In this Scene we demonstrate several implementations, and how we can
- * use the {@link com.github.hanyaeger.api.engine.entities.tilemap.TileMap#setAnchorPoint(AnchorPoint)} to put them on the
+ * use the {@link com.github.hanyaeger.api.scenes.TileMap#setAnchorPoint(com.github.hanyaeger.api.AnchorPoint)} to put them on the
  * Scene.
  */
 public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {

@@ -1,14 +1,13 @@
 package nl.han.showcase.scenes.mapsandlegends.tilemaps.entities;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.ellipse.EllipseEntity;
-import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.impl.ellipse.EllipseEntity;
 import javafx.scene.paint.Color;
 
 public class EllipseEntityForTileMap extends EllipseEntity {
 
-    public EllipseEntityForTileMap(Coordinate2D initialPosition, Size size) {
+    public EllipseEntityForTileMap(final Coordinate2D initialPosition, final Size size) {
         super(initialPosition, size);
 
         setStrokeWidth(1);

@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.distance;
 
-import com.github.hanyaeger.api.engine.entities.EntitySpawner;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.EntitySpawner;
 import nl.han.showcase.scenes.distance.entities.Rocket;
 
 import java.util.Random;
@@ -36,7 +36,7 @@ public class RocketSpawner extends EntitySpawner {
      *
      * @param direction The direction in which the next {@link Rocket} should travel.
      */
-    public void setDirection(double direction) {
+    public void setDirection(final double direction) {
         this.direction = direction;
     }
 }

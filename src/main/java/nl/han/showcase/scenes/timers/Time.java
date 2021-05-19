@@ -1,11 +1,12 @@
 package nl.han.showcase.scenes.timers;
 
-import com.github.hanyaeger.api.engine.TimerContainer;
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
-import com.github.hanyaeger.api.engine.styles.HanFont;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.TimerContainer;
+import com.github.hanyaeger.api.entities.impl.text.TextEntity;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.timers.timers.SceneMinuteTimer;
@@ -36,7 +37,7 @@ public class Time extends ShowCaseScene implements TimerContainer {
         super.setupEntities();
 
         displayNumberText = new TextEntity(new Coordinate2D(getWidth() / 2, (getHeight() / 2) + 10), Integer.toString(displayNumber));
-        displayNumberText.setFont(HanFont.createDefaultFont(100));
+        displayNumberText.setFont(Font.font("Roboto", FontWeight.NORMAL, 100));
         displayNumberText.setFill(Color.WHITE);
         displayNumberText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(displayNumberText);

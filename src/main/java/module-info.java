@@ -1,5 +1,5 @@
 module yaeger.showcase {
-    requires hanyaeger.api;
+    requires hanyaeger;
 
     exports nl.han.showcase;
     exports nl.han.showcase.scenes.mapsandlegends.tilemaps.entities;

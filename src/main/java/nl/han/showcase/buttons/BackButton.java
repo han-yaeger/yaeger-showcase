@@ -1,13 +1,13 @@
 package nl.han.showcase.buttons;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
 import javafx.scene.input.MouseButton;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.selection.SelectionScene;
 
 /**
- * Just a simple {@link com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity}
+ * Just a simple {@link com.github.hanyaeger.api.entities.impl.text.TextEntity}
  * that is used as a button.
  */
 public class BackButton extends BorderButton {

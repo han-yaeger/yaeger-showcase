@@ -1,11 +1,12 @@
 package nl.han.showcase.scenes.distance.entities;
 
-import com.github.hanyaeger.api.engine.UpdateExposer;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.YaegerEntity;
-import com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity;
-import com.github.hanyaeger.api.engine.styles.HanFont;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.UpdateExposer;
+import com.github.hanyaeger.api.entities.YaegerEntity;
+import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 /**
  * A simple {@link DynamicTextEntity} that implements the interface {@link UpdateExposer}
@@ -21,11 +22,11 @@ public class DistanceText extends DynamicTextEntity implements UpdateExposer {
         this.origin = origin;
         this.target = target;
         setFill(Color.WHITE);
-        setFont(HanFont.createDefaultCondensedFont(14));
+        setFont(Font.font("Roboto", FontWeight.NORMAL, 14));
     }
 
     @Override
-    public void explicitUpdate(long timestamp) {
+    public void explicitUpdate(final long timestamp) {
         setText("Distance: " + Math.round(origin.distanceTo(target)));
     }
 }

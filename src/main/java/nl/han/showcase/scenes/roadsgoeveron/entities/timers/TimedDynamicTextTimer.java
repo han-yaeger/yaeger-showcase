@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.roadsgoeveron.entities.timers;
 
-import com.github.hanyaeger.api.engine.Timer;
+import com.github.hanyaeger.api.Timer;
 import nl.han.showcase.scenes.roadsgoeveron.entities.TimedDynamicTextEntity;
 
 public class TimedDynamicTextTimer extends Timer {
@@ -21,5 +21,4 @@ public class TimedDynamicTextTimer extends Timer {
     public void onAnimationUpdate(final long timestamp) {
         timedDynamicTextEntity.nextLine();
     }
-
 }

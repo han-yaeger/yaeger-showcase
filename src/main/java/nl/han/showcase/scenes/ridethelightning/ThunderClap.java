@@ -1,14 +1,14 @@
 package nl.han.showcase.scenes.ridethelightning;
 
-import com.github.hanyaeger.api.engine.media.audio.SoundClip;
-import com.github.hanyaeger.api.engine.scenes.YaegerScene;
+import com.github.hanyaeger.api.media.SoundClip;
+import com.github.hanyaeger.api.scenes.DynamicScene;
 
 import java.util.Random;
 
 public class ThunderClap {
 
     private final String audioClip;
-    private final YaegerScene scene;
+    private final DynamicScene scene;
     private final Random random;
 
     private boolean inProgress = true;
@@ -19,7 +19,7 @@ public class ThunderClap {
     private final long timeBeforeClap;
 
 
-    public ThunderClap(final String audioClip, final YaegerScene scene) {
+    public ThunderClap(final String audioClip, final DynamicScene scene) {
         this.audioClip = audioClip;
         this.scene = scene;
 

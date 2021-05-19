@@ -1,10 +1,10 @@
 package nl.han.showcase.scenes.composing.entities.waterworld.swordfish;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.DynamicCompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderCrossingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
+import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 
 /**
  * Contrary to the Tutorial, The SwordFish is now created as a composition, through the use of a
@@ -13,9 +13,9 @@ import com.github.hanyaeger.api.engine.scenes.SceneBorder;
  */
 public class SwordFish extends DynamicCompositeEntity implements SceneBorderCrossingWatcher {
 
-    public SwordFish(Coordinate2D initialLocation) {
+    public SwordFish(final Coordinate2D initialLocation) {
         super(initialLocation);
-        setMotion(4, Direction.LEFT.getValue());
+        setMotion(4, Direction.LEFT);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class SwordFish extends DynamicCompositeEntity implements SceneBorderCros
     }
 
     @Override
-    public void notifyBoundaryCrossing(SceneBorder border) {
+    public void notifyBoundaryCrossing(final SceneBorder border) {
         setAnchorLocationX(getSceneWidth());
     }
 }

@@ -1,9 +1,9 @@
 package nl.han.showcase.scenes.shapeofyou.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 
 /**
  * By extending the {@link UpdatingCircle} more behaviour can be added. In this case we give the {@link MovingUpdatingCircle}

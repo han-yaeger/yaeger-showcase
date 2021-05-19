@@ -1,11 +1,11 @@
 package nl.han.showcase.buttons;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.CompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.userinput.MouseButtonPressedListener;
-import com.github.hanyaeger.api.engine.userinput.MouseEnterListener;
-import com.github.hanyaeger.api.engine.userinput.MouseExitListener;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.CompositeEntity;
+import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
+import com.github.hanyaeger.api.userinput.MouseEnterListener;
+import com.github.hanyaeger.api.userinput.MouseExitListener;
 import javafx.scene.Cursor;
 
 public abstract class BorderButton extends CompositeEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {

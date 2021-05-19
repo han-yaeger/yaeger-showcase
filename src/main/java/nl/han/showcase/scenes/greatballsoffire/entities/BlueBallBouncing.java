@@ -1,10 +1,10 @@
 package nl.han.showcase.scenes.greatballsoffire.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.entities.impl.sprite.DynamicSpriteEntity;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 
 /**
  * The Bouncing Blue Ball is a {@link DynamicSpriteEntity} that uses a {@code png} image file
@@ -13,7 +13,7 @@ import com.github.hanyaeger.api.engine.scenes.SceneBorder;
  * <p>
  * By implementing the interface {@link SceneBorderTouchingWatcher} the Bouncing Blue Ball gets
  * notified if it touches the border of the scene, after which it calls
- * {@link com.github.hanyaeger.api.engine.entities.entity.motion.Movable#changeDirection(double)}.
+ * {@link DynamicSpriteEntity#changeDirection(double)}.
  */
 public class BlueBallBouncing extends DynamicSpriteEntity implements SceneBorderTouchingWatcher {
 

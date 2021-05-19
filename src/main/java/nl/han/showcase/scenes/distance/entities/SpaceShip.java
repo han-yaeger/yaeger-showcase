@@ -1,17 +1,16 @@
 package nl.han.showcase.scenes.distance.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
-import com.github.hanyaeger.api.engine.userinput.MouseMovedListener;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.impl.circle.DynamicCircleEntity;
+import com.github.hanyaeger.api.userinput.MouseMovedListener;
 import javafx.scene.Cursor;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
 /**
  * A {@link SpaceShip} is just a simple {@link DynamicCircleEntity} that can move around the
- * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene}.
+ * {@link com.github.hanyaeger.api.scenes.DynamicScene}.
  * <p>
  * The interface {@link Collider} is used to registers collisions with a {@link Rocket}.
  */
@@ -19,7 +18,7 @@ public class SpaceShip extends DynamicCircleEntity implements MouseMovedListener
 
     private static final double RADIUS = 20;
 
-    public SpaceShip(Coordinate2D location) {
+    public SpaceShip(final Coordinate2D location) {
         super(location);
         setStrokeWidth(1);
         setStrokeColor(YaegerShowCase.HAN_RED);
@@ -28,7 +27,7 @@ public class SpaceShip extends DynamicCircleEntity implements MouseMovedListener
     }
 
     @Override
-    public void onMouseMoved(Coordinate2D coordinate2D) {
+    public void onMouseMoved(final Coordinate2D coordinate2D) {
         if (coordinate2D.getX() > RADIUS &&
                 coordinate2D.getX() < getSceneWidth() - RADIUS &&
                 coordinate2D.getY() > RADIUS &&

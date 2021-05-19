@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.gravity.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
 import javafx.scene.input.MouseButton;
 import nl.han.showcase.buttons.BorderButton;
 import nl.han.showcase.scenes.gravity.Gravity;

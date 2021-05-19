@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.composing.entities.blackboard;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.circle.CircleEntity;
-import com.github.hanyaeger.api.engine.userinput.MouseButtonPressedListener;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.circle.CircleEntity;
+import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
@@ -11,7 +11,7 @@ public class Circle extends CircleEntity implements MouseButtonPressedListener {
 
     public static final double RADIUS = 30;
 
-    public Circle(Coordinate2D initialPosition) {
+    public Circle(final Coordinate2D initialPosition) {
         super(initialPosition);
         setRadius(RADIUS);
         setFill(Color.TRANSPARENT);

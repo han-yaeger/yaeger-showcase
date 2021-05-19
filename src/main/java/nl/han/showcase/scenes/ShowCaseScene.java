@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes;
 
-import com.github.hanyaeger.api.engine.scenes.DynamicScene;
-import com.github.hanyaeger.api.engine.userinput.KeyListener;
+import com.github.hanyaeger.api.scenes.DynamicScene;
+import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.buttons.BackButton;
@@ -28,7 +28,7 @@ public abstract class ShowCaseScene extends DynamicScene implements KeyListener 
     }
 
     @Override
-    public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
+    public void onPressedKeysChange(final Set<KeyCode> pressedKeys) {
         if (pressedKeys.contains(KeyCode.DIGIT0)) {
             showCase.setActiveScene(YaegerShowCase.SCENE_SELECTION);
         }

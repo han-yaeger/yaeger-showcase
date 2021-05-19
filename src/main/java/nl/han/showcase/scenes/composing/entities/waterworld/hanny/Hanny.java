@@ -1,12 +1,12 @@
 package nl.han.showcase.scenes.composing.entities.waterworld.hanny;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.DynamicCompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
-import com.github.hanyaeger.api.engine.userinput.KeyListener;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Collided;
+import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
+import com.github.hanyaeger.api.entities.impl.text.TextEntity;
+import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
 
@@ -59,7 +59,7 @@ public class Hanny extends DynamicCompositeEntity implements KeyListener, Collid
     }
 
     @Override
-    public void onCollision(Collider collidingObject) {
+    public void onCollision(final Collider collidingObject) {
         healthText.setText(String.valueOf(health--));
     }
 }

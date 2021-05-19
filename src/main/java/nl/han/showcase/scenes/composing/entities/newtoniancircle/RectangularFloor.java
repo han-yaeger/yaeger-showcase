@@ -1,14 +1,14 @@
 package nl.han.showcase.scenes.composing.entities.newtoniancircle;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
 public class RectangularFloor extends RectangleEntity implements Collider {
 
-    public RectangularFloor(Coordinate2D initialPosition) {
+    public RectangularFloor(final Coordinate2D initialPosition) {
         super(initialPosition);
 
         setHeight(20);

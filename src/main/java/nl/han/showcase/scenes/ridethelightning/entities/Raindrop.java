@@ -1,10 +1,10 @@
 package nl.han.showcase.scenes.ridethelightning.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderCrossingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.entities.entity.shape.ellipse.DynamicEllipseEntity;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
+import com.github.hanyaeger.api.entities.impl.ellipse.DynamicEllipseEntity;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 
 public class Raindrop extends DynamicEllipseEntity implements SceneBorderCrossingWatcher {

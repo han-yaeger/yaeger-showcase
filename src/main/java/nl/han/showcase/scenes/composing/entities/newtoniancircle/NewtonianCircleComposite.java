@@ -1,14 +1,10 @@
 package nl.han.showcase.scenes.composing.entities.newtoniancircle;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.DynamicCompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderCrossingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Newtonian;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
-import com.github.hanyaeger.api.engine.userinput.KeyListener;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.*;
+import com.github.hanyaeger.api.scenes.SceneBorder;
+import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.scenes.composing.Composing;
 
@@ -50,7 +46,7 @@ public class NewtonianCircleComposite extends DynamicCompositeEntity implements 
     }
 
     @Override
-    public void notifyBoundaryCrossing(SceneBorder border) {
+    public void notifyBoundaryCrossing(final SceneBorder border) {
         composing.placeNewtonianCircle();
         remove();
     }

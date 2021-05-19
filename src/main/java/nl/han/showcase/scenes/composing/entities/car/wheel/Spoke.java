@@ -1,13 +1,13 @@
 package nl.han.showcase.scenes.composing.entities.car.wheel;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
 import nl.han.showcase.YaegerShowCase;
 
 public class Spoke extends RectangleEntity {
 
-    public Spoke(Coordinate2D initialPosition) {
+    public Spoke(final Coordinate2D initialPosition) {
         super(initialPosition);
         setWidth(60);
         setHeight(1);

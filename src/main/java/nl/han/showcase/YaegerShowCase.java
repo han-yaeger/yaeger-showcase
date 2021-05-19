@@ -1,7 +1,7 @@
 package nl.han.showcase;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.YaegerGame;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.YaegerGame;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.composing.Composing;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
@@ -64,13 +64,13 @@ public class YaegerShowCase extends YaegerGame {
     }
 
     @Override
-    protected void setupGame() {
+    public void setupGame() {
         setGameTitle(GAME_TITLE);
         setSize(SIZE);
     }
 
     @Override
-    protected void setupScenes() {
+    public void setupScenes() {
         var selection = new SelectionScene(this);
         addScene(SCENE_SELECTION, selection);
         var roadsGoEverOn = new RoadsGoEverOnScene(this);

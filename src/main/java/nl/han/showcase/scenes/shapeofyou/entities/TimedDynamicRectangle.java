@@ -1,16 +1,16 @@
 package nl.han.showcase.scenes.shapeofyou.entities;
 
-import com.github.hanyaeger.api.engine.TimerContainer;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.TimerContainer;
+import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.entities.impl.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.shapeofyou.entities.timers.TimedDynamicRectangleTimer;
 
 /**
- * A {@link DynamicRectangleEntity} that uses a {@link com.github.hanyaeger.api.engine.Timer} to change the arcWidth
+ * A {@link DynamicRectangleEntity} that uses a {@link com.github.hanyaeger.api.Timer} to change the arcWidth
  * and arcHeight of the rectangle.
  */
 public class TimedDynamicRectangle extends DynamicRectangleEntity implements TimerContainer, SceneBorderTouchingWatcher {
@@ -31,7 +31,7 @@ public class TimedDynamicRectangle extends DynamicRectangleEntity implements Tim
     }
 
     @Override
-    public void notifyBoundaryTouching(SceneBorder border) {
+    public void notifyBoundaryTouching(final SceneBorder border) {
         changeDirection(180);
     }
 

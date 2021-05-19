@@ -1,8 +1,7 @@
 package nl.han.showcase.scenes.shapeofyou.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.ellipse.EllipseEntity;
-import javafx.scene.paint.Color;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.ellipse.EllipseEntity;
 import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 
 public class StaticEllipse extends EllipseEntity {

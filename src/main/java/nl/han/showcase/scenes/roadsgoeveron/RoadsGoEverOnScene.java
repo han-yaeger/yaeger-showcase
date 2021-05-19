@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.roadsgoeveron;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.text.TextEntity;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
@@ -11,8 +11,8 @@ import nl.han.showcase.scenes.roadsgoeveron.entities.*;
 
 /**
  * To present text on the screen, Yaeger supports the {@link TextEntity} and its dynamic partner,
- * the {@link com.github.hanyaeger.api.engine.entities.entity.shape.text.DynamicTextEntity}. This
- * {@link com.github.hanyaeger.api.engine.scenes.YaegerScene} displays different Use Cases regarding
+ * the {@link com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity}. This
+ * {@link com.github.hanyaeger.api.scenes.DynamicScene} displays different Use Cases regarding
  * these Entities.
  */
 public class RoadsGoEverOnScene extends ShowCaseScene {

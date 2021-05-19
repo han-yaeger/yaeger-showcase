@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.gravity.tilemaps;
 
-import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
+import com.github.hanyaeger.api.scenes.TileMap;
 import nl.han.showcase.scenes.gravity.tilemaps.entities.WhiteEntity;
 
 public class GroundTileMap extends TileMap {

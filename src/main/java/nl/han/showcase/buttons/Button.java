@@ -1,14 +1,14 @@
 package nl.han.showcase.buttons;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
- import com.github.hanyaeger.api.engine.entities.entity.shape.text.TextEntity;
-import com.github.hanyaeger.api.engine.styles.HanFont;
-import com.github.hanyaeger.api.engine.styles.HanFontStyle;
-import com.github.hanyaeger.api.engine.userinput.MouseButtonPressedListener;
-import com.github.hanyaeger.api.engine.userinput.MouseEnterListener;
-import com.github.hanyaeger.api.engine.userinput.MouseExitListener;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.text.TextEntity;
+import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
+import com.github.hanyaeger.api.userinput.MouseEnterListener;
+import com.github.hanyaeger.api.userinput.MouseExitListener;
 import javafx.scene.Cursor;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 
 public abstract class Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
@@ -20,7 +20,7 @@ public abstract class Button extends TextEntity implements MouseButtonPressedLis
 
         this.scene = scene;
 
-        setFont(HanFont.createDefaultCondensedFont(HanFontStyle.MEDIUM, 25));
+        setFont(Font.font("Roboto", FontWeight.NORMAL, 25));
     }
 
     @Override

@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.mapsandlegends.tilemaps.entities;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.CompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.CompositeEntity;
 
 public class CompositeEntityForTileMap extends CompositeEntity {
 

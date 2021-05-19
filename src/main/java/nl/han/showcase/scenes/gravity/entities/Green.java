@@ -1,13 +1,11 @@
 package nl.han.showcase.scenes.gravity.entities;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.*;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Newtonian;
-import com.github.hanyaeger.api.engine.entities.entity.sprite.DynamicSpriteEntity;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.*;
+import com.github.hanyaeger.api.entities.impl.sprite.DynamicSpriteEntity;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 
 public class Green extends DynamicSpriteEntity implements Newtonian, Collided, SceneBorderTouchingWatcher {
 
@@ -40,7 +38,7 @@ public class Green extends DynamicSpriteEntity implements Newtonian, Collided, S
     }
 
     @Override
-    public void notifyBoundaryTouching(SceneBorder border) {
+    public void notifyBoundaryTouching(final SceneBorder border) {
         nullifySpeedInDirection(Direction.RIGHT);
     }
 }

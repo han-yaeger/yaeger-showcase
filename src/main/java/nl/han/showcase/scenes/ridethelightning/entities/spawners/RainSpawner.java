@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.ridethelightning.entities.spawners;
 
-import com.github.hanyaeger.api.engine.entities.EntitySpawner;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.EntitySpawner;
 import nl.han.showcase.scenes.ridethelightning.entities.Raindrop;
 
 import java.util.Random;
@@ -14,7 +14,7 @@ public class RainSpawner extends EntitySpawner {
     private final int maxSpeed;
 
     /**
-     * Create a new instance of {@link EntitySpawner} for the given interval in milliseconds.
+     * Create a new instance of {@link com.github.hanyaeger.api.entities.EntitySpawner} for the given interval in milliseconds.
      *
      * @param intervalInMs The interval in milliseconds.
      */
@@ -38,7 +38,7 @@ public class RainSpawner extends EntitySpawner {
     }
 
     private Coordinate2D generateRandomPosition() {
-        int x = new Random().nextInt((int) Math.round(worldWidth));
+        var x = new Random().nextInt((int) Math.round(worldWidth));
 
         return new Coordinate2D(x, 0);
     }

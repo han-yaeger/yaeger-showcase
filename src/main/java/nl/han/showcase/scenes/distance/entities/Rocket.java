@@ -1,10 +1,10 @@
 package nl.han.showcase.scenes.distance.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Collided;
+import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.impl.circle.DynamicCircleEntity;
 import javafx.scene.paint.Color;
 
 /**

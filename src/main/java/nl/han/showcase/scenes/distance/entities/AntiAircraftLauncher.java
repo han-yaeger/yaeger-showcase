@@ -1,9 +1,9 @@
 package nl.han.showcase.scenes.distance.entities;
 
-import com.github.hanyaeger.api.engine.UpdateExposer;
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.UpdateExposer;
+import com.github.hanyaeger.api.entities.impl.rectangle.DynamicRectangleEntity;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.distance.RocketSpawner;
 
@@ -18,7 +18,7 @@ public class AntiAircraftLauncher extends DynamicRectangleEntity implements Upda
     private final SpaceShip spaceShip;
     private final RocketSpawner rocketSpawner;
 
-    public AntiAircraftLauncher(Coordinate2D initialPosition, SpaceShip spaceShip, RocketSpawner rocketSpawner) {
+    public AntiAircraftLauncher(final Coordinate2D initialPosition, final SpaceShip spaceShip, final RocketSpawner rocketSpawner) {
         super(initialPosition);
         this.spaceShip = spaceShip;
         this.rocketSpawner = rocketSpawner;
@@ -29,7 +29,7 @@ public class AntiAircraftLauncher extends DynamicRectangleEntity implements Upda
     }
 
     @Override
-    public void explicitUpdate(long timestamp) {
+    public void explicitUpdate(final long timestamp) {
         var angle = angleTo(spaceShip);
         rocketSpawner.setDirection(angle);
         setRotate(angle);

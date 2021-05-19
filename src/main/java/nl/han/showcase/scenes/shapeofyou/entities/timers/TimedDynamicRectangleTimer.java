@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.shapeofyou.entities.timers;
 
-import com.github.hanyaeger.api.engine.Timer;
+import com.github.hanyaeger.api.Timer;
 import nl.han.showcase.scenes.shapeofyou.entities.TimedDynamicRectangle;
 
 public class TimedDynamicRectangleTimer extends Timer {
@@ -12,13 +12,13 @@ public class TimedDynamicRectangleTimer extends Timer {
      *
      * @param intervalInMs The interval in milleseconds.
      */
-    public TimedDynamicRectangleTimer(TimedDynamicRectangle imedDynamicRectangleint, int intervalInMs) {
+    public TimedDynamicRectangleTimer(final TimedDynamicRectangle timedDynamicRectangleint, final int intervalInMs) {
         super(intervalInMs);
-        this.timedDynamicRectangleint = imedDynamicRectangleint;
+        this.timedDynamicRectangleint = timedDynamicRectangleint;
     }
 
     @Override
-    public void onAnimationUpdate(long timestamp) {
+    public void onAnimationUpdate(final long timestamp) {
         timedDynamicRectangleint.setArc();
     }
 }

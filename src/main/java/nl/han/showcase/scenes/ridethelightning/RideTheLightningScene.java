@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.ridethelightning;
 
-import com.github.hanyaeger.api.engine.TimerContainer;
-import com.github.hanyaeger.api.engine.scenes.EntitySpawnerContainer;
+import com.github.hanyaeger.api.EntitySpawnerContainer;
+import com.github.hanyaeger.api.TimerContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.ridethelightning.entities.spawners.RainSpawner;

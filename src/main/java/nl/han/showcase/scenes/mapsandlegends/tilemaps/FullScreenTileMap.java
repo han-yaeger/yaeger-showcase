@@ -1,6 +1,6 @@
 package nl.han.showcase.scenes.mapsandlegends.tilemaps;
 
-import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
+import com.github.hanyaeger.api.scenes.TileMap;
 import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.WhiteEntityForTileMap;
 
 public class FullScreenTileMap extends TileMap {

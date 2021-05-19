@@ -1,9 +1,9 @@
 package nl.han.showcase.scenes.distance;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.scenes.EntitySpawnerContainer;
-import com.github.hanyaeger.api.engine.userinput.*;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.EntitySpawnerContainer;
+import com.github.hanyaeger.api.userinput.*;
 import javafx.scene.input.MouseButton;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
@@ -11,10 +11,10 @@ import nl.han.showcase.scenes.distance.entities.*;
 
 /**
  * A common Use Case in games is shooting at something. To know where to shoot, you will need to
- * aim in the right direction. This {@link com.github.hanyaeger.api.engine.scenes.YaegerScene} is
+ * aim in the right direction. This {@link com.github.hanyaeger.api.scenes.DynamicScene} is
  * a demonstration of that Use Case.
  * <p>
- * The user is able to control a SpaceShip, which is just a {@link com.github.hanyaeger.api.engine.entities.entity.shape.circle.DynamicCircleEntity}
+ * The user is able to control a SpaceShip, which is just a {@link com.github.hanyaeger.api.entities.impl.circle.DynamicCircleEntity}
  * that listens to mouse movements. While the mouse pointer is within the Scene, the SpaceShip is placed on the location
  * of the mouse pointer. To enable this behavior, the SpaceShip implements the interface {@link MouseMovedListener}.
  * <p>

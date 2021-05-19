@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.mapsandlegends.tilemaps;
 
-import com.github.hanyaeger.api.engine.Size;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.tilemap.TileMap;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.scenes.TileMap;
 import nl.han.showcase.scenes.mapsandlegends.tilemaps.entities.RectangleEntityForTileMap;
 
 public class BoundedRectangleMap extends TileMap {

@@ -1,9 +1,9 @@
 package nl.han.showcase.scenes.composing.entities.newtoniancircle;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collided;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.shape.circle.CircleEntity;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Collided;
+import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.impl.circle.CircleEntity;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
@@ -23,7 +23,7 @@ public class InnerCircle extends CircleEntity implements Collided {
     }
 
     @Override
-    public void onCollision(Collider collidingObject) {
+    public void onCollision(final Collider collidingObject) {
         newtonianCircleComposite.onCollision(collidingObject);
     }
 }

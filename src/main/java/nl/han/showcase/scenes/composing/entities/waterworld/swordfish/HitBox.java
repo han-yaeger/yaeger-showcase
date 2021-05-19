@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.composing.entities.waterworld.swordfish;
 
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.collisions.Collider;
-import com.github.hanyaeger.api.engine.entities.entity.shape.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
 import javafx.scene.paint.Color;
 
 /**

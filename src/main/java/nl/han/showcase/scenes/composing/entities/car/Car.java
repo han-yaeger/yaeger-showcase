@@ -1,11 +1,11 @@
 package nl.han.showcase.scenes.composing.entities.car;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.DynamicCompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.engine.entities.entity.motion.Direction;
-import com.github.hanyaeger.api.engine.scenes.SceneBorder;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
+import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.composing.entities.car.wheel.Wheel;
 
@@ -21,7 +21,7 @@ public class Car extends DynamicCompositeEntity implements SceneBorderTouchingWa
     private Wheel rightWheel;
     private Wheel leftWheel;
 
-    public Car(Coordinate2D initialLocation) {
+    public Car(final Coordinate2D initialLocation) {
         super(initialLocation);
         setMotion(4, Direction.RIGHT);
     }
@@ -44,7 +44,7 @@ public class Car extends DynamicCompositeEntity implements SceneBorderTouchingWa
     }
 
     @Override
-    public void notifyBoundaryTouching(SceneBorder border) {
+    public void notifyBoundaryTouching(final SceneBorder border) {
         changeDirection(180);
         leftWheel.setRotationSpeed(-1 * leftWheel.getRotationSpeed());
         rightWheel.setRotationSpeed(-1 * rightWheel.getRotationSpeed());

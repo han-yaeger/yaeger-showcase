@@ -1,8 +1,8 @@
 package nl.han.showcase.scenes.distance.entities;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
-import com.github.hanyaeger.api.engine.entities.entity.shape.circle.CircleEntity;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.circle.CircleEntity;
 import nl.han.showcase.YaegerShowCase;
 
 /**
@@ -10,7 +10,7 @@ import nl.han.showcase.YaegerShowCase;
  */
 public class AntiAircraftBase extends CircleEntity {
 
-    public AntiAircraftBase(Coordinate2D initialPosition) {
+    public AntiAircraftBase(final Coordinate2D initialPosition) {
         super(initialPosition);
         setRadius(60);
         setFill(YaegerShowCase.HAN_RED);

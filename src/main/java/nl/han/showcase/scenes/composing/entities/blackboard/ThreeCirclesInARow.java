@@ -1,12 +1,12 @@
 package nl.han.showcase.scenes.composing.entities.blackboard;
 
-import com.github.hanyaeger.api.engine.entities.entity.AnchorPoint;
-import com.github.hanyaeger.api.engine.entities.entity.CompositeEntity;
-import com.github.hanyaeger.api.engine.entities.entity.Coordinate2D;
+import com.github.hanyaeger.api.AnchorPoint;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.CompositeEntity;
 
 public class ThreeCirclesInARow extends CompositeEntity {
 
-    public ThreeCirclesInARow(Coordinate2D initialLocation) {
+    public ThreeCirclesInARow(final Coordinate2D initialLocation) {
         super(initialLocation);
     }
 
