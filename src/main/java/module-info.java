@@ -8,4 +8,5 @@ module yaeger.showcase {
     opens audio;
     opens backgrounds;
     opens entities;
+    opens fonts;
 }

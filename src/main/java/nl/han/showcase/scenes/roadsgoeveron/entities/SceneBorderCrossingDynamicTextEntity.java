@@ -3,12 +3,18 @@ package nl.han.showcase.scenes.roadsgoeveron.entities;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
+import com.github.hanyaeger.api.entities.impl.text.CustomFont;
 import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 
+/**
+ * This {@link com.github.hanyaeger.api.entities.impl.text.TextEntity} demonstrates to features. By implementing
+ * the interface {@link SceneBorderCrossingWatcher} it is notified whenever its crosses the border of
+ * the scene. In such case it changes its color and it changes it direction by 180 degrees.
+ * <p>
+ * Secondly it is uses a {@link CustomFont}, which is based on a font file.
+ */
 public class SceneBorderCrossingDynamicTextEntity extends DynamicTextEntity implements SceneBorderCrossingWatcher {
 
     public static final String TEXT = "SceneBorderCrossing";
@@ -16,7 +22,7 @@ public class SceneBorderCrossingDynamicTextEntity extends DynamicTextEntity impl
     public SceneBorderCrossingDynamicTextEntity(final Coordinate2D position) {
         super(position, TEXT);
         setFill(Color.TURQUOISE);
-        setFont(Font.font("palatino", FontWeight.BOLD, 30));
+        setFont(new CustomFont("fonts/pixelfont.ttf", 35));
         setMotion(4, Direction.LEFT);
     }
 
