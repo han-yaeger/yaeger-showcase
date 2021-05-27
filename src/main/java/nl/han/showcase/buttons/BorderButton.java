@@ -8,6 +8,11 @@ import com.github.hanyaeger.api.userinput.MouseEnterListener;
 import com.github.hanyaeger.api.userinput.MouseExitListener;
 import javafx.scene.Cursor;
 
+/**
+ * Since all buttons need a same layout, we create an abstract {@link CompositeEntity} that contains both a
+ * {@link com.github.hanyaeger.api.entities.impl.text.TextEntity} and a
+ * {@link com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity}.
+ */
 public abstract class BorderButton extends CompositeEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
 
     private ButtonText buttonText;

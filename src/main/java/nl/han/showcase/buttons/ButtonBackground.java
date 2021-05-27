@@ -9,8 +9,8 @@ public class ButtonBackground extends RectangleEntity {
 
     public ButtonBackground(final Coordinate2D initialPosition, final Size size) {
         super(initialPosition);
-        setWidth(size.getWidth());
-        setHeight(size.getHeight());
+        setWidth(size.width());
+        setHeight(size.height());
         setFill(Color.BLACK);
         setStrokeWidth(0);
     }

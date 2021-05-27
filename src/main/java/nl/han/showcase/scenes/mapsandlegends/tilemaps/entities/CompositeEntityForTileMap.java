@@ -18,7 +18,7 @@ public class CompositeEntityForTileMap extends CompositeEntity {
         var rectangle = new RectangleEntityForTileMap(new Coordinate2D(0, 0), size);
         addEntity(rectangle);
 
-        var ellipse = new EllipseEntityForTileMap(new Coordinate2D(4, 4), new Size(size.getWidth() - 8));
+        var ellipse = new EllipseEntityForTileMap(new Coordinate2D(4, 4), new Size(size.width() - 8));
         addEntity(ellipse);
     }
 }
