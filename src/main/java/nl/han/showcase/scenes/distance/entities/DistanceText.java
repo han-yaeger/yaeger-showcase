@@ -7,26 +7,26 @@ import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import nl.han.showcase.scenes.distance.entities.textfield.DynamicShowCaseTextField;
+import nl.han.showcase.scenes.distance.entities.textfield.ShowCaseTextField;
 
 /**
  * A simple {@link DynamicTextEntity} that implements the interface {@link UpdateExposer}
  * to update its text continuously.
  */
-public class DistanceText extends DynamicTextEntity implements UpdateExposer {
+public class DistanceText extends DynamicShowCaseTextField implements UpdateExposer {
 
+    private YaegerEntity origin;
     private final YaegerEntity target;
-    private final YaegerEntity origin;
 
     public DistanceText(final Coordinate2D initialPosition, final YaegerEntity origin, final YaegerEntity target) {
-        super(initialPosition);
+        super(initialPosition, "Distance");
         this.origin = origin;
         this.target = target;
-        setFill(Color.WHITE);
-        setFont(Font.font("Roboto", FontWeight.NORMAL, 14));
     }
 
     @Override
     public void explicitUpdate(final long timestamp) {
-        setText("Distance: " + Math.round(origin.distanceTo(target)));
+        setValue(String.valueOf(Math.round(origin.distanceTo(target))));
     }
 }

@@ -4,6 +4,7 @@ import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.CompositeEntity;
+import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.entities.impl.text.TextEntity;
 import javafx.scene.text.Font;
 import nl.han.showcase.YaegerShowCase;
@@ -12,17 +13,17 @@ import nl.han.showcase.YaegerShowCase;
  * A reusable component of an outlined text-field that contains both a label and a value. The value
  * is exposed through the {@link #setValue(String)} method.
  */
-public class ShowCaseTextField extends CompositeEntity {
+public class DynamicShowCaseTextField extends DynamicCompositeEntity {
 
     private final String name;
     private String defaultValue;
     private TextEntity value;
 
-    public ShowCaseTextField(final Coordinate2D initialLocation, final String name) {
+    public DynamicShowCaseTextField(final Coordinate2D initialLocation, final String name) {
         this(initialLocation, name, "");
     }
 
-    public ShowCaseTextField(final Coordinate2D initialLocation, final String name, final String defaultValue) {
+    public DynamicShowCaseTextField(final Coordinate2D initialLocation, final String name, final String defaultValue) {
         super(initialLocation);
         this.name = name;
         this.defaultValue = defaultValue;

@@ -72,11 +72,11 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
         mouseInSceneTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(mouseInSceneTextField);
 
-        primaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 100), "Primary Button");
+        primaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 100), "Primary Button", RELEASED);
         primaryButtonPressedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(primaryButtonPressedTextField);
 
-        secondaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 150), "Secondary Button");
+        secondaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 150), "Secondary Button", RELEASED);
         secondaryButtonPressedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(secondaryButtonPressedTextField);
 
@@ -117,10 +117,10 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
         var antiAircraftLauncher = new AntiAircraftLauncher(new Coordinate2D(getWidth() / 2, getHeight()), spaceShip, rocketSpawner);
         addEntity(antiAircraftLauncher);
 
-        var distanceText = new DistanceText(new Coordinate2D(getWidth() / 2 + 60, getHeight() - 60), antiAircraftBase, spaceShip);
+        var distanceText = new DistanceText(new Coordinate2D(getWidth() / 2 + 180, getHeight() - 60), antiAircraftBase, spaceShip);
         addEntity(distanceText);
 
-        var angleText = new AngleText(new Coordinate2D(getWidth() / 2 + 60, getHeight() - 40), antiAircraftBase, spaceShip);
+        var angleText = new AngleText(new Coordinate2D(getWidth() / 2 + 300, getHeight() - 60), antiAircraftBase, spaceShip);
         addEntity(angleText);
     }
 
