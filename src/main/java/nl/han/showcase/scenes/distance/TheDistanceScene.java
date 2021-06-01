@@ -80,19 +80,19 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
         secondaryButtonPressedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(secondaryButtonPressedTextField);
 
-        var dropArea = new DropArea(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 200), new Size(100, 150));
+        var dropArea = new DropArea(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 200), new Size(100, 150), rocketSpawner);
         dropArea.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(dropArea);
 
-        var draggableOne = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 360), Color.AQUA);
+        var draggableOne = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 360), Color.AQUA, 0, 0);
         draggableOne.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(draggableOne);
 
-        var draggableTwo = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 100, CONTROL_AREA_MARGIN + 360), Color.RED);
+        var draggableTwo = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 100, CONTROL_AREA_MARGIN + 360), Color.RED, -1, -1);
         draggableTwo.setAnchorPoint(AnchorPoint.TOP_LEFT);
         addEntity(draggableTwo);
 
-        var draggableThree = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 50, CONTROL_AREA_MARGIN + 360), Color.YELLOW);
+        var draggableThree = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 50, CONTROL_AREA_MARGIN + 360), Color.YELLOW, 1, 1);
         draggableThree.setAnchorPoint(AnchorPoint.TOP_CENTER);
         addEntity(draggableThree);
 
