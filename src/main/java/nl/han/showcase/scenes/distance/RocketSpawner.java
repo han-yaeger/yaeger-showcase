@@ -31,6 +31,9 @@ public class RocketSpawner extends EntitySpawner {
             var newBall = new EnergyBall(location, direction);
             newBall.setHue(requestedHue);
             newBall.setSaturation(requestedSaturation);
+            // Set the viewOrder to a value higher that the default to ensure the rockets appear from behind
+            // the rocket launcher.
+            newBall.setViewOrder(42);
             spawn(newBall);
         }
     }
