@@ -13,7 +13,7 @@ public class ButtonText extends TextEntity {
     public ButtonText(final Coordinate2D initialPosition, final String text) {
         super(initialPosition, text);
         setFill(Color.WHITE);
-        setFont(Font.font("Roboto", FontWeight.NORMAL, 25));
+        setFont(Font.font("Roboto", FontWeight.EXTRA_BOLD, 21));
     }
 
     public void onMouseEntered() {

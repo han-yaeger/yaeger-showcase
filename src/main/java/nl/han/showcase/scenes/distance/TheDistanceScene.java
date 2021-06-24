@@ -30,7 +30,7 @@ import nl.han.showcase.scenes.distance.entities.textfield.ShowCaseTextField;
  * {@link com.github.hanyaeger.api.entities.CompositeEntity} that demonstrates hoe to create re-usable components.
  * <p>
  */
-public class TheDistanceScene extends ShowCaseScene implements MouseButtonPressedListener, MouseButtonReleasedListener, MouseEnterListener, MouseExitListener, MouseMovedListener, EntitySpawnerContainer {
+public class TheDistanceScene extends ShowCaseScene implements MouseButtonPressedListener, MouseButtonReleasedListener, MouseEnterListener, MouseExitListener, MouseMovedListener, EntitySpawnerContainer, MouseMovedWhileDraggingListener {
 
     private static final double CONTROL_AREA_MARGIN = 140D;
     private static final double TEXTFIELD_MARGIN = 20D;
@@ -42,6 +42,7 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
     private ShowCaseTextField mouseInSceneTextField;
     private ShowCaseTextField primaryButtonPressedTextField;
     private ShowCaseTextField secondaryButtonPressedTextField;
+    private ShowCaseTextField mousePointerWhileDraggedTextField;
 
     public TheDistanceScene(final YaegerShowCase yaegerShowCase) {
         super(yaegerShowCase);
@@ -68,31 +69,35 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
         mousePointerTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(mousePointerTextField);
 
-        mouseInSceneTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 50), "Mouse in Scene?");
+        mousePointerWhileDraggedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 50), "Mouse dragging");
+        mousePointerWhileDraggedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
+        addEntity(mousePointerWhileDraggedTextField);
+
+        mouseInSceneTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 100), "Mouse in Scene?");
         mouseInSceneTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(mouseInSceneTextField);
 
-        primaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 100), "Primary Button", RELEASED);
+        primaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 150), "Primary Button", RELEASED);
         primaryButtonPressedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(primaryButtonPressedTextField);
 
-        secondaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 150), "Secondary Button", RELEASED);
+        secondaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 200), "Secondary Button", RELEASED);
         secondaryButtonPressedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(secondaryButtonPressedTextField);
 
-        var dropArea = new DropArea(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 200), new Size(100, 150), rocketSpawner);
+        var dropArea = new DropArea(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 250), new Size(100, 150), rocketSpawner);
         dropArea.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(dropArea);
 
-        var draggableOne = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 360), Color.AQUA, 0, 0);
+        var draggableOne = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 410), Color.AQUA, 0, 0);
         draggableOne.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(draggableOne);
 
-        var draggableTwo = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 100, CONTROL_AREA_MARGIN + 360), Color.RED, -1, -1);
+        var draggableTwo = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 100, CONTROL_AREA_MARGIN + 410), Color.RED, -1, -1);
         draggableTwo.setAnchorPoint(AnchorPoint.TOP_LEFT);
         addEntity(draggableTwo);
 
-        var draggableThree = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 50, CONTROL_AREA_MARGIN + 360), Color.YELLOW, 1, 1);
+        var draggableThree = new Draggable(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN - 50, CONTROL_AREA_MARGIN + 410), Color.YELLOW, 1, 1);
         draggableThree.setAnchorPoint(AnchorPoint.TOP_CENTER);
         addEntity(draggableThree);
 
@@ -132,6 +137,11 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
     @Override
     public void onMouseMoved(final Coordinate2D coordinate2D) {
         mousePointerTextField.setValue(("(" + Math.round(coordinate2D.getX()) + ", " + Math.round(coordinate2D.getY()) + ")"));
+    }
+
+    @Override
+    public void onMouseMovedWhileDragging(final Coordinate2D coordinate2D) {
+        mousePointerWhileDraggedTextField.setValue(("(" + Math.round(coordinate2D.getX()) + ", " + Math.round(coordinate2D.getY()) + ")"));
     }
 
     @Override

@@ -2,6 +2,7 @@ package nl.han.showcase.scenes.timers;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Timer;
 import com.github.hanyaeger.api.TimerContainer;
 import com.github.hanyaeger.api.entities.impl.text.TextEntity;
 import javafx.scene.paint.Color;
@@ -9,13 +10,19 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
+import nl.han.showcase.scenes.timers.entities.PauseResumeButton;
+import nl.han.showcase.scenes.timers.entities.RemoveRenewButton;
 import nl.han.showcase.scenes.timers.timers.SceneMinuteTimer;
 
 public class Time extends ShowCaseScene implements TimerContainer {
 
-    public static final int COUNTDOWN_NUMBER = 5;
+    public static final int COUNTDOWN_NUMBER_START_VALUE = 25;
     private TextEntity displayNumberText;
-    private int displayNumber;
+    private PauseResumeButton pauseResumeButton;
+    private RemoveRenewButton removeRenewButton;
+
+    private Timer sceneSecondsTimer;
+    private int displayNumber = COUNTDOWN_NUMBER_START_VALUE;
 
     public Time(YaegerShowCase showCase) {
         super(showCase);
@@ -23,8 +30,8 @@ public class Time extends ShowCaseScene implements TimerContainer {
 
     @Override
     public void setupTimers() {
-        displayNumber = COUNTDOWN_NUMBER;
-        addTimer(new SceneMinuteTimer(this));
+        sceneSecondsTimer = new SceneMinuteTimer(this);
+        addTimer(sceneSecondsTimer);
     }
 
     @Override
@@ -36,19 +43,52 @@ public class Time extends ShowCaseScene implements TimerContainer {
     public void setupEntities() {
         super.setupEntities();
 
-        displayNumberText = new TextEntity(new Coordinate2D(getWidth() / 2, (getHeight() / 2) + 10), Integer.toString(displayNumber));
-        displayNumberText.setFont(Font.font("Roboto", FontWeight.NORMAL, 100));
+        displayNumberText = new TextEntity(new Coordinate2D(getWidth() / 2, (getHeight() / 2) + 22), Integer.toString(displayNumber));
+        displayNumberText.setFont(Font.font("Roboto", FontWeight.BOLD, 80));
         displayNumberText.setFill(Color.WHITE);
         displayNumberText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(displayNumberText);
+
+        pauseResumeButton = new PauseResumeButton(new Coordinate2D(270, 520), this);
+        addEntity(pauseResumeButton);
+
+        removeRenewButton = new RemoveRenewButton(new Coordinate2D(430, 520), this);
+        addEntity(removeRenewButton);
+
     }
 
+    /**
+     * A public {@code #update()} that is used by the {@link SceneMinuteTimer} to count down the number displayed.
+     */
     public void update() {
         if (displayNumber <= 0) {
-            displayNumber = COUNTDOWN_NUMBER;
+            displayNumber = COUNTDOWN_NUMBER_START_VALUE;
             showCase.setActiveScene(YaegerShowCase.SCENE_SELECTION);
         } else {
             displayNumberText.setText(Integer.toString(displayNumber--));
+        }
+    }
+
+    public void pauseResumeTimer() {
+        if (sceneSecondsTimer.isActive()) {
+            sceneSecondsTimer.pause();
+            pauseResumeButton.setResumeTextText();
+        } else {
+            sceneSecondsTimer.resume();
+            pauseResumeButton.setPauseText();
+        }
+    }
+
+    public void removeRenewTimer() {
+        if (sceneSecondsTimer == null) {
+            removeRenewButton.setRemoveText();
+            displayNumber = COUNTDOWN_NUMBER_START_VALUE;
+            sceneSecondsTimer = new SceneMinuteTimer(this);
+            addTimer(sceneSecondsTimer);
+        } else {
+            sceneSecondsTimer.remove();
+            sceneSecondsTimer = null;
+            removeRenewButton.setRenewText();
         }
     }
 }

@@ -23,6 +23,7 @@ public abstract class BorderButton extends CompositeEntity implements MouseButto
         super(initialLocation);
         this.text = text;
         this.width = width;
+        setViewOrder(1);
     }
 
     @Override
@@ -30,7 +31,7 @@ public abstract class BorderButton extends CompositeEntity implements MouseButto
         ButtonBackground buttonBackground = new ButtonBackground(new Coordinate2D(0, 0), new Size(width, 36));
         addEntity(buttonBackground);
 
-        buttonText = new ButtonText(new Coordinate2D(9, 2), text);
+        buttonText = new ButtonText(new Coordinate2D(9, 4), text);
         addEntity(buttonText);
     }
 
@@ -44,5 +45,9 @@ public abstract class BorderButton extends CompositeEntity implements MouseButto
     public void onMouseExited() {
         setCursor(Cursor.DEFAULT);
         buttonText.onMouseExited();
+    }
+
+    protected void setText(final String text) {
+        buttonText.setText(text);
     }
 }
