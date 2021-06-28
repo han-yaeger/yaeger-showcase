@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.distance.entities.eneryball;
+package nl.han.showcase.scenes.distance.entities.energyball;
 
 
 import com.github.hanyaeger.api.Timer;

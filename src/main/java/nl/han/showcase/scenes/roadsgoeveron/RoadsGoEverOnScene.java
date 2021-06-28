@@ -2,12 +2,16 @@ package nl.han.showcase.scenes.roadsgoeveron;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.EntitySpawnerContainer;
+import com.github.hanyaeger.api.entities.EntitySpawner;
 import com.github.hanyaeger.api.entities.impl.text.TextEntity;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.roadsgoeveron.entities.*;
+import nl.han.showcase.scenes.roadsgoeveron.spawners.TextSpawner;
+import nl.han.showcase.scenes.time.timers.SceneMinuteTimer;
 
 /**
  * To present text on the screen, Yaeger supports the {@link TextEntity} and its dynamic partner,
@@ -15,9 +19,13 @@ import nl.han.showcase.scenes.roadsgoeveron.entities.*;
  * {@link com.github.hanyaeger.api.scenes.DynamicScene} displays different Use Cases regarding
  * these Entities.
  */
-public class RoadsGoEverOnScene extends ShowCaseScene {
+public class RoadsGoEverOnScene extends ShowCaseScene implements EntitySpawnerContainer {
 
     private static final String TEXT_STATIC_ENTITY = "I'm a TextEntity and remain static on the Scene";
+
+    private EntitySpawner textSpawner;
+    private PauseResumeButton pauseResumeButton;
+    private RemoveRenewButton removeRenewButton;
 
     public RoadsGoEverOnScene(YaegerShowCase showCase) {
         super(showCase);
@@ -54,5 +62,44 @@ public class RoadsGoEverOnScene extends ShowCaseScene {
 
         var rolling = new RollingTextEntity(new Coordinate2D(100, 450));
         addEntity(rolling);
+
+        pauseResumeButton = new PauseResumeButton(new Coordinate2D(100, getHeight() - BOTTOM_MARGIN), this);
+        addEntity(pauseResumeButton);
+
+        removeRenewButton = new RemoveRenewButton(new Coordinate2D(270, getHeight() - BOTTOM_MARGIN), this);
+        addEntity(removeRenewButton);
+    }
+
+    @Override
+    public void setupEntitySpawners() {
+        textSpawner = new TextSpawner(700, getWidth(), getHeight());
+        addEntitySpawner(textSpawner);
+    }
+
+    public void pauseResumeSpawner() {
+        if (textSpawner == null) {
+            return;
+        }
+
+        if (textSpawner.isActive()) {
+            textSpawner.pause();
+            pauseResumeButton.setResumeTextText();
+        } else {
+            textSpawner.resume();
+            pauseResumeButton.setPauseText();
+        }
+    }
+
+    public void removeRenewSpawner() {
+        if (textSpawner == null) {
+            removeRenewButton.setRemoveText();
+            textSpawner = new TextSpawner(700, getWidth(), getHeight());
+            addEntitySpawner(textSpawner);
+            pauseResumeButton.setPauseText();
+        } else {
+            textSpawner.remove();
+            textSpawner = null;
+            removeRenewButton.setRenewText();
+        }
     }
 }

@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.timers;
+package nl.han.showcase.scenes.time;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
@@ -10,9 +10,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.timers.entities.PauseResumeButton;
-import nl.han.showcase.scenes.timers.entities.RemoveRenewButton;
-import nl.han.showcase.scenes.timers.timers.SceneMinuteTimer;
+import nl.han.showcase.scenes.time.entities.PauseResumeButton;
+import nl.han.showcase.scenes.time.entities.RemoveRenewButton;
+import nl.han.showcase.scenes.time.timers.SceneMinuteTimer;
 
 public class Time extends ShowCaseScene implements TimerContainer {
 
@@ -70,6 +70,10 @@ public class Time extends ShowCaseScene implements TimerContainer {
     }
 
     public void pauseResumeTimer() {
+        if (sceneSecondsTimer == null){
+            return;
+        }
+
         if (sceneSecondsTimer.isActive()) {
             sceneSecondsTimer.pause();
             pauseResumeButton.setResumeTextText();

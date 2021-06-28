@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.composing.Composing;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
 import nl.han.showcase.scenes.gravity.Gravity;
-import nl.han.showcase.scenes.timers.Time;
+import nl.han.showcase.scenes.time.Time;
 import nl.han.showcase.scenes.mapsandlegends.MapsAndLegends;
 import nl.han.showcase.scenes.selection.SelectionScene;
 import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;

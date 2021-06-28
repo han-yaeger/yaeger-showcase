@@ -18,7 +18,7 @@ import nl.han.showcase.scenes.distance.entities.textfield.TextFieldBackground;
  * <p>
  * To receive notification when a {@link Draggable} has been dropped, it implements the interface {@link MouseDropListener}.
  * When {@link MouseDropListener#onDrop(Coordinate2D, MouseDraggedListener)} is called it changes the hue and satuarion of the
- * {@link nl.han.showcase.scenes.distance.entities.eneryball.EnergyBall} by calling {@link RocketSpawner#setHue(double)} and
+ * {@link nl.han.showcase.scenes.distance.entities.energyball.EnergyBall} by calling {@link RocketSpawner#setHue(double)} and
  * {@link RocketSpawner#setSaturation(double)}.
  */
 public class DropArea extends TextFieldBackground implements MouseDragEnterListener, MouseDragExitedListener, MouseDropListener {

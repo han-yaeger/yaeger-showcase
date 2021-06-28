@@ -16,7 +16,7 @@ public class BackButton extends BorderButton {
     private final YaegerShowCase showCase;
 
     public BackButton(final double y, final YaegerShowCase showCase) {
-        super(new Coordinate2D(SelectionScene.LEFT_MARGIN, y), TEXT, 60);
+        super(new Coordinate2D(SelectionScene.LEFT_MARGIN, y), TEXT, 63);
         this.showCase = showCase;
         setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
     }

@@ -12,6 +12,7 @@ import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.distance.entities.*;
 import nl.han.showcase.scenes.distance.entities.dragndrop.Draggable;
 import nl.han.showcase.scenes.distance.entities.dragndrop.DropArea;
+import nl.han.showcase.scenes.distance.entities.energyball.Explosion;
 import nl.han.showcase.scenes.distance.entities.textfield.ShowCaseTextField;
 
 /**
@@ -54,7 +55,7 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
 
         // We instantiate the rocket spawner at this early stage, so we can pass it
         // to the antiAircraftLauncher.
-        rocketSpawner = new RocketSpawner(new Coordinate2D(getWidth() / 2, getHeight()));
+        rocketSpawner = new RocketSpawner(new Coordinate2D(getWidth() / 2, getHeight()), this);
     }
 
     @Override
@@ -168,5 +169,9 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
             case PRIMARY -> primaryButtonPressedTextField.setValue(RELEASED);
             case SECONDARY -> secondaryButtonPressedTextField.setValue(RELEASED);
         }
+    }
+
+    public void explode(Coordinate2D anchorLocation) {
+        addEntity(new Explosion(anchorLocation));
     }
 }
