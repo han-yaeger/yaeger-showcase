@@ -1,28 +1,29 @@
 package nl.han.showcase.scenes.time;
 
-import com.github.hanyaeger.api.AnchorPoint;
-import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.Timer;
-import com.github.hanyaeger.api.TimerContainer;
+import com.github.hanyaeger.api.*;
 import com.github.hanyaeger.api.entities.impl.text.TextEntity;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.time.entities.PauseResumeButton;
-import nl.han.showcase.scenes.time.entities.RemoveRenewButton;
+import nl.han.showcase.scenes.time.entities.*;
+import nl.han.showcase.scenes.time.spawners.ClockSpawner;
 import nl.han.showcase.scenes.time.timers.SceneMinuteTimer;
 
-public class Time extends ShowCaseScene implements TimerContainer {
+public class Time extends ShowCaseScene implements TimerContainer, EntitySpawnerContainer {
 
     public static final int COUNTDOWN_NUMBER_START_VALUE = 25;
     private TextEntity displayNumberText;
-    private PauseResumeButton pauseResumeButton;
+    private PauseResumeGWUButton pauseResumeGWUButton;
+    private PauseResumeTimerButton pauseResumeTimerButton;
     private RemoveRenewButton removeRenewButton;
 
     private Timer sceneSecondsTimer;
     private int displayNumber = COUNTDOWN_NUMBER_START_VALUE;
+    private SpawningSpeed spawningSpeedButton;
+    private ClockSpawner clockSpawner;
+
 
     public Time(YaegerShowCase showCase) {
         super(showCase);
@@ -43,17 +44,32 @@ public class Time extends ShowCaseScene implements TimerContainer {
     public void setupEntities() {
         super.setupEntities();
 
+        // Since we need a reference to the ClockSpawner for the spawningSpeedButton, we instantiate it before
+        // the setupTimers() method. This way we can ensure the reference passed to the spawningSpeedButton is
+        // not null.
+        clockSpawner = new ClockSpawner(getWidth());
+
         displayNumberText = new TextEntity(new Coordinate2D(getWidth() / 2, (getHeight() / 2) + 22), Integer.toString(displayNumber));
         displayNumberText.setFont(Font.font("Roboto", FontWeight.BOLD, 80));
         displayNumberText.setFill(Color.WHITE);
         displayNumberText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(displayNumberText);
 
-        pauseResumeButton = new PauseResumeButton(new Coordinate2D(270, 520), this);
-        addEntity(pauseResumeButton);
+        pauseResumeGWUButton = new PauseResumeGWUButton(new Coordinate2D(110, getHeight() - BOTTOM_MARGIN), this);
+        addEntity(pauseResumeGWUButton);
+
+        spawningSpeedButton = new SpawningSpeed(new Coordinate2D(260, getHeight() - BOTTOM_MARGIN), clockSpawner);
+        addEntity(spawningSpeedButton);
+
+        var spawningIntervalText = new SpawnerIntervalText(new Coordinate2D(getWidth() - BOTTOM_MARGIN, 8), clockSpawner);
+        addEntity(spawningIntervalText);
+
+        pauseResumeTimerButton = new PauseResumeTimerButton(new Coordinate2D(270, 520), this);
+        addEntity(pauseResumeTimerButton);
 
         removeRenewButton = new RemoveRenewButton(new Coordinate2D(430, 520), this);
         addEntity(removeRenewButton);
+
 
     }
 
@@ -70,16 +86,16 @@ public class Time extends ShowCaseScene implements TimerContainer {
     }
 
     public void pauseResumeTimer() {
-        if (sceneSecondsTimer == null){
+        if (sceneSecondsTimer == null) {
             return;
         }
 
         if (sceneSecondsTimer.isActive()) {
             sceneSecondsTimer.pause();
-            pauseResumeButton.setResumeTextText();
+            pauseResumeTimerButton.setResumeTextText();
         } else {
             sceneSecondsTimer.resume();
-            pauseResumeButton.setPauseText();
+            pauseResumeTimerButton.setPauseText();
         }
     }
 
@@ -89,10 +105,26 @@ public class Time extends ShowCaseScene implements TimerContainer {
             displayNumber = COUNTDOWN_NUMBER_START_VALUE;
             sceneSecondsTimer = new SceneMinuteTimer(this);
             addTimer(sceneSecondsTimer);
+            pauseResumeTimerButton.setPauseText();
         } else {
             sceneSecondsTimer.remove();
             sceneSecondsTimer = null;
             removeRenewButton.setRenewText();
         }
+    }
+
+    public void pauseResumeGWU() {
+        if (isActiveGWU()) {
+            pause();
+            pauseResumeGWUButton.setResumeTextText();
+        } else {
+            resume();
+            pauseResumeGWUButton.setPauseText();
+        }
+    }
+
+    @Override
+    public void setupEntitySpawners() {
+        addEntitySpawner(clockSpawner);
     }
 }

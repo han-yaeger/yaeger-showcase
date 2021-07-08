@@ -7,8 +7,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.QuitButton;
-import nl.han.showcase.buttons.SelectionButton;
+import nl.han.showcase.shared.buttons.QuitButton;
+import nl.han.showcase.shared.buttons.SelectionButton;
 
 /**
  * A {@link StaticScene} that only contains the menu for selecting the

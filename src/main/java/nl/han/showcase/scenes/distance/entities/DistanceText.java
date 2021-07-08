@@ -4,11 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.YaegerEntity;
 import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import nl.han.showcase.scenes.distance.entities.textfield.DynamicShowCaseTextField;
-import nl.han.showcase.scenes.distance.entities.textfield.ShowCaseTextField;
+import nl.han.showcase.shared.textfield.DynamicShowCaseTextField;
 
 /**
  * A simple {@link DynamicTextEntity} that implements the interface {@link UpdateExposer}

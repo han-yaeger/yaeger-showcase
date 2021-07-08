@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.gravity.entities;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import javafx.scene.input.MouseButton;
-import nl.han.showcase.buttons.BorderButton;
+import nl.han.showcase.shared.buttons.BorderButton;
 import nl.han.showcase.scenes.gravity.Gravity;
 
 public class ResetButton extends BorderButton {

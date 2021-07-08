@@ -4,7 +4,7 @@ import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
-import nl.han.showcase.buttons.BackButton;
+import nl.han.showcase.shared.buttons.BackButton;
 
 import java.util.Set;
 

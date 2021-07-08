@@ -13,7 +13,7 @@ import nl.han.showcase.scenes.distance.entities.*;
 import nl.han.showcase.scenes.distance.entities.dragndrop.Draggable;
 import nl.han.showcase.scenes.distance.entities.dragndrop.DropArea;
 import nl.han.showcase.scenes.distance.entities.energyball.Explosion;
-import nl.han.showcase.scenes.distance.entities.textfield.ShowCaseTextField;
+import nl.han.showcase.shared.textfield.ShowCaseTextField;
 
 /**
  * A common Use Case in games is shooting at something. To know where to shoot, you will need to

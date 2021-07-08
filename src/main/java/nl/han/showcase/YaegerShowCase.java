@@ -20,6 +20,9 @@ import nl.han.showcase.scenes.roadsgoeveron.RoadsGoEverOnScene;
  */
 public class YaegerShowCase extends YaegerGame {
 
+    // A constant that contains the name of the mp3 file that should be played throughout the ShowCase
+    private static final String PACHELBEL = "audio/Pachelbel-canon-in-d.mp3";
+
     // A constant that contains the title of the game.
     private static final String GAME_TITLE = "Yaeger Show Case";
 
@@ -67,6 +70,7 @@ public class YaegerShowCase extends YaegerGame {
     public void setupGame() {
         setGameTitle(GAME_TITLE);
         setSize(SIZE);
+        setBackgroundAudio(PACHELBEL);
     }
 
     @Override

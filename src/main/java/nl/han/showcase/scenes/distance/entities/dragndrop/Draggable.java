@@ -4,7 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.userinput.MouseDraggedListener;
 import javafx.scene.paint.Color;
-import nl.han.showcase.scenes.distance.entities.textfield.TextFieldBackground;
+import nl.han.showcase.shared.textfield.TextFieldBackground;
 
 public class Draggable extends TextFieldBackground implements MouseDraggedListener {
 

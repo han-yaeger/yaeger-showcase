@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
 import com.github.hanyaeger.api.userinput.*;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.distance.RocketSpawner;
-import nl.han.showcase.scenes.distance.entities.textfield.TextFieldBackground;
+import nl.han.showcase.shared.textfield.TextFieldBackground;
 
 /**
  * The {@code DropArea} changes its color, based on the {@link Draggable} that is being dragged over it. For this it
