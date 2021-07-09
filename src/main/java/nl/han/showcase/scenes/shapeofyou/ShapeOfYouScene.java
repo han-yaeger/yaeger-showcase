@@ -2,6 +2,7 @@ package nl.han.showcase.scenes.shapeofyou;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
+import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
@@ -21,7 +22,7 @@ public class ShapeOfYouScene extends ShowCaseScene {
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/underwater.jpg");
+        setBackgroundImage("backgrounds/stars.jpg", false);
     }
 
     @Override
