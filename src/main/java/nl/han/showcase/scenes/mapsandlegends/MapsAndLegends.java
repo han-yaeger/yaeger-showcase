@@ -6,6 +6,7 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
+import nl.han.showcase.scenes.mapsandlegends.entities.slider.*;
 import nl.han.showcase.scenes.mapsandlegends.tilemaps.*;
 
 /**
@@ -19,13 +20,41 @@ public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
     // A constant that is used as the top, right, bottom and left margin.
     private static final double MARGIN = 100d;
 
+    private BoundedChangeableMap bottomCenterMap;
+
     public MapsAndLegends(final YaegerShowCase showCase) {
+
         super(showCase);
     }
 
     @Override
     public void setupScene() {
         setBackgroundImage("backgrounds/purple.jpg");
+    }
+
+    @Override
+    public void setupEntities() {
+        super.setupEntities();
+
+        // First we initialize the BoundedChangeableMap, to ensure the reference is not null
+        // when we pass it to the sliders.
+        bottomCenterMap = new BoundedChangeableMap(new Coordinate2D(getWidth() / 2, getHeight() - MARGIN), new Size(100, 100));
+        bottomCenterMap.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
+
+        var opacitySlider = new OpacitySlider(new Coordinate2D(380, 620), bottomCenterMap);
+        addEntity(opacitySlider);
+
+        var brightnessSlider = new BrightnessSlider(new Coordinate2D(380, 650), bottomCenterMap);
+        addEntity(brightnessSlider);
+
+        var contrastSlider = new ContrastSlider(new Coordinate2D(480, 620), bottomCenterMap);
+        addEntity(contrastSlider);
+
+        var hueSlider = new HueSlider(new Coordinate2D(480, 650), bottomCenterMap);
+        addEntity(hueSlider);
+
+        var saturationSlider = new SaturationSlider(new Coordinate2D(580, 620), bottomCenterMap);
+        addEntity(saturationSlider);
     }
 
     @Override
@@ -57,12 +86,11 @@ public class MapsAndLegends extends ShowCaseScene implements TileMapContainer {
         centerRightMap.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addTileMap(centerRightMap);
 
-        var bottomLeftMap = new BoundedTileMap(new Coordinate2D(MARGIN, getHeight() - MARGIN), new Size(100, 100));
+        var bottomLeftMap = new BoundedRemoveableMap(new Coordinate2D(MARGIN, getHeight() - MARGIN), new Size(100, 100));
         bottomLeftMap.setAnchorPoint(AnchorPoint.BOTTOM_LEFT);
         addTileMap(bottomLeftMap);
 
-        var bottomCenterMap = new BoundedTileMap(new Coordinate2D(getWidth() / 2, getHeight() - MARGIN), new Size(100, 100));
-        bottomCenterMap.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
+        // Here we added the previously created TileMap
         addTileMap(bottomCenterMap);
 
         var bottomRightMap = new BoundedTileMap(new Coordinate2D(getWidth() - MARGIN, getHeight() - MARGIN), new Size(100, 100));
