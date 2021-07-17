@@ -6,6 +6,7 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.YaegerEntity;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
+import com.github.hanyaeger.api.scenes.YaegerScene;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.gravity.entities.*;
@@ -99,5 +100,18 @@ public class Gravity extends ShowCaseScene implements TileMapContainer {
         var stairsMap = new StairsTileMap(new Coordinate2D(getWidth() - 100, getHeight() / 2), new Size(300, 300));
         stairsMap.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addTileMap(stairsMap);
+    }
+
+    /**
+     * Since this {@link com.github.hanyaeger.api.scenes.YaegerScene} keeps track of all the entities (see {@link #entities}),
+     * they will still be present when the user has switched to another {@link com.github.hanyaeger.api.scenes.YaegerScene} and
+     * the returns to this one. To ensure the are all cleared, we overwrite {@link YaegerScene#destroy()} and use it to clear
+     * {@link #entities}.
+     */
+    @Override
+    public void destroy() {
+        super.destroy();
+
+        entities.clear();
     }
 }
