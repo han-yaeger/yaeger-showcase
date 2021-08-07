@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.mapsandlegends.entities.slider;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 

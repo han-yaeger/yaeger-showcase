@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.composing.entities.waterworld.hanny;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.impl.sprite.DynamicSpriteEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 
 /**
  * A simple {@link DynamicSpriteEntity} is used for Hanny. The frame-index is controlled from the enclosing

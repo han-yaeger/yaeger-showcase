@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.greatballsoffire.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.impl.sprite.DynamicSpriteEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 
 public class BouncingYellow extends DynamicSpriteEntity {
 

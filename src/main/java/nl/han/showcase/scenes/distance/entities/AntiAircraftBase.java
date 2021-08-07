@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.distance.entities;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.entities.impl.circle.CircleEntity;
+import com.github.hanyaeger.api.entities.impl.CircleEntity;
 import nl.han.showcase.YaegerShowCase;
 
 /**

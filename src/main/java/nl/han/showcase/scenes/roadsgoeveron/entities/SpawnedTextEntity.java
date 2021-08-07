@@ -5,7 +5,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
-import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicTextEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;

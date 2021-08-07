@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.mapsandlegends.tilemaps.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import javafx.scene.paint.Color;
 
 public class RectangleEntityForTileMap extends RectangleEntity {

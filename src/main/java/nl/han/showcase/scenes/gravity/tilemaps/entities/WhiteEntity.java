@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.gravity.tilemaps.entities;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collider;
-import com.github.hanyaeger.api.entities.impl.sprite.SpriteEntity;
+import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
 public class WhiteEntity extends SpriteEntity implements Collider {
 

@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.distance.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collider;
-import com.github.hanyaeger.api.entities.impl.circle.DynamicCircleEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicCircleEntity;
 import com.github.hanyaeger.api.userinput.MouseMovedListener;
 import javafx.scene.Cursor;
 import javafx.scene.paint.Color;

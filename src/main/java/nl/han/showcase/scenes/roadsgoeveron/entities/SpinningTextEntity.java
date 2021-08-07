@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.roadsgoeveron.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicTextEntity;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;

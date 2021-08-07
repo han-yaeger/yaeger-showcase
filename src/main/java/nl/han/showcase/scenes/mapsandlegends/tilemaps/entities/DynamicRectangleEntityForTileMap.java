@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.mapsandlegends.tilemaps.entities;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.UpdateExposer;
-import com.github.hanyaeger.api.entities.impl.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicRectangleEntity;
 import javafx.scene.paint.Color;
 
 public class DynamicRectangleEntityForTileMap extends DynamicRectangleEntity implements UpdateExposer {

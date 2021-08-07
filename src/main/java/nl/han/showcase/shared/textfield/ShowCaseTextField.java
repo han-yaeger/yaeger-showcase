@@ -4,7 +4,7 @@ import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.CompositeEntity;
-import com.github.hanyaeger.api.entities.impl.text.TextEntity;
+import com.github.hanyaeger.api.entities.impl.TextEntity;
 import javafx.scene.text.Font;
 import nl.han.showcase.YaegerShowCase;
 

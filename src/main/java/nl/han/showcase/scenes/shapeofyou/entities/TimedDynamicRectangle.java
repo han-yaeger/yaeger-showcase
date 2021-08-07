@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.shapeofyou.entities;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.TimerContainer;
 import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
-import com.github.hanyaeger.api.entities.impl.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicRectangleEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;

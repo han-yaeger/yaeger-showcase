@@ -5,7 +5,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.CompositeEntity;
 import com.github.hanyaeger.api.entities.YaegerEntity;
-import com.github.hanyaeger.api.entities.impl.text.TextEntity;
+import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.TileMap;
 
 public abstract class Slider extends CompositeEntity {

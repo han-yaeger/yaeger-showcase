@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.distance.entities;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.YaegerEntity;
-import com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicTextEntity;
 import nl.han.showcase.shared.textfield.DynamicShowCaseTextField;
 
 /**

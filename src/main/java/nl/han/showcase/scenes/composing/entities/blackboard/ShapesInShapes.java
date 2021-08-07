@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.composing.entities.blackboard;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.CompositeEntity;
-import com.github.hanyaeger.api.entities.impl.text.TextEntity;
+import com.github.hanyaeger.api.entities.impl.TextEntity;
 import nl.han.showcase.YaegerShowCase;
 
 /**

@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.mapsandlegends.tilemaps.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.impl.ellipse.EllipseEntity;
+import com.github.hanyaeger.api.entities.impl.EllipseEntity;
 import javafx.scene.paint.Color;
 
 public class EllipseEntityForTileMap extends EllipseEntity {
