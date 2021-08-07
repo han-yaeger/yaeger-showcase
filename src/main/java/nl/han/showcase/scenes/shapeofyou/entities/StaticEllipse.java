@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.shapeofyou.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.entities.impl.ellipse.EllipseEntity;
+import com.github.hanyaeger.api.entities.impl.EllipseEntity;
 import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 
 public class StaticEllipse extends EllipseEntity {

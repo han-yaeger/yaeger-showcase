@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.distance.entities.dragndrop;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.impl.rectangle.RectangleEntity;
+import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import com.github.hanyaeger.api.userinput.*;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.distance.RocketSpawner;

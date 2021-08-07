@@ -4,18 +4,17 @@ import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.EntitySpawnerContainer;
 import com.github.hanyaeger.api.entities.EntitySpawner;
-import com.github.hanyaeger.api.entities.impl.text.TextEntity;
+import com.github.hanyaeger.api.entities.impl.TextEntity;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.roadsgoeveron.entities.*;
 import nl.han.showcase.scenes.roadsgoeveron.spawners.TextSpawner;
-import nl.han.showcase.scenes.time.timers.SceneMinuteTimer;
 
 /**
  * To present text on the screen, Yaeger supports the {@link TextEntity} and its dynamic partner,
- * the {@link com.github.hanyaeger.api.entities.impl.text.DynamicTextEntity}. This
+ * the {@link com.github.hanyaeger.api.entities.impl.DynamicTextEntity}. This
  * {@link com.github.hanyaeger.api.scenes.DynamicScene} displays different Use Cases regarding
  * these Entities.
  */

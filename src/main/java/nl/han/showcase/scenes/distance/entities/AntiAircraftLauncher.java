@@ -3,7 +3,7 @@ package nl.han.showcase.scenes.distance.entities;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.UpdateExposer;
-import com.github.hanyaeger.api.entities.impl.rectangle.DynamicRectangleEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicRectangleEntity;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.distance.RocketSpawner;
 

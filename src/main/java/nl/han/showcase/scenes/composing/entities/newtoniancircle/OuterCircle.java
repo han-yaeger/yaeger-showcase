@@ -1,7 +1,7 @@
 package nl.han.showcase.scenes.composing.entities.newtoniancircle;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.entities.impl.circle.CircleEntity;
+import com.github.hanyaeger.api.entities.impl.CircleEntity;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 

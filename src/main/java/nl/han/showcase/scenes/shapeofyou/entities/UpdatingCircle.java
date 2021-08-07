@@ -2,7 +2,7 @@ package nl.han.showcase.scenes.shapeofyou.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.UpdateExposer;
-import com.github.hanyaeger.api.entities.impl.circle.DynamicCircleEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicCircleEntity;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
@@ -13,7 +13,7 @@ import nl.han.showcase.YaegerShowCase;
  * Game World Update.
  * <p>
  * In this case we use the {@link UpdateExposer#explicitUpdate(long)} to change the {@code radius} of the
- * {@link com.github.hanyaeger.api.entities.impl.circle.CircleEntity}.
+ * {@link com.github.hanyaeger.api.entities.impl.CircleEntity}.
  */
 public class UpdatingCircle extends DynamicCircleEntity implements UpdateExposer {
 

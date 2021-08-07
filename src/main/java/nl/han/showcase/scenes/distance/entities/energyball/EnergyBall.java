@@ -7,10 +7,9 @@ import com.github.hanyaeger.api.TimerContainer;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
-import com.github.hanyaeger.api.entities.impl.sprite.DynamicSpriteEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.api.scenes.SceneBorder;
-import javafx.scene.media.AudioClip;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
 
 public class EnergyBall extends DynamicSpriteEntity implements SceneBorderCrossingWatcher, Collider, Collided, TimerContainer {
