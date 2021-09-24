@@ -72,5 +72,8 @@ public class SelectionScene extends StaticScene {
 
         var gravityScene = new SelectionButton(550, YaegerShowCase.SCENE_GRAVITY_TITLE, showCase, YaegerShowCase.SCENE_GRAVITY);
         addEntity(gravityScene);
+
+        var scrollingScene = new SelectionButton(600, YaegerShowCase.SCENE_SCROLLING_TITLE, showCase, YaegerShowCase.SCENE_SCROLLING);
+        addEntity(scrollingScene);
     }
 }
