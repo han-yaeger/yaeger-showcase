@@ -2,15 +2,21 @@ package nl.han.showcase.scenes.scrolling;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.impl.CircleEntity;
+import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.ScrollableDynamicScene;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.scrolling.entities.Bat;
 import nl.han.showcase.scenes.scrolling.entities.Torch;
 import nl.han.showcase.scenes.scrolling.entities.Zombie;
 import nl.han.showcase.shared.buttons.BackButton;
+import nl.han.showcase.shared.textfield.DynamicShowCaseTextField;
 
 import java.util.Set;
 
@@ -31,8 +37,21 @@ public class Scrolling extends ScrollableDynamicScene implements KeyListener {
     @Override
     public void setupEntities() {
         var backButton = new BackButton(getHeight() - ShowCaseScene.BOTTOM_MARGIN, showCase);
-        addEntity(backButton);
+        addEntity(backButton, true);
 
+        addTorches();
+        addFoes();
+    }
+
+    private void addFoes() {
+        var bat = new Bat(new Coordinate2D(100, 100));
+        addEntity(bat);
+
+        var zombie = new Zombie(new Coordinate2D(300, 582));
+        addEntity(zombie);
+    }
+
+    private void addTorches() {
         var torch0 = new Torch(new Coordinate2D(-15, 500));
         addEntity(torch0);
 
@@ -50,12 +69,6 @@ public class Scrolling extends ScrollableDynamicScene implements KeyListener {
 
         var torch5 = new Torch(new Coordinate2D(2210, 500));
         addEntity(torch5);
-
-        var bat = new Bat(new Coordinate2D(100, 100));
-        addEntity(bat);
-
-        var zombie = new Zombie(new Coordinate2D(300, 582));
-        addEntity(zombie);
     }
 
     @Override

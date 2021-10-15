@@ -23,7 +23,9 @@ public abstract class BorderButton extends CompositeEntity implements MouseButto
         super(initialLocation);
         this.text = text;
         this.width = width;
-        setViewOrder(1);
+
+        // Setting the viewOrder to 5 ensures the button is featured at the front of the view stack
+        setViewOrder(5);
     }
 
     @Override
