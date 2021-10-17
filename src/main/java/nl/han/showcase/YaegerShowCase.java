@@ -2,12 +2,11 @@ package nl.han.showcase;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
-import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import nl.han.showcase.scenes.composing.Composing;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
 import nl.han.showcase.scenes.gravity.Gravity;
-import nl.han.showcase.scenes.scrolling.Scrolling;
+import nl.han.showcase.scenes.scrollingstones.ScrollingStones;
 import nl.han.showcase.scenes.time.Time;
 import nl.han.showcase.scenes.mapsandlegends.MapsAndLegends;
 import nl.han.showcase.scenes.selection.SelectionScene;
@@ -15,8 +14,6 @@ import nl.han.showcase.scenes.shapeofyou.ShapeOfYouScene;
 import nl.han.showcase.scenes.ridethelightning.RideTheLightningScene;
 import nl.han.showcase.scenes.greatballsoffire.GreatBallsOfFire;
 import nl.han.showcase.scenes.roadsgoeveron.RoadsGoEverOnScene;
-
-import java.util.Set;
 
 /**
  * The {@link YaegerShowCase} demonstrates implementations of all features Yaeger provides. Use the code
@@ -59,7 +56,7 @@ public class YaegerShowCase extends YaegerGame {
     public static final int SCENE_GRAVITY = 10;
     public static final String SCENE_GRAVITY_TITLE = "Gravity";
     public static final int SCENE_SCROLLING = 11;
-    public static final String SCENE_SCROLLING_TITLE = "Scrolling";
+    public static final String SCENE_SCROLLING_TITLE = "The Scrolling Stones";
 
 
     /**
@@ -102,7 +99,7 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_DISTANCE, distance);
         var gravity = new Gravity(this);
         addScene(SCENE_GRAVITY, gravity);
-        var scrolling = new Scrolling(this);
+        var scrolling = new ScrollingStones(this);
         addScene(SCENE_SCROLLING, scrolling);
     }
 

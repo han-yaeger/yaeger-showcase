@@ -1,30 +1,24 @@
-package nl.han.showcase.scenes.scrolling;
+package nl.han.showcase.scenes.scrollingstones;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.impl.CircleEntity;
-import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.ScrollableDynamicScene;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.scrolling.entities.Bat;
-import nl.han.showcase.scenes.scrolling.entities.Torch;
-import nl.han.showcase.scenes.scrolling.entities.Zombie;
+import nl.han.showcase.scenes.scrollingstones.entities.Bat;
+import nl.han.showcase.scenes.scrollingstones.entities.Torch;
+import nl.han.showcase.scenes.scrollingstones.entities.Zombie;
 import nl.han.showcase.shared.buttons.BackButton;
-import nl.han.showcase.shared.textfield.DynamicShowCaseTextField;
 
 import java.util.Set;
 
-public class Scrolling extends ScrollableDynamicScene implements KeyListener {
+public class ScrollingStones extends ScrollableDynamicScene implements KeyListener {
 
     protected YaegerShowCase showCase;
 
-    public Scrolling(final YaegerShowCase yaegerShowCase) {
+    public ScrollingStones(final YaegerShowCase yaegerShowCase) {
         this.showCase = yaegerShowCase;
     }
 

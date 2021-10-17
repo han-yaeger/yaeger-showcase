@@ -21,6 +21,8 @@ public class SelectionScene extends StaticScene {
     // To align the buttons on the screen we create a constant for the left margin.
     public static final double LEFT_MARGIN = 34;
 
+    private static final double DELTA_Y = 40;
+
     private static final String TEXT_PLEASE_SELECT = "PLEASE SELECT A SCENE:";
 
     private final YaegerShowCase showCase;
@@ -46,34 +48,54 @@ public class SelectionScene extends StaticScene {
         select.setFont(Font.font("Roboto", FontWeight.BOLD, 23));
         addEntity(select);
 
-        var roadsGoEverOn = new SelectionButton(150, YaegerShowCase.SCENE_ROADS_GO_EVER_ON_TITLE, showCase, YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
+        var y = 150D;
+
+        var roadsGoEverOn = new SelectionButton(y, YaegerShowCase.SCENE_ROADS_GO_EVER_ON_TITLE, showCase, YaegerShowCase.SCENE_ROADS_GO_EVER_ON);
         addEntity(roadsGoEverOn);
 
-        var greatBallsOfFire = new SelectionButton(200, YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE_TITLE, showCase, YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE);
+        y += DELTA_Y;
+
+        var greatBallsOfFire = new SelectionButton(y, YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE_TITLE, showCase, YaegerShowCase.SCENE_GREAT_BALLS_OF_FIRE);
         addEntity(greatBallsOfFire);
 
-        var shapeOfYou = new SelectionButton(250, YaegerShowCase.SCENE_SHAPE_TITLE, showCase, YaegerShowCase.SCENE_SHAPE);
+        y += DELTA_Y;
+
+        var shapeOfYou = new SelectionButton(y, YaegerShowCase.SCENE_SHAPE_TITLE, showCase, YaegerShowCase.SCENE_SHAPE);
         addEntity(shapeOfYou);
 
-        var composing = new SelectionButton(300, YaegerShowCase.SCENE_COMPOSING_TITLE, showCase, YaegerShowCase.SCENE_COMPOSING);
+        y += DELTA_Y;
+
+        var composing = new SelectionButton(y, YaegerShowCase.SCENE_COMPOSING_TITLE, showCase, YaegerShowCase.SCENE_COMPOSING);
         addEntity(composing);
 
-        var time = new SelectionButton(350, YaegerShowCase.SCENE_TIME_TITLE, showCase, YaegerShowCase.SCENE_TIME);
+        y += DELTA_Y;
+
+        var time = new SelectionButton(y, YaegerShowCase.SCENE_TIME_TITLE, showCase, YaegerShowCase.SCENE_TIME);
         addEntity(time);
 
-        var maps = new SelectionButton(400, YaegerShowCase.SCENE_MAPS_TITLE, showCase, YaegerShowCase.SCENE_MAPS);
+        y += DELTA_Y;
+
+        var maps = new SelectionButton(y, YaegerShowCase.SCENE_MAPS_TITLE, showCase, YaegerShowCase.SCENE_MAPS);
         addEntity(maps);
 
-        var rideTheLightning = new SelectionButton(450, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING_TITLE, showCase, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
+        y += DELTA_Y;
+
+        var rideTheLightning = new SelectionButton(y, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING_TITLE, showCase, YaegerShowCase.SCENE_RIDE_THE_LIGHTNING);
         addEntity(rideTheLightning);
 
-        var distanceScene = new SelectionButton(500, YaegerShowCase.SCENE_DISTANCE_TITLE, showCase, YaegerShowCase.SCENE_DISTANCE);
+        y += DELTA_Y;
+
+        var distanceScene = new SelectionButton(y, YaegerShowCase.SCENE_DISTANCE_TITLE, showCase, YaegerShowCase.SCENE_DISTANCE);
         addEntity(distanceScene);
 
-        var gravityScene = new SelectionButton(550, YaegerShowCase.SCENE_GRAVITY_TITLE, showCase, YaegerShowCase.SCENE_GRAVITY);
+        y += DELTA_Y;
+
+        var gravityScene = new SelectionButton(y, YaegerShowCase.SCENE_GRAVITY_TITLE, showCase, YaegerShowCase.SCENE_GRAVITY);
         addEntity(gravityScene);
 
-        var scrollingScene = new SelectionButton(600, YaegerShowCase.SCENE_SCROLLING_TITLE, showCase, YaegerShowCase.SCENE_SCROLLING);
+        y += DELTA_Y;
+
+        var scrollingScene = new SelectionButton(y, YaegerShowCase.SCENE_SCROLLING_TITLE, showCase, YaegerShowCase.SCENE_SCROLLING);
         addEntity(scrollingScene);
     }
 }
