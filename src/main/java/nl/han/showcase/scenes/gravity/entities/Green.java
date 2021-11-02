@@ -7,6 +7,8 @@ import com.github.hanyaeger.api.entities.*;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
+import java.util.List;
+
 public class Green extends DynamicSpriteEntity implements Newtonian, Collided, SceneBorderTouchingWatcher {
 
     public Green(final Coordinate2D location) {
@@ -18,8 +20,8 @@ public class Green extends DynamicSpriteEntity implements Newtonian, Collided, S
     }
 
     @Override
-    public void onCollision(final Collider collidingObject) {
-        setAnchorLocationY(collidingObject.getBoundingBox().getMinY());
+    public void onCollision(final List<Collider> collidingObject) {
+        setAnchorLocationY(collidingObject.get(0).getBoundingBox().getMinY());
 
         if (getSpeedInDirection(Direction.DOWN) < 1) {
             nullifySpeedInDirection(Direction.DOWN);

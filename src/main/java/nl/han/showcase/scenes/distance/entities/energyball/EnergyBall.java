@@ -12,6 +12,8 @@ import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
 
+import java.util.List;
+
 public class EnergyBall extends DynamicSpriteEntity implements SceneBorderCrossingWatcher, Collider, Collided, TimerContainer {
 
     private TheDistanceScene theDistanceScene;
@@ -41,7 +43,7 @@ public class EnergyBall extends DynamicSpriteEntity implements SceneBorderCrossi
     }
 
     @Override
-    public void onCollision(Collider collidingObject) {
+    public void onCollision(List<Collider> collidingObject) {
         remove();
         explode();
     }

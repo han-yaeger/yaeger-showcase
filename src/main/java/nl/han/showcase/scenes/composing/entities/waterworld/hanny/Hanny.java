@@ -10,6 +10,7 @@ import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -59,7 +60,7 @@ public class Hanny extends DynamicCompositeEntity implements KeyListener, Collid
     }
 
     @Override
-    public void onCollision(final Collider collidingObject) {
+    public void onCollision(final List<Collider> collidingObject) {
         healthText.setText(String.valueOf(health--));
     }
 }

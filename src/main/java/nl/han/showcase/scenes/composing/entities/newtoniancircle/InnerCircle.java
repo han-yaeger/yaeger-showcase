@@ -7,6 +7,8 @@ import com.github.hanyaeger.api.entities.impl.CircleEntity;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
+import java.util.List;
+
 public class InnerCircle extends CircleEntity implements Collided {
 
     public static final double RADIUS = 4;
@@ -23,7 +25,7 @@ public class InnerCircle extends CircleEntity implements Collided {
     }
 
     @Override
-    public void onCollision(final Collider collidingObject) {
-        newtonianCircleComposite.onCollision(collidingObject);
+    public void onCollision(final List<Collider> collidingObjects) {
+        newtonianCircleComposite.onCollision(collidingObjects.get(0));
     }
 }

@@ -7,16 +7,27 @@ import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.scrollingstones.entities.Bat;
-import nl.han.showcase.scenes.scrollingstones.entities.Torch;
-import nl.han.showcase.scenes.scrollingstones.entities.Zombie;
+import nl.han.showcase.scenes.scrollingstones.entities.game.Bat;
+import nl.han.showcase.scenes.scrollingstones.entities.game.FlameSpirit;
+import nl.han.showcase.scenes.scrollingstones.entities.game.Torch;
+import nl.han.showcase.scenes.scrollingstones.entities.game.Zombie;
+import nl.han.showcase.scenes.scrollingstones.entities.sticky.ViewPortHTextField;
 import nl.han.showcase.shared.buttons.BackButton;
 
 import java.util.Set;
 
+/**
+ * In this {@code ScrollingStones}, a {@link ScrollableDynamicScene} is used to create a classic
+ * dungeon-based scrolling game. The actual level is much wider than de visible area of the
+ * {@link com.github.hanyaeger.api.scenes.YaegerScene}.
+ */
 public class ScrollingStones extends ScrollableDynamicScene implements KeyListener {
 
     protected YaegerShowCase showCase;
+    private static final double X_START_TORCH = -15;
+    private static final double Y_TORCH = 500;
+    private static final double X_DELTA_TORCH = 444;
+    private static final int NUMBER_OF_TORCHES = 11;
 
     public ScrollingStones(final YaegerShowCase yaegerShowCase) {
         this.showCase = yaegerShowCase;
@@ -24,17 +35,26 @@ public class ScrollingStones extends ScrollableDynamicScene implements KeyListen
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/dungeon.png");
-        setSize(new Size(2223, 698));
+        // We set {@code fullscreen} to {@code false} to ensure the image is tiled
+        setBackgroundImage("backgrounds/dungeon.png", false);
+        // The size is twice as wide as the image used.
+        setSize(new Size(4446, 698));
     }
 
     @Override
     public void setupEntities() {
+        // Since the backbutton should be visible at all times, we add it with stickyOnViewPort `true`
         var backButton = new BackButton(getHeight() - ShowCaseScene.BOTTOM_MARGIN, showCase);
         addEntity(backButton, true);
 
+        var viewPortHValue = new ViewPortHTextField(new Coordinate2D(20, 10), this);
+        addEntity(viewPortHValue, true);
+
         addTorches();
         addFoes();
+
+        var player = new FlameSpirit(new Coordinate2D(50, 550));
+        addEntity(player);
     }
 
     private void addFoes() {
@@ -46,23 +66,14 @@ public class ScrollingStones extends ScrollableDynamicScene implements KeyListen
     }
 
     private void addTorches() {
-        var torch0 = new Torch(new Coordinate2D(-15, 500));
-        addEntity(torch0);
 
-        var torch1 = new Torch(new Coordinate2D(430, 500));
-        addEntity(torch1);
+        var x = X_START_TORCH;
 
-        var torch2 = new Torch(new Coordinate2D(875, 500));
-        addEntity(torch2);
-
-        var torch3 = new Torch(new Coordinate2D(1320, 500));
-        addEntity(torch3);
-
-        var torch4 = new Torch(new Coordinate2D(1765, 500));
-        addEntity(torch4);
-
-        var torch5 = new Torch(new Coordinate2D(2210, 500));
-        addEntity(torch5);
+        for (int i = 0; i < NUMBER_OF_TORCHES; i++) {
+            var torch = new Torch(new Coordinate2D(x, Y_TORCH));
+            addEntity(torch);
+            x += X_DELTA_TORCH;
+        }
     }
 
     @Override

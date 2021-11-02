@@ -61,7 +61,7 @@ public class YaegerShowCase extends YaegerGame {
 
     /**
      * The {@code #main(String[])} is the entry point of every Java Application. This {@code #main(String[])}
-     * is used to call {@link YaegerGame#launch(String...)}, which start the Game.
+     * is used to call {@link YaegerGame#launch(String...)}, which starts the Game.
      *
      * @param args Commandline parameters that will be passed to Yaeger.
      */
@@ -73,8 +73,8 @@ public class YaegerShowCase extends YaegerGame {
     public void setupGame() {
         setGameTitle(GAME_TITLE);
         setSize(SIZE);
-        setBackgroundAudio(PACHELBEL);
-        setBackgroundAudioVolume(0.2);
+//        setBackgroundAudio(PACHELBEL);
+//        setBackgroundAudioVolume(0.1);
     }
 
     @Override

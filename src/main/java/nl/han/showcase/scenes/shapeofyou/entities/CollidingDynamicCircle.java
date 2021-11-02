@@ -10,6 +10,8 @@ import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
+import java.util.List;
+
 public class CollidingDynamicCircle extends DynamicCircleEntity implements SceneBorderTouchingWatcher, Collider, Collided {
 
     public CollidingDynamicCircle(final Coordinate2D initialPosition) {
@@ -28,7 +30,7 @@ public class CollidingDynamicCircle extends DynamicCircleEntity implements Scene
     }
 
     @Override
-    public void onCollision(Collider collidingObject) {
+    public void onCollision(List<Collider> collidingObject) {
         changeDirection(180);
     }
 }

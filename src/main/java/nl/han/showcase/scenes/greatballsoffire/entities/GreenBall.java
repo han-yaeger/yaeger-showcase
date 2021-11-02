@@ -8,6 +8,8 @@ import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
+import java.util.List;
+
 public class GreenBall extends DynamicSpriteEntity implements SceneBorderTouchingWatcher, Collider, Collided {
 
     public GreenBall(final Coordinate2D location, double speed, double direction) {
@@ -21,7 +23,7 @@ public class GreenBall extends DynamicSpriteEntity implements SceneBorderTouchin
     }
 
     @Override
-    public void onCollision(final Collider collidingObject) {
+    public void onCollision(final List<Collider> collidingObject) {
         changeDirection(180);
     }
 }

@@ -10,6 +10,8 @@ import com.github.hanyaeger.api.scenes.SceneBorder;
 import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 
+import java.util.List;
+
 public class CollidingDynamicEllipse extends DynamicEllipseEntity implements SceneBorderTouchingWatcher, Collided, Collider {
 
     public CollidingDynamicEllipse(final Coordinate2D initialPosition) {
@@ -29,7 +31,7 @@ public class CollidingDynamicEllipse extends DynamicEllipseEntity implements Sce
     }
 
     @Override
-    public void onCollision(Collider collidingObject) {
+    public void onCollision(List<Collider> collidingObject) {
         changeDirection(180);
     }
 }

@@ -8,6 +8,8 @@ import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.Newtonian;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 
+import java.util.List;
+
 public class Pink extends DynamicSpriteEntity implements Newtonian, Collided {
 
     public Pink(final Coordinate2D location) {
@@ -16,7 +18,7 @@ public class Pink extends DynamicSpriteEntity implements Newtonian, Collided {
     }
 
     @Override
-    public void onCollision(final Collider collidingObject) {
+    public void onCollision(final List<Collider> collidingObject) {
         setDirection(Direction.UP);
     }
 }
