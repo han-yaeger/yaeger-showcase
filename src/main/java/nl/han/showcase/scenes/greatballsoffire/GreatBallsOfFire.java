@@ -2,12 +2,17 @@ package nl.han.showcase.scenes.greatballsoffire;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.YaegerEntity;
+import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.greatballsoffire.entities.*;
 
 public class GreatBallsOfFire extends ShowCaseScene {
+
+    public static final int PARALLAX_HEIGHT = 640;
 
     public GreatBallsOfFire(final YaegerShowCase showCase) {
         super(showCase);
@@ -15,13 +20,17 @@ public class GreatBallsOfFire extends ShowCaseScene {
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/yellyfish.jpg");
+        // Since this scene uses a parallax background, which is constructed by using DynamicSpriteEntities,
+        // there is no need for a background image. So we just ensure it is set to the color black.
+        setBackgroundColor(Color.BLACK);
     }
 
     @Override
     public void setupEntities() {
 
         super.setupEntities();
+
+        setupBackground();
 
         placeRugbyBallsWithAllAnchorPoints();
 
@@ -50,6 +59,18 @@ public class GreatBallsOfFire extends ShowCaseScene {
         addEntity(walking);
     }
 
+    private void setupBackground() {
+        addEntity(new HanLogoHeader());
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_1.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 100, 1.75));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_2.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 101, 1.50));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_3.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 102, 1.25));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_4.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 103, 1.0));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_5.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 104, 0.75));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_6.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 105, 0.5));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_7.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 106, 0));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_8.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 107, 0));
+    }
+
     private void placeRugbyBallsWithAllAnchorPoints() {
 
         var margin = 100d;
@@ -76,5 +97,18 @@ public class GreatBallsOfFire extends ShowCaseScene {
         var rc = new PinkBall(new Coordinate2D(getWidth() - margin, getHeight() / 2));
         rc.setAnchorPoint(AnchorPoint.CENTER_RIGHT);
         addEntity(rc);
+    }
+
+    /**
+     * Override the {@code protected} method in the superclass with a {@code public} version to change
+     * the visibility. This way it is possible to add instances of {@link YaegerEntity} from outside this
+     * instance.
+     *
+     * @param yaegerEntity The {@link YaegerEntity} that should be added to this
+     *                     {@link com.github.hanyaeger.api.scenes.YaegerScene}
+     */
+    @Override
+    public void addEntity(final YaegerEntity yaegerEntity) {
+        super.addEntity(yaegerEntity);
     }
 }
