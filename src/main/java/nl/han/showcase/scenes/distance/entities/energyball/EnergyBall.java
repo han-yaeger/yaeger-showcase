@@ -11,16 +11,17 @@ import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import nl.han.showcase.scenes.distance.TheDistanceScene;
+import nl.han.showcase.shared.explosion.ExplosionAdder;
 
 import java.util.List;
 
 public class EnergyBall extends DynamicSpriteEntity implements SceneBorderCrossingWatcher, Collider, Collided, TimerContainer {
 
-    private TheDistanceScene theDistanceScene;
+    private ExplosionAdder explosionAdder;
 
-    public EnergyBall(final Coordinate2D location, final double direction, final TheDistanceScene theDistanceScene) {
+    public EnergyBall(final Coordinate2D location, final double direction, final ExplosionAdder explosionAdder) {
         super("entities/energyball.png", location, new Size(20), 1, 9);
-        this.theDistanceScene = theDistanceScene;
+        this.explosionAdder = explosionAdder;
 
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
         setMotion(10, direction);
@@ -34,7 +35,7 @@ public class EnergyBall extends DynamicSpriteEntity implements SceneBorderCrossi
     }
 
     public void explode() {
-        theDistanceScene.explode(getAnchorLocation());
+        explosionAdder.addExplosion(getAnchorLocation(), getSpeed(), getDirection());
     }
 
     @Override

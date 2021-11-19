@@ -12,7 +12,8 @@ import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.distance.entities.*;
 import nl.han.showcase.scenes.distance.entities.dragndrop.Draggable;
 import nl.han.showcase.scenes.distance.entities.dragndrop.DropArea;
-import nl.han.showcase.scenes.distance.entities.energyball.Explosion;
+import nl.han.showcase.shared.explosion.Explosion;
+import nl.han.showcase.shared.explosion.ExplosionAdder;
 import nl.han.showcase.shared.textfield.ShowCaseTextField;
 
 /**
@@ -20,7 +21,7 @@ import nl.han.showcase.shared.textfield.ShowCaseTextField;
  * aim in the right direction. This {@link com.github.hanyaeger.api.scenes.DynamicScene} is
  * a demonstration of that Use Case.
  * <p>
- * The user is able to control a SpaceShip, which is just a {@link com.github.hanyaeger.api.entities.impl.circle.DynamicCircleEntity}
+ * The user is able to control a SpaceShip, which is just a {@link com.github.hanyaeger.api.entities.impl.DynamicCircleEntity}
  * that listens to mouse movements. While the mouse pointer is within the Scene, the SpaceShip is placed on the location
  * of the mouse pointer. To enable this behavior, the SpaceShip implements the interface {@link MouseMovedListener}.
  * <p>
@@ -31,10 +32,11 @@ import nl.han.showcase.shared.textfield.ShowCaseTextField;
  * {@link com.github.hanyaeger.api.entities.CompositeEntity} that demonstrates hoe to create re-usable components.
  * <p>
  */
-public class TheDistanceScene extends ShowCaseScene implements MouseButtonPressedListener, MouseButtonReleasedListener, MouseEnterListener, MouseExitListener, MouseMovedListener, EntitySpawnerContainer, MouseMovedWhileDraggingListener {
+public class TheDistanceScene extends ShowCaseScene implements MouseButtonPressedListener, MouseButtonReleasedListener, MouseEnterListener, MouseExitListener, MouseMovedListener, EntitySpawnerContainer, MouseMovedWhileDraggingListener, ExplosionAdder {
 
     private static final double CONTROL_AREA_MARGIN = 140D;
     private static final double TEXTFIELD_MARGIN = 20D;
+    private static final double TEXTFIELD_DELTA = 50D;
     private static final String PRESSED = "PRESSED";
     private static final String RELEASED = "RELEASED";
     private RocketSpawner rocketSpawner;
@@ -70,23 +72,23 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
         mousePointerTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(mousePointerTextField);
 
-        mousePointerWhileDraggedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 50), "Mouse dragging");
+        mousePointerWhileDraggedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + TEXTFIELD_DELTA), "Mouse dragging");
         mousePointerWhileDraggedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(mousePointerWhileDraggedTextField);
 
-        mouseInSceneTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 100), "Mouse in Scene?");
+        mouseInSceneTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 2 * TEXTFIELD_DELTA), "Mouse in Scene?");
         mouseInSceneTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(mouseInSceneTextField);
 
-        primaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 150), "Primary Button", RELEASED);
+        primaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 3 * TEXTFIELD_DELTA), "Primary Button", RELEASED);
         primaryButtonPressedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(primaryButtonPressedTextField);
 
-        secondaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 200), "Secondary Button", RELEASED);
+        secondaryButtonPressedTextField = new ShowCaseTextField(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 4 * TEXTFIELD_DELTA), "Secondary Button", RELEASED);
         secondaryButtonPressedTextField.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(secondaryButtonPressedTextField);
 
-        var dropArea = new DropArea(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 250), new Size(100, 150), rocketSpawner);
+        var dropArea = new DropArea(new Coordinate2D(getWidth() - TEXTFIELD_MARGIN, CONTROL_AREA_MARGIN + 5 * TEXTFIELD_DELTA), new Size(100, 150), rocketSpawner);
         dropArea.setAnchorPoint(AnchorPoint.TOP_RIGHT);
         addEntity(dropArea);
 
@@ -171,7 +173,8 @@ public class TheDistanceScene extends ShowCaseScene implements MouseButtonPresse
         }
     }
 
-    public void explode(Coordinate2D anchorLocation) {
+    @Override
+    public void addExplosion(final Coordinate2D anchorLocation, double speed, double direction) {
         addEntity(new Explosion(anchorLocation));
     }
 }

@@ -9,6 +9,7 @@ import javafx.scene.paint.Color;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
 import nl.han.showcase.scenes.greatballsoffire.entities.*;
+import nl.han.showcase.shared.HanLogoHeader;
 
 public class GreatBallsOfFire extends ShowCaseScene {
 
@@ -67,8 +68,8 @@ public class GreatBallsOfFire extends ShowCaseScene {
         addEntity(new ParallaxBackground("backgrounds/parallax_layer_4.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 103, 1.0));
         addEntity(new ParallaxBackground("backgrounds/parallax_layer_5.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 104, 0.75));
         addEntity(new ParallaxBackground("backgrounds/parallax_layer_6.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 105, 0.5));
-        addEntity(new ParallaxBackground("backgrounds/parallax_layer_7.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 106, 0));
-        addEntity(new ParallaxBackground("backgrounds/parallax_layer_8.png", new Coordinate2D(0, 58), new Size(this.getWidth() * 2, PARALLAX_HEIGHT), this, 107, 0));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_7.png", new Coordinate2D(0, 58), new Size(getWidth(), PARALLAX_HEIGHT), this, 106, 0));
+        addEntity(new ParallaxBackground("backgrounds/parallax_layer_8.png", new Coordinate2D(0, 58), new Size(getWidth(), PARALLAX_HEIGHT), this, 107, 0));
     }
 
     private void placeRugbyBallsWithAllAnchorPoints() {

@@ -5,6 +5,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.CompositeEntity;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import nl.han.showcase.YaegerShowCase;
 
@@ -16,6 +17,7 @@ public class ShowCaseTextField extends CompositeEntity {
 
     private final String name;
     private String defaultValue;
+    private Color backgroundColor;
     private TextEntity value;
 
     public ShowCaseTextField(final Coordinate2D initialLocation, final String name) {
@@ -23,15 +25,25 @@ public class ShowCaseTextField extends CompositeEntity {
     }
 
     public ShowCaseTextField(final Coordinate2D initialLocation, final String name, final String defaultValue) {
+        this(initialLocation, name, defaultValue, Color.BLACK);
+    }
+
+    public ShowCaseTextField(final Coordinate2D initialLocation, final String name, final Color backgroundColor) {
+        this(initialLocation, name, "", backgroundColor);
+    }
+
+    public ShowCaseTextField(final Coordinate2D initialLocation, final String name, final String defaultValue, final Color backgroundColor) {
         super(initialLocation);
         this.name = name;
         this.defaultValue = defaultValue;
+        this.backgroundColor = backgroundColor;
+
     }
 
     @Override
     protected void setupEntities() {
         // The background is a black rectangle with a HAN-red stroke
-        addEntity(new TextFieldBackground(new Coordinate2D(0, 8), new Size(100, 30)));
+        addEntity(new TextFieldBackground(new Coordinate2D(0, 8), new Size(100, 30), backgroundColor));
 
         // The Line blocker places a small black rectangle over the stroke of the background. The length of
         // the name (e.g. number of characters) is used to calculate the length of this rectangle.
