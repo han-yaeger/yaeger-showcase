@@ -2,8 +2,7 @@ package nl.han.showcase.scenes.scrollingstones.tilemaps;
 
 import com.github.hanyaeger.api.scenes.TileMap;
 import nl.han.showcase.scenes.scrollingstones.ScrollingStones;
-import nl.han.showcase.scenes.scrollingstones.entities.game.Satellite;
-import nl.han.showcase.shared.explosion.ExplosionAdder;
+import nl.han.showcase.scenes.scrollingstones.entities.Satellite;
 
 import java.util.Random;
 

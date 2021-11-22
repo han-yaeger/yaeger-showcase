@@ -3,6 +3,7 @@ package nl.han.showcase.scenes.scrollingstones;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.EntitySpawnerContainer;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.ScrollableDynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
@@ -12,8 +13,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import nl.han.showcase.YaegerShowCase;
 import nl.han.showcase.scenes.ShowCaseScene;
-import nl.han.showcase.scenes.scrollingstones.entities.game.Earth;
-import nl.han.showcase.scenes.scrollingstones.entities.game.Star;
+import nl.han.showcase.scenes.scrollingstones.entities.Earth;
+import nl.han.showcase.scenes.scrollingstones.entities.NasaSpaceship;
+import nl.han.showcase.scenes.scrollingstones.entities.Star;
 import nl.han.showcase.scenes.scrollingstones.spawners.RockSpawner;
 import nl.han.showcase.scenes.scrollingstones.tilemaps.SatelliteTileMap;
 import nl.han.showcase.shared.HanLogoHeader;
@@ -29,7 +31,7 @@ import java.util.Random;
  * dungeon-based scrolling game. The actual level is much wider than de visible area of the
  * {@link com.github.hanyaeger.api.scenes.YaegerScene}.
  */
-public class ScrollingStones extends ScrollableDynamicScene implements EntitySpawnerContainer, TileMapContainer, ExplosionAdder, MouseMovedListener, MouseButtonPressedListener, MouseButtonReleasedListener {
+public class ScrollingStones extends ScrollableDynamicScene implements EntitySpawnerContainer, TileMapContainer, ExplosionAdder, MouseMovedListener, MouseButtonPressedListener, MouseButtonReleasedListener, UpdateExposer {
 
     private static final double TEXTFIELD_MARGIN = 150D;
     private static final double TEXTFIELD_DELTA = 50D;
@@ -40,6 +42,8 @@ public class ScrollingStones extends ScrollableDynamicScene implements EntitySpa
     private ShowCaseTextField sceneMousePointerMovedTextField;
     private ShowCaseTextField sceneMousePointerPressedTextField;
     private ShowCaseTextField sceneMousePointerReleasedTextField;
+
+    private NasaSpaceship nasaSpaceship;
 
     public ScrollingStones(final YaegerShowCase yaegerShowCase) {
         this.showCase = yaegerShowCase;
@@ -70,8 +74,9 @@ public class ScrollingStones extends ScrollableDynamicScene implements EntitySpa
         // The text field that display information about mouse events are added to the viewport
         addMouseListenersTextFields();
 
-        // Add Mouse controlling entities
-
+        // Add the NASA spaceship. This spaceship can be controlled through the arrow buttons and the space bar.
+        nasaSpaceship = new NasaSpaceship(new Coordinate2D(getWidth() / 2, getHeight() / 2), this);
+        addEntity(nasaSpaceship);
 
         addStars();
         addEntity(new Earth(new Coordinate2D(getWidth() / 2, getHeight() / 2)));
@@ -118,17 +123,33 @@ public class ScrollingStones extends ScrollableDynamicScene implements EntitySpa
     }
 
     @Override
-    public void onMouseButtonPressed(MouseButton button, Coordinate2D coordinate2D) {
+    public void onMouseButtonPressed(final MouseButton button, final Coordinate2D coordinate2D) {
         sceneMousePointerPressedTextField.setValue(("(" + Math.round(coordinate2D.getX()) + ", " + Math.round(coordinate2D.getY()) + ")"));
     }
 
     @Override
-    public void onMouseButtonReleased(MouseButton button, Coordinate2D coordinate2D) {
+    public void onMouseButtonReleased(final MouseButton button, final Coordinate2D coordinate2D) {
         sceneMousePointerReleasedTextField.setValue(("(" + Math.round(coordinate2D.getX()) + ", " + Math.round(coordinate2D.getY()) + ")"));
     }
 
     @Override
     public void setupTileMaps() {
         addTileMap(new SatelliteTileMap(this));
+    }
+
+    /**
+     * To center the viewport around the spaceship, we let this class implement the interface {@link UpdateExposer},
+     * which adds the method {@link UpdateExposer#explicitUpdate(long)} that is called during each Game World Update.
+     * <p>
+     * During these GWU's we use the location of the spaceship to set the scroll position.
+     *
+     * @param timestamp the current time as a timestamp
+     */
+    @Override
+    public void explicitUpdate(final long timestamp) {
+        var spaceShipLocation = nasaSpaceship.getAnchorLocation();
+        var centerOn = new Coordinate2D(spaceShipLocation.getX() / getWidth(), spaceShipLocation.getY() / getHeight());
+
+        setScrollPosition(centerOn);
     }
 }

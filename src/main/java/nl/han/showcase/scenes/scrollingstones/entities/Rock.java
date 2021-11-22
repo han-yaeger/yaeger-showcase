@@ -1,4 +1,4 @@
-package nl.han.showcase.scenes.scrollingstones.entities.game;
+package nl.han.showcase.scenes.scrollingstones.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;

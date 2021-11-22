@@ -5,9 +5,9 @@ import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.EntitySpawner;
 import com.github.hanyaeger.api.entities.YaegerEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
-import nl.han.showcase.scenes.scrollingstones.entities.game.RockOne;
-import nl.han.showcase.scenes.scrollingstones.entities.game.RockThree;
-import nl.han.showcase.scenes.scrollingstones.entities.game.RockTwo;
+import nl.han.showcase.scenes.scrollingstones.entities.RockOne;
+import nl.han.showcase.scenes.scrollingstones.entities.RockThree;
+import nl.han.showcase.scenes.scrollingstones.entities.RockTwo;
 import nl.han.showcase.shared.explosion.ExplosionAdder;
 
 import java.util.Random;

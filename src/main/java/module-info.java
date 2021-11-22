@@ -4,7 +4,7 @@ module yaeger.showcase {
     exports nl.han.showcase;
     exports nl.han.showcase.scenes.mapsandlegends.tilemaps.entities;
     exports nl.han.showcase.scenes.gravity.tilemaps.entities;
-    exports nl.han.showcase.scenes.scrollingstones.entities.game;
+    exports nl.han.showcase.scenes.scrollingstones.entities;
 
     opens audio;
     opens backgrounds;
