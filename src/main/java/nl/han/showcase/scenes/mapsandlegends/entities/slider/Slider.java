@@ -7,6 +7,7 @@ import com.github.hanyaeger.api.entities.CompositeEntity;
 import com.github.hanyaeger.api.entities.YaegerEntity;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.TileMap;
+import nl.han.showcase.scenes.composing.entities.blackboard.Circle;
 
 public abstract class Slider extends CompositeEntity {
 

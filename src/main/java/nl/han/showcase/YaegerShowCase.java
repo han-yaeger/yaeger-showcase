@@ -97,7 +97,7 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_GRAVITY, gravity);
     }
 
-    public void setActiveScene(int scene) {
+    public void setActiveScene(final int scene) {
         super.setActiveScene(scene);
     }
 }
