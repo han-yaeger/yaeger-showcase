@@ -46,19 +46,19 @@ public class NasaSpaceship extends DynamicSpriteEntity implements KeyListener, N
      * @param newDirection the new direction that the spaceship should travel to
      */
     @Override
-    public void setDirection(double newDirection) {
+    public void setDirection(final double newDirection) {
         setRotate(newDirection);
         super.setDirection(newDirection);
     }
 
     @Override
-    public void addExplosion(Coordinate2D anchorLocation, double speed, double direction) {
+    public void addExplosion(final Coordinate2D anchorLocation, final double speed, final double direction) {
         explosionAdder.addExplosion(getAnchorLocation(), getSpeed(), getDirection());
         remove();
     }
 
     @Override
-    public void notifyBoundaryTouching(SceneBorder border) {
+    public void notifyBoundaryTouching(final SceneBorder border) {
         addExplosion(getAnchorLocation(), 0, 0);
     }
 }

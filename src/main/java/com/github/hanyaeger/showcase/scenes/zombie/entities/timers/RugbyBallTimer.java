@@ -1,7 +1,7 @@
-package com.github.hanyaeger.showcase.scenes.greatballsoffire.entities.timers;
+package com.github.hanyaeger.showcase.scenes.zombie.entities.timers;
 
 import com.github.hanyaeger.api.Timer;
-import com.github.hanyaeger.showcase.scenes.greatballsoffire.entities.PinkBall;
+import com.github.hanyaeger.showcase.scenes.zombie.entities.PinkBall;
 
 public class RugbyBallTimer extends Timer {
 

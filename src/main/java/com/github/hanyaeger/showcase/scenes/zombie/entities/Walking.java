@@ -1,4 +1,4 @@
-package com.github.hanyaeger.showcase.scenes.greatballsoffire.entities;
+package com.github.hanyaeger.showcase.scenes.zombie.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Direction;

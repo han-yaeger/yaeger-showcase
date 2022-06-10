@@ -1,10 +1,10 @@
-package com.github.hanyaeger.showcase.scenes.greatballsoffire.entities;
+package com.github.hanyaeger.showcase.scenes.zombie.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.TimerContainer;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
-import com.github.hanyaeger.showcase.scenes.greatballsoffire.entities.timers.RugbyBallTimer;
+import com.github.hanyaeger.showcase.scenes.zombie.entities.timers.RugbyBallTimer;
 
 public class PinkBall extends DynamicSpriteEntity implements TimerContainer {
 

@@ -12,7 +12,7 @@ import com.github.hanyaeger.showcase.YaegerShowCase;
  * A {@link SpaceShip} is just a simple {@link DynamicCircleEntity} that can move around the
  * {@link com.github.hanyaeger.api.scenes.DynamicScene}.
  * <p>
- * The interface {@link Collider} is used to registers collisions with a {@link Rocket}.
+ * The interface {@link Collider} is used to registers collisions with a {@link com.github.hanyaeger.showcase.scenes.distance.entities.energyball.EnergyBall}.
  * <p>
  * The interface {@link MouseMovedListener} is used to follow the mouse pointer. The event handler
  * {@link MouseMovedListener#onMouseMoved(Coordinate2D)} is the used to change the appearance of the cursor

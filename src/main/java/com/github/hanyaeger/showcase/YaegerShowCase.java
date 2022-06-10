@@ -5,7 +5,7 @@ import com.github.hanyaeger.api.YaegerGame;
 import com.github.hanyaeger.showcase.scenes.composing.Composing;
 import com.github.hanyaeger.showcase.scenes.distance.TheDistanceScene;
 import com.github.hanyaeger.showcase.scenes.gravity.Gravity;
-import com.github.hanyaeger.showcase.scenes.greatballsoffire.GreatBallsOfFire;
+import com.github.hanyaeger.showcase.scenes.zombie.ZombieScene;
 import com.github.hanyaeger.showcase.scenes.mapsandlegends.MapsAndLegends;
 import com.github.hanyaeger.showcase.scenes.ridethelightning.RideTheLightningScene;
 import com.github.hanyaeger.showcase.scenes.scrollingstones.ScrollingStones;
@@ -39,8 +39,8 @@ public class YaegerShowCase extends YaegerGame {
     public static final int SCENE_SELECTION = 1;
     public static final int SCENE_ROADS_GO_EVER_ON = 2;
     public static final String SCENE_ROADS_GO_EVER_ON_TITLE = "Roads go ever on";
-    public static final int SCENE_GREAT_BALLS_OF_FIRE = 3;
-    public static final String SCENE_GREAT_BALLS_OF_FIRE_TITLE = "Great balls of fire";
+    public static final int SCENE_ZOMBIE = 3;
+    public static final String SCENE_ZOMBIE_TITLE = "Zombie";
     public static final int SCENE_SHAPE = 4;
     public static final String SCENE_SHAPE_TITLE = "Shape of you";
     public static final int SCENE_COMPOSING = 5;
@@ -73,8 +73,8 @@ public class YaegerShowCase extends YaegerGame {
     public void setupGame() {
         setGameTitle(GAME_TITLE);
         setSize(SIZE);
-//        setBackgroundAudio(PACHELBEL);
-//        setBackgroundAudioVolume(0.1);
+        setBackgroundAudio(PACHELBEL);
+        setBackgroundAudioVolume(0.1);
     }
 
     @Override
@@ -83,8 +83,8 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_SELECTION, selection);
         var roadsGoEverOn = new RoadsGoEverOnScene(this);
         addScene(SCENE_ROADS_GO_EVER_ON, roadsGoEverOn);
-        var greatBallsOfFire = new GreatBallsOfFire(this);
-        addScene(SCENE_GREAT_BALLS_OF_FIRE, greatBallsOfFire);
+        var zombieScene = new ZombieScene(this);
+        addScene(SCENE_ZOMBIE, zombieScene);
         var shapeOfYou = new ShapeOfYouScene(this);
         addScene(SCENE_SHAPE, shapeOfYou);
         var composing = new Composing(this);
