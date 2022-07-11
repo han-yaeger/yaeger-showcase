@@ -72,15 +72,17 @@ public class ZombieScene extends ScrollableDynamicScene implements UpdateExposer
         var bat = new Bat(new Coordinate2D(180, 65));
         addEntity(bat);
 
-        zombie = new com.github.hanyaeger.showcase.scenes.zombie.entities.Zombie(new Coordinate2D(190, 585));
+        zombie = new Zombie(new Coordinate2D(190, 585));
         addEntity(zombie);
+
+        var witch = new Witch(new Coordinate2D(400, 590));
+        addEntity(witch);
 
         for (int i = -15; i <= 2210; i = i + 445) {
             var torch = new Torch(new Coordinate2D(i, 500));
             addEntity(torch);
         }
     }
-
 
 
     private void placeRugbyBallsWithAllAnchorPoints() {

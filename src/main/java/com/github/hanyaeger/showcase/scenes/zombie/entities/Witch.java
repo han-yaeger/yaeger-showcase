@@ -13,14 +13,14 @@ import javafx.scene.input.KeyCode;
 import java.util.List;
 import java.util.Set;
 
-public class Zombie extends DynamicSpriteEntity implements KeyListener, SceneBorderTouchingWatcher, Collided {
+public class Witch extends DynamicSpriteEntity implements KeyListener, SceneBorderTouchingWatcher, Collided {
 
     private static final int AUTOCYCLE_SPEED = 100;
     private static final int WALKING_SPEED_RIGHT = 2;
     private static final int WALKING_SPEED_LEFT = 2;
 
-    public Zombie(final Coordinate2D initialLocation) {
-        super("entities/zombie-spritemap.png", initialLocation, 2, 12);
+    public Witch(final Coordinate2D initialLocation) {
+        super("entities/witch-spritesheet.png", initialLocation, 9, 16);
     }
 
     @Override

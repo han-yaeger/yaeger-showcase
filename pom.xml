@@ -50,7 +50,7 @@
         <dependency>
             <groupId>com.github.han-yaeger</groupId>
             <artifactId>yaeger</artifactId>
-            <version>2022.2023.beta1</version>
+            <version>2022.2023.beta2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
