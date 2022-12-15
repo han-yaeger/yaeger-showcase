@@ -55,7 +55,7 @@ public class SelectionScene extends StaticScene {
 
         y += DELTA_Y;
 
-        var greatBallsOfFire = new SelectionButton(y, YaegerShowCase.SCENE_ZOMBIE_TITLE, showCase, YaegerShowCase.SCENE_ZOMBIE);
+        var greatBallsOfFire = new SelectionButton(y, YaegerShowCase.SCENE_BURN_THE_WITCH_TITLE, showCase, YaegerShowCase.SCENE_BURN_THE_WITCH);
         addEntity(greatBallsOfFire);
 
         y += DELTA_Y;

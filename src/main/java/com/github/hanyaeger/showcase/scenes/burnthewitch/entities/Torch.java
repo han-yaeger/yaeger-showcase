@@ -1,4 +1,4 @@
-package com.github.hanyaeger.showcase.scenes.zombie.entities;
+package com.github.hanyaeger.showcase.scenes.burnthewitch.entities;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;

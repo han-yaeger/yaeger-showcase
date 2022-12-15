@@ -5,7 +5,7 @@ import com.github.hanyaeger.api.YaegerGame;
 import com.github.hanyaeger.showcase.scenes.composing.Composing;
 import com.github.hanyaeger.showcase.scenes.distance.TheDistanceScene;
 import com.github.hanyaeger.showcase.scenes.gravity.Gravity;
-import com.github.hanyaeger.showcase.scenes.zombie.ZombieScene;
+import com.github.hanyaeger.showcase.scenes.burnthewitch.BurnTheWitchScene;
 import com.github.hanyaeger.showcase.scenes.mapsandlegends.MapsAndLegends;
 import com.github.hanyaeger.showcase.scenes.ridethelightning.RideTheLightningScene;
 import com.github.hanyaeger.showcase.scenes.scrollingstones.ScrollingStones;
@@ -31,7 +31,7 @@ public class YaegerShowCase extends YaegerGame {
     public static final Color HAN_RED = Color.rgb(229, 0, 85);
 
     // A constant that contains the dimensions of the ShowCase.
-    private static final Size SIZE = new Size(1024, 698);
+    public static final Size SHOWCASE_SIZE = new Size(1024, 698);
 
     // The ShowCase contains multiple Scenes to demonstrate all feature. Each of those
     // Scenes has an id and a title, expect the first scene, which is the one that can be
@@ -39,8 +39,8 @@ public class YaegerShowCase extends YaegerGame {
     public static final int SCENE_SELECTION = 1;
     public static final int SCENE_ROADS_GO_EVER_ON = 2;
     public static final String SCENE_ROADS_GO_EVER_ON_TITLE = "Roads go ever on";
-    public static final int SCENE_ZOMBIE = 3;
-    public static final String SCENE_ZOMBIE_TITLE = "Zombie";
+    public static final int SCENE_BURN_THE_WITCH = 3;
+    public static final String SCENE_BURN_THE_WITCH_TITLE = "Burn the Witch";
     public static final int SCENE_SHAPE = 4;
     public static final String SCENE_SHAPE_TITLE = "Shape of you";
     public static final int SCENE_COMPOSING = 5;
@@ -58,7 +58,6 @@ public class YaegerShowCase extends YaegerGame {
     public static final int SCENE_SCROLLING = 11;
     public static final String SCENE_SCROLLING_TITLE = "The Scrolling Stones";
 
-
     /**
      * The {@code #main(String[])} is the entry point of every Java Application. This {@code #main(String[])}
      * is used to call {@link YaegerGame#launch(String...)}, which starts the Game.
@@ -72,7 +71,7 @@ public class YaegerShowCase extends YaegerGame {
     @Override
     public void setupGame() {
         setGameTitle(GAME_TITLE);
-        setSize(SIZE);
+        setSize(SHOWCASE_SIZE);
         setBackgroundAudio(PACHELBEL);
         setBackgroundAudioVolume(0.1);
     }
@@ -83,8 +82,8 @@ public class YaegerShowCase extends YaegerGame {
         addScene(SCENE_SELECTION, selection);
         var roadsGoEverOn = new RoadsGoEverOnScene(this);
         addScene(SCENE_ROADS_GO_EVER_ON, roadsGoEverOn);
-        var zombieScene = new ZombieScene(this);
-        addScene(SCENE_ZOMBIE, zombieScene);
+        var burnTheWitchScene = new BurnTheWitchScene(this);
+        addScene(SCENE_BURN_THE_WITCH, burnTheWitchScene);
         var shapeOfYou = new ShapeOfYouScene(this);
         addScene(SCENE_SHAPE, shapeOfYou);
         var composing = new Composing(this);
