@@ -4,7 +4,7 @@
 
     <groupId>nl.han</groupId>
     <artifactId>yaeger-showcase</artifactId>
-    <version>2021.2022.2-SNAPSHOT</version>
+    <version>2022.2023</version>
     <packaging>jar</packaging>
 
     <name>yaeger-showcase</name>
@@ -13,7 +13,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>16</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <build>
@@ -50,7 +50,7 @@
         <dependency>
             <groupId>com.github.han-yaeger</groupId>
             <artifactId>yaeger</artifactId>
-            <version>2022.2023.beta2-SNAPSHOT</version>
+            <version>2022.2023</version>
         </dependency>
     </dependencies>
 </project>
