@@ -10,6 +10,7 @@ import com.github.hanyaeger.showcase.YaegerShowCase;
 import com.github.hanyaeger.showcase.scenes.ShowCaseScene;
 import com.github.hanyaeger.showcase.scenes.composing.entities.PinkTree;
 import com.github.hanyaeger.showcase.scenes.composing.entities.blackboard.ShapesInShapes;
+import com.github.hanyaeger.showcase.scenes.composing.entities.car.wheel.WheelRotationDisplay;
 import com.github.hanyaeger.showcase.scenes.composing.entities.newtoniancircle.NewtonianCircleComposite;
 import com.github.hanyaeger.showcase.scenes.composing.entities.newtoniancircle.RectangularFloor;
 import com.github.hanyaeger.showcase.scenes.composing.entities.waterworld.hanny.Hanny;
@@ -39,6 +40,9 @@ public class Composing extends ShowCaseScene {
 
         var topLeftWheel = new Wheel(new Coordinate2D(MARGIN, MARGIN));
         addEntity(topLeftWheel);
+
+        var wheelRotationDisplay = new WheelRotationDisplay(new Coordinate2D(MARGIN + 70, MARGIN), topLeftWheel);
+        addEntity(wheelRotationDisplay);
 
         var shapeInShapes = new ShapesInShapes(new Coordinate2D(getWidth() / 2, MARGIN));
         shapeInShapes.setAnchorPoint(AnchorPoint.TOP_CENTER);
