@@ -49,6 +49,8 @@ public class BurnTheWitchScene extends ShowCaseScene {
 
         var bat3 = new Bat(new Coordinate2D(680, 175), witch);
         addEntity(bat3);
+
+        super.setupEntities();
     }
 
     public void createMagicSpell(final Coordinate2D coordinate2D, final Direction direction) {
