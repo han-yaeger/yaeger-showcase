@@ -58,8 +58,8 @@ public class ScrollingStones extends ScrollableDynamicScene implements EntitySpa
         setSize(new Size(2000, 2000));
 
         // By setting the horizontal and vertical scroll position to .5, we ensure that the viewport is centered
-        setVerticalScrollPosition(0.5);
-        setHorizontalScrollPosition(0.5);
+        setRelativeScrollPosition(0.5, 0.5);
+//        setScrollPosition(new Coordinate2D(37, 37));
     }
 
     @Override
@@ -148,8 +148,6 @@ public class ScrollingStones extends ScrollableDynamicScene implements EntitySpa
     @Override
     public void explicitUpdate(final long timestamp) {
         var spaceShipLocation = nasaSpaceship.getAnchorLocation();
-        var centerOn = new Coordinate2D(spaceShipLocation.getX() / getWidth(), spaceShipLocation.getY() / getHeight());
-
-        setScrollPosition(centerOn);
+        setScrollPosition(spaceShipLocation);
     }
 }
